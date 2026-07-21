@@ -50,3 +50,21 @@
 | **`classic_1_5.png`** | Page 5~6 | 하지만 언니들은 자신들만 예쁘게 단장하고 가버렸고, 신데렐라는 혼자 부엌에 남아 울었답니다... | A kind, glowing fairy godmother is waving a magic wand over Cinderella, transforming her ragged clothes into a beautiful glowing blue ballgown. Sparkles, stars, soft watercolor style. |
 | **`classic_1_7.png`** | Page 7~8 | 요술봉을 톡톡 흔들자 신데렐라의 낡은 옷은 눈부신 드레스로, 호박은 황금빛 마차로 마법처럼 바뀌었어요... | A glowing golden pumpkin carriage is parked outside a grand castle at night. Sparkles in the air, full moon, soft dreamlike fairytale style, watercolor. |
 | **`classic_1_9.png`** | Page 9~10 | 무도회에서 왕자님과 즐거운 춤을 추던 신데렐라는 열두 시 종이 울리자 서둘러 뛰어 나오다 유리구두... | A handsome prince is sliding a tiny glowing glass slipper onto Cinderella's foot. It fits perfectly! Cinderella is smiling, magical celebration sparkles, soft watercolor fairytale style. |
+
+---
+
+## ⭐ 4. 아기 별들의 밤하늘 축제 (`creative_3`)
+어두워진 밤하늘을 위해 주인공과 동물들이 협동하여 노래를 부르고 아기 별들을 다시 반짝이게 돕는 이야기입니다. (1페이지당 1장 구조)
+
+| 파일명 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
+| :--- | :---: | :--- | :--- |
+| **`creative_3_1.jpg`** | Page 1 | 일 년에 한 번씩 찾아오는 은하수 광장의 아기 별들의 댄스 축제 날이 마침내 찾아왔어요. | A cover illustration for a children's fairytale book. A group of tiny cute smiling baby stars are dancing on a sparkling river of stardust in a deep purple night sky. Bouncy colorful Korean text "아기 별들의 밤하늘 축제" is written in glowing letters at the top. Whimsical watercolor children's book style. |
+| **`creative_3_2.jpg`** | Page 2 | 하지만 갑자기 시커먼 먹구름 괴물이 하늘을 덮어버려서 아기 별들의 눈부신 빛이 꽁꽁 가려졌어요. | A giant dark grumpy storm cloud monster sweeps across the starry sky, covering the sparkling little stars and casting a dark shadow over the land. Soft watercolor style. |
+| **`creative_3_3.jpg`** | Page 3 | 하늘이 깜깜해지자 은하수 축제를 기대하던 숲속 동물 친구들은 큰 실망에 빠져 고개를 숙였어요. | A group of cute friendly forest animals (a little bear, squirrel, and deer) are sitting on a grassy hill, looking up at the dark night sky with sad faces. Soft glowing moon hidden behind clouds, watercolor style. |
+| **`creative_3_4.jpg`** | Page 4 | 이때 지혜로운 민지(이)가 나서며 동물 친구들을 불렀어요. '모두 높은 산 위로 올라가자!' | A kind little girl/boy is standing on a high mountain peak at night, calling out and waving to a group of cute forest animals to follow. Bright sparkling stars peeking through clouds, watercolor style. |
+| **`creative_3_5.jpg`** | Page 5 | 민지(이)와 곰돌이, 다람쥐는 손에 손을 꼬옥 잡고 밤하늘을 향해 아주 예쁜 희망의 노래를 불렀어요. | A group of children and cute forest animals are holding hands in a circle on top of a mountain under the night sky, singing together happily. Whimsical watercolor style. |
+| **`creative_3_6.jpg`** | Page 6 | 친구들의 다정하고 따뜻한 노랫소리가 먹구름을 지나 하늘 꼭대기 아기 별들의 귀에 닿았답니다. | Glowing musical notes and sparkles float up from the singing animals on the mountain peak, traveling through the dark storm clouds toward the hidden stars. Soft dreamlike watercolor style. |
+| **`creative_3_7.jpg`** | Page 7 | 아기 별들은 용기를 내어 서로의 작은 손을 잡았고, 빛을 꽁꽁 뭉쳐 더욱 강한 빛을 뿜었어요. | A group of tiny cute baby stars in the sky are holding hands, their bodies glowing brighter and brighter as they gather their light together. Sparkles, magical watercolor style. |
+| **`creative_3_8.jpg`** | Page 8 | 모두가 힘을 합치자 커다란 시커먼 먹구름 괴물은 휙 날아가 버렸고, 하늘은 다시 눈부셔졌어요. | The dark grumpy storm cloud monster is blown away by the combined brilliant light of the glowing baby stars. The night sky becomes bright and clear again, watercolor style. |
+| **`creative_3_9.jpg`** | Page 9 | 은하수 광장에는 오색찬란한 아기 별들의 환상적인 댄스 축제가 성대하게 시작되었답니다. | A grand, magical stardust dance festival under the night sky. Tiny smiling baby stars and cute forest animals are dancing together on a glowing silver silver-blue Milky Way field. Watercolor fairytale style. |
+| **`creative_3_10.jpg`** | Page 10 | 민지(이)와 별들은 힘을 합치면 그 어떤 어둠도 물리칠 수 있다는 멋진 지혜를 깨달았답니다. | A smiling baby star winks down from the bright starry sky toward a happy child who is looking up from a bedroom window, holding hands with a toy squirrel. Cozy room, warm and happy atmosphere, watercolor style. |
