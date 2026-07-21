@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시계 요정의 째깍 모험 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 시계 요정의 째깍 모험 (규칙적이고 좋은 생활 습관)">
+</head>
+<body>
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_15">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">⏰</div>
+          <div class="moral-tag">규칙적이고 좋은 생활 습관</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">째깍이 방에는 시간을 알리는 작은 태엽 요정 틱톡이 살고 있었어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">⏰</div>
+          <div class="moral-tag">규칙적이고 좋은 생활 습관</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">[이름](이)가 밤늦게까지 장난감을 갖고 놀려고 할 때, 틱톡 요정이 찾아와 째깍째깍 노래했어요. '이제 잘 시간이야!'</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">⏰</div>
+          <div class="moral-tag">규칙적이고 좋은 생활 습관</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">[이름](이)가 양치를 치카치카 하고 침대에 눕자, 요정은 예쁜 꿈나라 지도를 머리맡에 놓아두었답니다.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">⏰</div>
+          <div class="moral-tag">규칙적이고 좋은 생활 습관</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">일찍 자고 아침에 번쩍 일어난 [이름](이)의 몸과 마음은 활기찬 햇살처럼 튼튼해졌어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 4</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노래하는 노란 나비 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 노래하는 노란 나비 (부모님과 가족에 대한 사랑)">
+</head>
+<body>
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_13">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🦋</div>
+          <div class="moral-tag">부모님과 가족에 대한 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">노란 나비 나비는 언제나 날개를 펄펄 휘두르며 엄마 아빠 나비의 품을 지켰어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🦋</div>
+          <div class="moral-tag">부모님과 가족에 대한 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">어느 날, 엄마 나비가 아파서 꿀을 따러 갈 수 없게 되자 나비는 혼자 정원에 나가 달콤한 이슬을 모았어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🦋</div>
+          <div class="moral-tag">부모님과 가족에 대한 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">[이름](이)가 동행해 주며 가장 싱싱한 꽃을 찾는 법을 도와주었답니다. 둘은 예쁜 하트 꽃송이도 꺾었어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🦋</div>
+          <div class="moral-tag">부모님과 가족에 대한 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">이슬을 마신 엄마는 금방 나아 꼭 안아주었어요. 나비와 [이름](이)는 가족의 따스한 사랑을 깊이 느꼈답니다.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 4</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

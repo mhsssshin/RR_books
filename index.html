@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로롱북스 (rorongBooks) - 5세 여아 맞춤형 AI 동화책 플랫폼</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <meta name="description" content="아이가 스스로 선택하는 그림책! 5세 아이 맞춤형 AI 창작 동화 및 유명 명작 동화 리딩 플랫폼, 로롱북스">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧚‍♀️</text></svg>">
+</head>
+<body>
+  <!-- Particle sparkles canvas background -->
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- Header Section with Logo and Profile Card -->
+  <header>
+    <div class="logo-container">
+      <span class="logo-icon">🐿️</span>
+      <h1 class="logo-text">로롱북스</h1>
+    </div>
+    <div class="profile-card" id="profile-card" title="프로필을 바꿔보세요!">
+      <div class="profile-avatar">👧</div>
+      <div class="profile-info">
+        <span class="profile-greeting" id="profile-greeting">우리 아이의 책방</span>
+        <span class="profile-tagline">🎨 프로필 설정하기</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Selector Tabs -->
+  <div class="category-tabs">
+    <button class="tab-btn active" id="tab-creative">
+      <span>🎨</span> 로롱 창작 동화
+    </button>
+    <button class="tab-btn" id="tab-classic">
+      <span>📖</span> 유명 명작 동화
+    </button>
+  </div>
+
+  <!-- Main Books Content Grid -->
+  <main class="content-section">
+    <div class="books-grid" id="books-grid">
+      <!-- Loaded dynamically via js/main.js -->
+    </div>
+  </main>
+
+  <!-- Mascot Floating Character Helper -->
+  <div class="mascot-container" id="mascot-container">
+    <div class="mascot-speech-bubble" id="mascot-bubble">안녕! 나랑 같이 책 읽자! ✨</div>
+    <div class="mascot-sprite" id="mascot-sprite">🐿️</div>
+  </div>
+
+  <!-- Profile Setup Modal overlay -->
+  <div class="modal-overlay" id="profile-modal">
+    <div class="setup-modal">
+      <h2 class="modal-title">반가워! 프로필 만들기 💖</h2>
+      <p class="modal-subtitle">이름과 좋아하는 색상을 고르면 책방이 바뀐단다!</p>
+      
+      <div class="form-group">
+        <label class="form-label" for="name-input">아이 이름</label>
+        <input type="text" id="name-input" class="name-input" placeholder="이름을 알려줘! (예: 민지)" maxlength="8">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">좋아하는 색상</label>
+        <div class="color-selectors">
+          <div class="color-option color-pink selected" data-color="pink">분홍색</div>
+          <div class="color-option color-lavender" data-color="lavender">보라색</div>
+          <div class="color-option color-mint" data-color="mint">민트색</div>
+          <div class="color-option color-gold" data-color="gold">노란색</div>
+        </div>
+      </div>
+
+      <button class="submit-profile-btn" id="submit-profile-btn">책방 입장하기 ⭐</button>
+    </div>
+  </div>
+
+  <!-- Audio Synthesis Library -->
+  <script src="./js/audio.js"></script>
+  <!-- Homepage Main Logic -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

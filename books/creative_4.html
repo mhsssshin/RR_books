@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과자 나라의 다정한 사자 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 과자 나라의 다정한 사자 (배려와 친절)">
+</head>
+<body>
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_4">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/candy_lion.png" alt="과자 나라의 다정한 사자" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🦁</div>
+          <div class="moral-tag">배려와 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">솜사탕 갈기를 가진 다정한 사자 레오는 달콤한 과자 나라를 지키는 아주 착한 왕이었어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/candy_lion.png" alt="과자 나라의 다정한 사자" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🦁</div>
+          <div class="moral-tag">배려와 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">어느 날, [이름](이)가 과자 나라에 놀러 왔을 때 젤리 플라워를 잃어버리고 길을 잃은 아기 다람쥐를 만났어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/candy_lion.png" alt="과자 나라의 다정한 사자" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🦁</div>
+          <div class="moral-tag">배려와 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">레오 왕은 아기 다람쥐에게 폭신폭신한 솜사탕 갈기를 나누어주며 기분을 달래주었고, [이름](이)는 길을 찾아주었어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/candy_lion.png" alt="과자 나라의 다정한 사자" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🦁</div>
+          <div class="moral-tag">배려와 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">다람쥐는 웃음을 되찾고 맛있는 초콜릿 하트를 주었어요. 배려하는 마음이 과자 나라를 더욱 달콤하게 만들었답니다.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 4</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모두 다른 꽃밭 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 모두 다른 꽃밭 (다양성을 인정하고 존중하기)">
+</head>
+<body>
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_18">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🌸</div>
+          <div class="moral-tag">다양성을 인정하고 존중하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">마법 정원에는 보라색 장미, 파란색 민들레, 그리고 아무 향기도 나지 않는 풀꽃이 살았어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🌸</div>
+          <div class="moral-tag">다양성을 인정하고 존중하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">꽃들은 서로 다른 모습이 이상하다며 서로 가까이 오지 말라고 뾰로통하게 툴툴거렸지요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🌸</div>
+          <div class="moral-tag">다양성을 인정하고 존중하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">[이름](이)가 와서 웃으며 꽃들을 모두 한데 모아 동그란 꽃밭을 만들었어요. '모두 다르게 생겨서 이 정원이 더 예쁜걸!'</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">🌸</div>
+          <div class="moral-tag">다양성을 인정하고 존중하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">꽃들은 깨달았어요. 서로 다른 색과 매력이 모여 가장 아름다운 요정의 꽃밭이 완성되었다는 것을요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 4</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

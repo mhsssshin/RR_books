@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>잠자는 숲속의 공주 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 잠자는 숲속의 공주 (역경을 이기는 사랑)">
+</head>
+<body>
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="classic_3">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">👑</div>
+          <div class="moral-tag">역경을 이기는 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">마법에 걸려 백 년 동안 깊은 잠에 빠진 오로라 공주님과 왕국 전체가 초록색 장미 덩굴에 싸였어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">👑</div>
+          <div class="moral-tag">역경을 이기는 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">많은 시간이 흐른 뒤, 용감하고 다정한 이웃 나라 필립 왕자님이 마법의 성을 향해 모험을 떠났어요.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">👑</div>
+          <div class="moral-tag">역경을 이기는 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">왕자님이 덩굴을 헤치고 나아가 잠들어 있는 공주님의 손을 따뜻하게 꼭 잡았답니다.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 4</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <div class="fallback-illustration" style="display: flex;">
+          <div class="floating-emoji">👑</div>
+          <div class="moral-tag">역경을 이기는 사랑</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <div class="story-text-container">
+          <p class="story-paragraph">
+            <span class="tts-trigger">온 왕국이 잠에서 깨어나고 찬란한 태양이 비추었어요. 성안에는 축하하는 노랫소리가 가득 울렸답니다.</span>
+          </p>
+        </div>
+        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 4</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

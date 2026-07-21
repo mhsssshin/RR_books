@@ -1,0 +1,13 @@
+{
+  "name": "rorong-books",
+  "version": "1.0.0",
+  "description": "rorongBooks - A fairy tale platform for 5-year-old kids",
+  "main": "index.html",
+  "scripts": {
+    "compile": "node scripts/generate_books.js",
+    "start": "npx -y http-server -p 8080",
+    "dev": "npx -y http-server -p 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
