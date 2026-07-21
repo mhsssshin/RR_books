@@ -37,11 +37,9 @@ const generateHTML = (story) => {
       </div>
       <div class="text-side">
         <div class="story-text-container">
-          <p class="story-paragraph">
-            <span class="tts-trigger">${page.text}</span>
-          </p>
+          <p class="story-paragraph">${page.text}</p>
         </div>
-        <div class="tts-hint">👉 문장을 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="tts-hint">👉 모르는 단어를 3초 동안 꾹 누르면 읽어줘요! 🔊</div>
         <div class="page-num">${page.pageNumber} / ${story.pages.length}</div>
       </div>
     </div>`;

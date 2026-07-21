@@ -19,18 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.background = 'var(--bg-gold)';
   }
 
-  // Personalize page texts
-  const personalizeText = () => {
-    const textNodes = document.querySelectorAll('.tts-trigger');
-    textNodes.forEach(node => {
-      let html = node.innerHTML;
-      if (html.includes('[이름]') || html.includes('{{name}}')) {
-        html = html.replace(/\[이름\]/g, childName).replace(/\{\{name\}\}/g, childName);
-        node.innerHTML = html;
-      }
+  // Personalize page texts and split into word-by-word TTS triggers
+  const processStoryTexts = () => {
+    const paragraphs = document.querySelectorAll('.story-paragraph');
+    paragraphs.forEach(p => {
+      let rawText = p.innerHTML.trim();
+      // Replace name tokens
+      const personalized = rawText.replace(/\[이름\]/g, childName).replace(/\{\{name\}\}/g, childName);
+      // Split by whitespace to create individual words
+      const words = personalized.split(/\s+/);
+      p.innerHTML = words.map(word => {
+        if (!word) return '';
+        return `<span class="tts-trigger">${word}</span>`;
+      }).join(' ');
     });
   };
-  personalizeText();
+  processStoryTexts();
 
   // 2. Book Pages Navigation Setup
   const pages = document.querySelectorAll('.book-page');
