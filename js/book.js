@@ -157,12 +157,29 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentUtterance = null;
   const PRESS_DURATION = 1000; // 1 second
 
+  // Helper to extract clean content words (nouns/stems) by striping common Korean particles
+  const cleanWordForTTS = (word) => {
+    if (!word) return '';
+    // Strip punctuation marks
+    let clean = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+    
+    // Korean particles to remove from the end of the word, ordered by length descending
+    const josaRegex = /(에서|에게|으로|한테|이랑|하고|은|는|이|가|을|를|의|에|로|와|과|도|만|랑)$/;
+    
+    const processed = clean.replace(josaRegex, "");
+    // Fallback to original clean word if it becomes empty after removing particles
+    return processed.length > 0 ? processed : clean;
+  };
+
   const speakText = (text, element) => {
     // Stop any current voice output
     window.speechSynthesis.cancel();
 
+    // Clean text by stripping Korean particles
+    const cleanedText = cleanWordForTTS(text);
+
     // Create a new utterance
-    currentUtterance = new SpeechSynthesisUtterance(text);
+    currentUtterance = new SpeechSynthesisUtterance(cleanedText);
     currentUtterance.lang = 'ko-KR';
     
     // Find friendly Korean female voice if available
