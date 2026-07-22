@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nameInput = document.getElementById('name-input');
   const colorOptions = document.querySelectorAll('.color-option');
   const genderOptions = document.querySelectorAll('.gender-option');
+  const languageOptions = document.querySelectorAll('.language-option');
   const submitProfileBtn = document.getElementById('submit-profile-btn');
   const profileCard = document.getElementById('profile-card');
   const greetingEl = document.getElementById('profile-greeting');
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   let tempFavColor = 'pink';
   let tempGender = 'girl';
+  let tempLanguage = 'ko';
 
   // Apply visual theme to dashboard background
   const applyTheme = (color) => {
@@ -68,13 +70,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Helper to determine natural Korean particle for greeting
-  const getGreetingText = (name) => {
-    if (!name) return '우리 아이의 책방';
+  // Helper to determine natural Korean particle or English possessive bookshelf greeting
+  const getGreetingText = (name, lang = 'ko') => {
+    if (!name) return lang === 'en' ? "My Bookshelf" : '우리 아이의 책방';
+    if (lang === 'en') {
+      return `${name}'s Bookshelf`;
+    }
     const lastChar = name.charAt(name.length - 1);
     const charCode = lastChar.charCodeAt(0);
     const hasPadchim = (charCode >= 0xAC00 && charCode <= 0xD7A3) && ((charCode - 0xAC00) % 28 > 0);
     return `${name}${hasPadchim ? '이' : ''}의 책방`;
+  };
+
+  // Localize dashboard labels based on language
+  const applyDashboardLanguage = (lang = 'ko') => {
+    const isEn = lang === 'en';
+    
+    // Header labels
+    const taglineEl = document.querySelector('.profile-tagline');
+    if (taglineEl) taglineEl.textContent = isEn ? '🎨 Edit Profile' : '🎨 프로필 설정하기';
+
+    // Tabs
+    const tabCreativeGirl = document.getElementById('tab-creative-girl');
+    const tabCreativeBoy = document.getElementById('tab-creative-boy');
+    const tabClassic = document.getElementById('tab-classic');
+
+    if (tabCreativeGirl) tabCreativeGirl.innerHTML = `<span>👧</span> ${isEn ? 'Creative (Girl)' : '창작 동화 (여아)'}`;
+    if (tabCreativeBoy) tabCreativeBoy.innerHTML = `<span>👦</span> ${isEn ? 'Creative (Boy)' : '창작 동화 (남아)'}`;
+    if (tabClassic) tabClassic.innerHTML = `<span>📖</span> ${isEn ? 'Classic' : '유명 명작 동화'}`;
+
+    // Modal UI Labels
+    const modalTitle = document.querySelector('.modal-title');
+    const modalSubtitle = document.querySelector('.modal-subtitle');
+    const labelName = document.querySelector('label[for="name-input"]');
+    const labelGender = document.querySelector('.form-group:nth-of-type(2) .form-label');
+    const labelLang = document.getElementById('label-language');
+    const labelColor = document.querySelector('.form-group:nth-of-type(4) .form-label');
+
+    if (modalTitle) modalTitle.textContent = isEn ? 'Welcome! Set Profile 💖' : '반가워! 프로필 만들기 💖';
+    if (modalSubtitle) modalSubtitle.textContent = isEn ? 'Choose name and color to customize your bookshelf!' : '이름과 좋아하는 색상을 고르면 책방이 바뀐단다!';
+    if (labelName) labelName.textContent = isEn ? 'Child Name' : '아이 이름';
+    if (labelGender) labelGender.textContent = isEn ? 'Child Gender' : '우리 아이 성별';
+    if (labelLang) labelLang.textContent = isEn ? 'Language' : '읽기 언어 (Language)';
+    if (labelColor) labelColor.textContent = isEn ? 'Favorite Color' : '좋아하는 색상';
+    if (nameInput) nameInput.placeholder = isEn ? "Enter name! (e.g. Roa)" : "이름을 알려줘! (예: 민지)";
+
+    // Modal Options Label Text
+    const optionGirl = document.querySelector('.gender-option[data-gender="girl"]');
+    const optionBoy = document.querySelector('.gender-option[data-gender="boy"]');
+    if (optionGirl) optionGirl.textContent = isEn ? '👧 Girl' : '👧 여자아이';
+    if (optionBoy) optionBoy.textContent = isEn ? '👦 Boy' : '👦 남자아이';
+
+    const optionPink = document.querySelector('.color-option[data-color="pink"]');
+    const optionLavender = document.querySelector('.color-option[data-color="lavender"]');
+    const optionMint = document.querySelector('.color-option[data-color="mint"]');
+    const optionGold = document.querySelector('.color-option[data-color="gold"]');
+    if (optionPink) optionPink.textContent = isEn ? 'Pink' : '분홍색';
+    if (optionLavender) optionLavender.textContent = isEn ? 'Purple' : '보라색';
+    if (optionMint) optionMint.textContent = isEn ? 'Mint' : '민트색';
+    if (optionGold) optionGold.textContent = isEn ? 'Yellow' : '노란색';
+
+    if (submitProfileBtn) submitProfileBtn.textContent = isEn ? 'Enter Bookshelf ⭐' : '책방 입장하기 ⭐';
   };
 
   // Load existing profile or show modal
@@ -82,20 +138,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedName = localStorage.getItem('rorong_child_name');
     const savedColor = localStorage.getItem('rorong_fav_color');
     const savedGender = localStorage.getItem('rorong_gender') || 'girl';
+    const savedLang = localStorage.getItem('rorong_language') || 'ko';
 
     if (!savedName || !savedColor) {
       // First time user -> Show Profile Setup Modal
       modalOverlay.classList.add('active');
     } else {
-      greetingEl.textContent = getGreetingText(savedName);
+      greetingEl.textContent = getGreetingText(savedName, savedLang);
       applyTheme(savedColor);
       avatarEl.textContent = savedGender === 'boy' ? '👦' : '👧';
+      applyDashboardLanguage(savedLang);
       
       // Auto switch default tab based on gender
       activeCategory = savedGender === 'boy' ? 'creative-boy' : 'creative-girl';
       updateTabUI();
     }
   };
+
+  // Profile Modal Language Option Click
+  languageOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      RorongAudio.playBubble();
+      languageOptions.forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      tempLanguage = opt.getAttribute('data-lang');
+      applyDashboardLanguage(tempLanguage);
+    });
+  });
 
   // Profile Modal Gender Option Click
   genderOptions.forEach(opt => {
@@ -107,9 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Auto name suggestion & default color recommendation
       const currentName = nameInput.value.trim();
+      const isEn = tempLanguage === 'en';
       if (tempGender === 'boy') {
-        if (!currentName || currentName === '민지' || currentName === '로아') {
-          nameInput.value = '로이';
+        if (!currentName || currentName === '민지' || currentName === '로아' || currentName === 'Roa' || currentName === 'Minji') {
+          nameInput.value = isEn ? 'Roy' : '로이';
         }
         // Switch recommended color to mint/gold
         colorOptions.forEach(o => o.classList.remove('selected'));
@@ -119,8 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
           tempFavColor = 'mint';
         }
       } else {
-        if (!currentName || currentName === '로이' || currentName === '민수') {
-          nameInput.value = '로아';
+        if (!currentName || currentName === '로이' || currentName === '민수' || currentName === 'Roy' || currentName === 'Minsu') {
+          nameInput.value = isEn ? 'Roa' : '로아';
         }
         // Switch recommended color to pink/lavender
         colorOptions.forEach(o => o.classList.remove('selected'));
@@ -145,18 +215,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Submit Profile Setup
   submitProfileBtn.addEventListener('click', () => {
-    const nameVal = nameInput.value.trim() || (tempGender === 'boy' ? '로이' : '로아');
+    const isEn = tempLanguage === 'en';
+    const nameVal = nameInput.value.trim() || (tempGender === 'boy' ? (isEn ? 'Roy' : '로이') : (isEn ? 'Roa' : '로아'));
     
     localStorage.setItem('rorong_child_name', nameVal);
     localStorage.setItem('rorong_fav_color', tempFavColor);
     localStorage.setItem('rorong_gender', tempGender);
+    localStorage.setItem('rorong_language', tempLanguage);
 
     RorongAudio.playChime();
     
     // Update Greeting, theme & avatar
-    greetingEl.textContent = getGreetingText(nameVal);
+    greetingEl.textContent = getGreetingText(nameVal, tempLanguage);
     applyTheme(tempFavColor);
     avatarEl.textContent = tempGender === 'boy' ? '👦' : '👧';
+    applyDashboardLanguage(tempLanguage);
 
     // Close Modal
     modalOverlay.classList.remove('active');
@@ -167,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderBooks();
 
     // Trigger Mascot Jump
-    triggerMascotJump('만나서 반가워! 책 고르자!');
+    triggerMascotJump(isEn ? 'Nice to meet you! Let\'s read books!' : '만나서 반가워! 책 고르자!');
   });
 
   // Click profile card to edit profile
@@ -175,14 +248,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentName = localStorage.getItem('rorong_child_name') || '';
     const currentColor = localStorage.getItem('rorong_fav_color') || 'pink';
     const currentGender = localStorage.getItem('rorong_gender') || 'girl';
+    const currentLang = localStorage.getItem('rorong_language') || 'ko';
     
     nameInput.value = currentName;
     tempFavColor = currentColor;
     tempGender = currentGender;
+    tempLanguage = currentLang;
 
     // Set active options
     genderOptions.forEach(opt => {
       if (opt.getAttribute('data-gender') === currentGender) {
+        opt.classList.add('selected');
+      } else {
+        opt.classList.remove('selected');
+      }
+    });
+
+    languageOptions.forEach(opt => {
+      if (opt.getAttribute('data-lang') === currentLang) {
         opt.classList.add('selected');
       } else {
         opt.classList.remove('selected');
@@ -197,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    applyDashboardLanguage(tempLanguage);
     modalOverlay.classList.add('active');
   });
 
@@ -338,6 +422,8 @@ document.addEventListener('DOMContentLoaded', () => {
     gridContainer.innerHTML = '';
     indicatorsContainer.innerHTML = '';
     
+    const isEn = localStorage.getItem('rorong_language') === 'en';
+    
     // Filter books based on selected tab (mapped to book.category)
     const filtered = allBooks.filter(book => book.category === activeCategory);
 
@@ -356,19 +442,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const isFeatured = book.featured;
       const imageUrl = isFeatured ? `./assets/images/${book.pages[0].image}` : '';
 
+      const bookTitle = isEn ? (book.englishTitle || book.title) : book.title;
+      const bookMoral = isEn ? (book.englishMoral || book.moral) : book.moral;
+
       card.innerHTML = `
         <div class="book-cover-art" style="background: var(--bg-${book.coverColor || 'pink'});">
           ${ratingHtml}
           ${isFeatured ? `
-            <img src="${imageUrl}" alt="${book.title}" class="book-cover-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <img src="${imageUrl}" alt="${bookTitle}" class="book-cover-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           ` : ''}
           <div class="book-cover-fallback" style="display: ${isFeatured ? 'none' : 'flex'}; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
             <span class="book-cover-emoji">${book.emoji}</span>
           </div>
         </div>
         <div class="book-details">
-          <h3 class="book-title">${book.title}</h3>
-          <span class="book-moral">${book.moral}</span>
+          <h3 class="book-title">${bookTitle}</h3>
+          <span class="book-moral">${bookMoral}</span>
         </div>
       `;
 
@@ -447,21 +536,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const mascotSprite = document.getElementById('mascot-sprite');
   const mascotBubble = document.getElementById('mascot-bubble');
 
-  const mascotPhrases = [
-    '안녕! 오늘도 재밌는 모험 가자! ✨',
-    '어떤 동화책이 읽고 싶어? 📚',
-    '글자를 꾹 누르면 소리내어 읽어줘! 🔊',
-    '책을 다 읽고 나면 별점 꼭 눌러줘! ⭐',
-    '로롱이는 너가 너무 좋아! 💖',
-    '우와! 핑크색 별이 쏟아져! 🪄'
-  ];
+  const mascotPhrases = {
+    ko: [
+      '안녕! 오늘도 재밌는 모험 가자! ✨',
+      '어떤 동화책이 읽고 싶어? 📚',
+      '글자를 꾹 누르면 소리내어 읽어줘! 🔊',
+      '책을 다 읽고 나면 별점 꼭 눌러줘! ⭐',
+      '로롱이는 너가 너무 좋아! 💖',
+      '우와! 핑크색 별이 쏟아져! 🪄'
+    ],
+    en: [
+      "Hi! Let's go on an adventure! ✨",
+      "Which book do you want to read? 📚",
+      "Press and hold any word to read aloud! 🔊",
+      "Please leave a star rating after reading! ⭐",
+      "Rorong loves you so much! 💖",
+      "Wow! Pink sparkles are everywhere! 🪄"
+    ]
+  };
 
   const triggerMascotJump = (customText = null) => {
     RorongAudio.playChime();
     mascotSprite.classList.add('excited');
     
     // Pick text
-    const text = customText || mascotPhrases[Math.floor(Math.random() * mascotPhrases.length)];
+    const currentLang = localStorage.getItem('rorong_language') || 'ko';
+    const phrases = mascotPhrases[currentLang] || mascotPhrases.ko;
+    const text = customText || phrases[Math.floor(Math.random() * phrases.length)];
     mascotBubble.textContent = text;
 
     setTimeout(() => {
@@ -474,7 +575,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mascot speaks occasionally in background
   setInterval(() => {
     if (!modalOverlay.classList.contains('active')) {
-      const text = mascotPhrases[Math.floor(Math.random() * mascotPhrases.length)];
+      const currentLang = localStorage.getItem('rorong_language') || 'ko';
+      const phrases = mascotPhrases[currentLang] || mascotPhrases.ko;
+      const text = phrases[Math.floor(Math.random() * phrases.length)];
       mascotBubble.textContent = text;
     }
   }, 10000);

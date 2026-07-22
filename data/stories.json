@@ -69,7 +69,9 @@
         "englishText": "Learning the joy of sharing, [이름] returned home happily with the pretty star ring."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Rorong and the Rainbow Fairy",
+    "englishMoral": "Share things nicely with friends."
   },
   {
     "id": "creative_girl_02",
@@ -141,7 +143,9 @@
         "englishText": "Thanks to [이름]'s golden box, Toto became the bravest baby rabbit who loves the night in the forest."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Little Rabbit's Courage Box",
+    "englishMoral": "Be brave and do not fear."
   },
   {
     "id": "creative_girl_03",
@@ -213,7 +217,9 @@
         "englishText": "[이름] and the stars realized the great wisdom that they can overcome any darkness when they work together."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Baby Stars' Night Sky Festival",
+    "englishMoral": "We can do it if we work together."
   },
   {
     "id": "creative_girl_04",
@@ -285,7 +291,9 @@
         "englishText": "As sharing and caring spread, the delicious Cookie Land became a much sweeter and happier paradise."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "The Friendly Lion of Cookie Land",
+    "englishMoral": "Have a kind heart to help hungry friends."
   },
   {
     "id": "creative_girl_05",
@@ -357,7 +365,9 @@
         "englishText": "Thanks to [이름]'s warm help, the two lonely toys found a lifelong friendship of their souls."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Magic Broom and Magic Harp",
+    "englishMoral": "Discover friends' strengths and be together."
   },
   {
     "id": "creative_girl_06",
@@ -429,7 +439,9 @@
         "englishText": "Thanks to [이름]'s wisdom, Starry learned that honesty is the brightest light of all."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Little Clam's Pearl Necklace",
+    "englishMoral": "Enduring hard times brings beautiful results."
   },
   {
     "id": "creative_girl_07",
@@ -501,7 +513,9 @@
         "englishText": "Rorong learned that patience, the power of waiting, is stronger than magic and smiled happily."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Squirrel's Acorn Piggy Bank",
+    "englishMoral": "Save and prepare for the future."
   },
   {
     "id": "creative_girl_08",
@@ -573,7 +587,9 @@
         "englishText": "[이름] smiled warmly, watching them hold hands under the sunny forest trees."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Baby Bear's Honey Pot Journey",
+    "englishMoral": "Share food without being greedy."
   },
   {
     "id": "creative_girl_09",
@@ -645,7 +661,9 @@
         "englishText": "[이름] and Pinky learned that loving oneself is the most beautiful music in the world."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Baby Dolphin's Ocean Cleaning",
+    "englishMoral": "Keep our ocean clean and green."
   },
   {
     "id": "creative_girl_10",
@@ -717,7 +735,9 @@
         "englishText": "Thanks to [이름]'s help, Rumi and [이름] discovered that curiosity makes the world a playground."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Forest Fairy's Magnifying Glass",
+    "englishMoral": "Treat small insects precious and protect them."
   },
   {
     "id": "creative_girl_11",
@@ -789,7 +809,9 @@
         "englishText": "[이름] and Pobi learned that chasing dreams with courage makes anything possible."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Little Penguin's Ice Fishing",
+    "englishMoral": "Do not give up and try until the end."
   },
   {
     "id": "creative_girl_12",
@@ -861,7 +883,9 @@
         "englishText": "[이름] learned that expressing gratitude makes both the giver and receiver happy."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Pigeon Postman's Happy Letter",
+    "englishMoral": "Send love to neighbors and share joy."
   },
   {
     "id": "creative_girl_13",
@@ -933,7 +957,9 @@
         "englishText": "[이름] smiled, realizing that warm love is the most precious gift we can give to family."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Butterfly and Flowerbed Promise",
+    "englishMoral": "Value and keep promises with friends."
   },
   {
     "id": "creative_girl_14",
@@ -1005,7 +1031,9 @@
         "englishText": "[이름] and Leafy learned that protecting nature makes our world a beautiful home for everyone."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Tiny Sprout in the Flowerpot",
+    "englishMoral": "Cherish life and take care with love."
   },
   {
     "id": "creative_girl_15",
@@ -1077,7 +1105,9 @@
         "englishText": "[이름] and the toys learned that a regular routine makes our days happy and healthy."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Clock Land's Little Gears",
+    "englishMoral": "Everyone does their part to achieve great things."
   },
   {
     "id": "creative_girl_16",
@@ -1149,7 +1179,9 @@
         "englishText": "[이름] and Piyak learned that expressing sad feelings and comforting friends builds warm trust."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Baby Chick's Warm Embrace",
+    "englishMoral": "Comfort and hug sad friends."
   },
   {
     "id": "creative_girl_17",
@@ -1221,7 +1253,9 @@
         "englishText": "[이름] and Bambi learned that keeping safety promises protects us from getting hurt."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Baby Deer's Forest Walk",
+    "englishMoral": "Keep safety rules and prevent danger."
   },
   {
     "id": "creative_girl_18",
@@ -1293,7 +1327,9 @@
         "englishText": "[이름] learned that respecting and valuing differences makes our world a beautiful garden."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Rainbow Flowerbed Secret",
+    "englishMoral": "Respect differences and live in harmony."
   },
   {
     "id": "creative_girl_19",
@@ -1360,7 +1396,9 @@
         "englishText": "[이름] and Gumi learned that imagination can turn the sky into a magical playground."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Cloud Fairy's Drawing Adventure",
+    "englishMoral": "Unleash imagination to create new things."
   },
   {
     "id": "creative_girl_20",
@@ -1432,7 +1470,9 @@
         "englishText": "[이름] and the toys learned that sharing and yielding makes playtime happy for everyone."
       }
     ],
-    "category": "creative-girl"
+    "category": "creative-girl",
+    "englishTitle": "Toy Box Friendship",
+    "englishMoral": "Cherish toys and play together with friends."
   },
   {
     "id": "classic_01",
@@ -1504,7 +1544,9 @@
         "englishText": "왕자님은 유리구두가 꼭 맞는 착한 신데렐라를 마침내 찾아냈고, 둘은 영원히 행복하게 살았답니다."
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Cinderella",
+    "englishMoral": "If you have a kind heart, you will be blessed."
   },
   {
     "id": "classic_02",
@@ -1576,7 +1618,9 @@
         "englishText": "잠에서 깨어난 공주는 난쟁이들과 왕자님의 큰 환호 속에 궁전으로 돌아가 오래오래 사랑하며 살았답니다."
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Snow White",
+    "englishMoral": "Do not envy others and treat them with kindness."
   },
   {
     "id": "classic_03",
@@ -1648,7 +1692,9 @@
         "image": "classic_03/classic_03_10.jpg"
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Sleeping Beauty",
+    "englishMoral": "Love overcomes any trials and hardships."
   },
   {
     "id": "classic_04",
@@ -1720,7 +1766,9 @@
         "englishText": "진실을 안 왕자님은 기뻐했고, 에리얼은 아빠 바다 왕의 축복 속에 예쁜 인간이 되어 결혼식을 올렸답니다."
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "The Little Mermaid",
+    "englishMoral": "Realize the value of true, selfless love."
   },
   {
     "id": "classic_05",
@@ -1792,7 +1840,9 @@
         "image": "classic_05/classic_05_10.jpg"
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Beauty and the Beast",
+    "englishMoral": "Inner beauty is more important than appearance."
   },
   {
     "id": "classic_06",
@@ -1864,7 +1914,9 @@
         "image": "classic_06/classic_06_10.jpg"
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Hansel and Gretel",
+    "englishMoral": "Gather wisdom to overcome difficult situations."
   },
   {
     "id": "classic_07",
@@ -1936,7 +1988,9 @@
         "image": "classic_07/classic_07_10.jpg"
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Little Red Riding Hood",
+    "englishMoral": "Beware of strangers and listen to parents."
   },
   {
     "id": "classic_08",
@@ -2008,7 +2062,9 @@
         "image": "classic_08/classic_08_10.jpg"
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "The Wizard of Oz",
+    "englishMoral": "The wisdom and courage we need are already within us."
   },
   {
     "id": "classic_09",
@@ -2080,7 +2136,9 @@
         "image": "classic_09/classic_09_10.jpg"
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Peter Pan",
+    "englishMoral": "Do not lose pure childhood innocence and adventure."
   },
   {
     "id": "classic_10",
@@ -2152,7 +2210,9 @@
         "image": "classic_10/classic_10_10.jpg"
       }
     ],
-    "category": "classic"
+    "category": "classic",
+    "englishTitle": "Alice in Wonderland",
+    "englishMoral": "Grow through new curiosities and adventures."
   },
   {
     "id": "creative_boy_01",
@@ -2222,7 +2282,9 @@
         "englishText": "Roni and his friends learned that when they help each other, they can easily get through any space maze.",
         "image": "creative_boy_01/creative_boy_01_10.jpg"
       }
-    ]
+    ],
+    "englishTitle": "Space Robot Roni's Adventure",
+    "englishMoral": "Forgive friends' mistakes and hold hands."
   },
   {
     "id": "creative_boy_02",
@@ -2292,7 +2354,9 @@
         "englishText": "Dino learned that when you show courage and lead your friends in scary times, you can always overcome danger.",
         "image": "creative_boy_02/creative_boy_02_10.jpg"
       }
-    ]
+    ],
+    "englishTitle": "Baby Dinosaur Dino's Volcano Play",
+    "englishMoral": "Refrain from dangerous acts and play safely."
   },
   {
     "id": "creative_boy_03",
@@ -2362,7 +2426,9 @@
         "englishText": "Hose and Jet learned that cooperating to cover each other's limits is the greatest power to protect the forest.",
         "image": "creative_boy_03/creative_boy_03_10.jpg"
       }
-    ]
+    ],
+    "englishTitle": "Little Fire Engine Hose's Wish",
+    "englishMoral": "Helping others is a truly happy thing."
   },
   {
     "id": "creative_boy_04",
@@ -2432,7 +2498,9 @@
         "englishText": "Boat realized that helping a friend in trouble is a much happier adventure than just finding treasure.",
         "image": "creative_boy_04/creative_boy_04_10.jpg"
       }
-    ]
+    ],
+    "englishTitle": "Submarine Boat's Undersea Treasure",
+    "englishMoral": "The real treasure is the beautiful nature around us."
   },
   {
     "id": "creative_boy_05",
@@ -2502,6 +2570,8 @@
         "englishText": "Though he lost first place, Thunder learned that finishing the race side by side with a friend is much brighter.",
         "image": "creative_boy_05/creative_boy_05_10.jpg"
       }
-    ]
+    ],
+    "englishTitle": "Little Racing Car Thunder's Run",
+    "englishMoral": "Keep the racing rules fair and square."
   }
 ]

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const readPageBtns = document.querySelectorAll('.read-page-btn');
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   
-  let isEnglishMode = false;
+  let isEnglishMode = localStorage.getItem('rorong_language') === 'en';
   
   // Set theme background based on user's preference
   if (favColor === 'pink') {
@@ -364,10 +364,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Bind Language Toggle Click Handler
   if (langToggleBtn) {
+    langToggleBtn.textContent = isEnglishMode ? '🇰🇷 한글로 읽기' : '🇺🇸 English';
     langToggleBtn.addEventListener('click', () => {
       RorongAudio.playBubble();
       isEnglishMode = !isEnglishMode;
       langToggleBtn.textContent = isEnglishMode ? '🇰🇷 한글로 읽기' : '🇺🇸 English';
+      localStorage.setItem('rorong_language', isEnglishMode ? 'en' : 'ko');
       
       // Trigger smooth text transition
       const bookContainer = document.getElementById('book-container');
