@@ -65,6 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Helper to determine natural Korean particle for greeting
+  const getGreetingText = (name) => {
+    if (!name) return '우리 아이의 책방';
+    const lastChar = name.charAt(name.length - 1);
+    const charCode = lastChar.charCodeAt(0);
+    const hasPadchim = (charCode >= 0xAC00 && charCode <= 0xD7A3) && ((charCode - 0xAC00) % 28 > 0);
+    return `${name}${hasPadchim ? '이' : ''}의 책방`;
+  };
+
   // Load existing profile or show modal
   const checkProfile = () => {
     const savedName = localStorage.getItem('rorong_child_name');
@@ -74,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // First time user -> Show Profile Setup Modal
       modalOverlay.classList.add('active');
     } else {
-      greetingEl.textContent = `${savedName}이의 책방`;
+      greetingEl.textContent = getGreetingText(savedName);
       applyTheme(savedColor);
     }
   };
@@ -99,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     RorongAudio.playChime();
     
     // Update Greeting & theme
-    greetingEl.textContent = `${nameVal}이의 책방`;
+    greetingEl.textContent = getGreetingText(nameVal);
     applyTheme(tempFavColor);
 
     // Close Modal

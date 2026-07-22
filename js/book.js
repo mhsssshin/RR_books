@@ -149,13 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 3. 1.5-Second Long-Press TTS Feature
+  // 3. 1-Second Long-Press TTS Feature
   let pressTimer = null;
   let pressInterval = null;
   let currentPressedEl = null;
   let pressStartTimestamp = 0;
   let currentUtterance = null;
-  const PRESS_DURATION = 1500; // 1.5 seconds
+  const PRESS_DURATION = 1000; // 1 second
 
   const speakText = (text, element) => {
     // Stop any current voice output

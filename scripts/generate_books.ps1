@@ -38,7 +38,7 @@ foreach ($story in $stories) {
         <div class="story-text-container">
           <p class="story-paragraph">$($page.text)</p>
         </div>
-        <div class="tts-hint">👉 모르는 단어를 1.5초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="tts-hint">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
         <div class="page-num">$($page.pageNumber) / $($story.pages.length)</div>
       </div>
     </div>
