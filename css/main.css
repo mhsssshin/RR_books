@@ -721,3 +721,97 @@ header {
     padding: 5px 10px;
   }
 }
+
+/* Background Floating Bubbles (Liquid Aurora Effect) */
+.bg-bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  transition: background 0.8s ease;
+}
+
+/* Default / Pink Theme Bubble Colors */
+.bubble-1 {
+  width: 350px;
+  height: 350px;
+  background: #ffb6c1;
+  top: -50px;
+  left: -50px;
+  animation: float1 25s infinite alternate ease-in-out;
+}
+
+.bubble-2 {
+  width: 450px;
+  height: 450px;
+  background: #ffe4e1;
+  bottom: -100px;
+  right: -100px;
+  animation: float2 30s infinite alternate ease-in-out;
+}
+
+.bubble-3 {
+  width: 300px;
+  height: 300px;
+  background: #fff9c4;
+  top: 30%;
+  right: 15%;
+  animation: float3 22s infinite alternate ease-in-out;
+}
+
+.bubble-4 {
+  width: 380px;
+  height: 380px;
+  background: #f3e5f5;
+  bottom: 20%;
+  left: 10%;
+  animation: float4 28s infinite alternate ease-in-out;
+}
+
+/* Theme modifications - mapping body theme background styles */
+body[style*="bg-lavender"] .bubble-1 { background: #e1bee7; }
+body[style*="bg-lavender"] .bubble-2 { background: #f3e5f5; }
+body[style*="bg-lavender"] .bubble-3 { background: #ffe4e1; }
+body[style*="bg-lavender"] .bubble-4 { background: #b2dfdb; }
+
+body[style*="bg-mint"] .bubble-1 { background: #b2dfdb; }
+body[style*="bg-mint"] .bubble-2 { background: #e0f2f1; }
+body[style*="bg-mint"] .bubble-3 { background: #fff9c4; }
+body[style*="bg-mint"] .bubble-4 { background: #e1bee7; }
+
+body[style*="bg-gold"] .bubble-1 { background: #fff9c4; }
+body[style*="bg-gold"] .bubble-2 { background: #fffde7; }
+body[style*="bg-gold"] .bubble-3 { background: #ffe4e1; }
+body[style*="bg-gold"] .bubble-4 { background: #b2dfdb; }
+
+/* Floating Animation Keyframes */
+@keyframes float1 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate(80px, 50px) scale(1.15) rotate(45deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0) scale(1.05) rotate(0deg); }
+  100% { transform: translate(-100px, -60px) scale(0.9) rotate(-30deg); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0, 0) scale(0.95); }
+  100% { transform: translate(50px, -80px) scale(1.1); }
+}
+
+@keyframes float4 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-40px, 80px) scale(1.1) rotate(15deg); }
+}

@@ -454,6 +454,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Animate loop
     const animateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Ambient sparkles: 5% chance per frame to generate a floating background sparkle
+      if (Math.random() < 0.05) {
+        const randX = Math.random() * canvas.width;
+        const randY = Math.random() * canvas.height;
+        particles.push(new SparkleParticle(randX, randY));
+      }
+
       particles = particles.filter(p => p.life > 0);
       particles.forEach(p => {
         p.update();
