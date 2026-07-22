@@ -1,6 +1,6 @@
-# 🎨 로롱북스 (rorongBooks) AI 이미지 생성 프롬프트 가이드
+# 🎨 로롱북스 (rorongBooks) 모든 콘텐츠 이미지 생성 프롬프트 가이드
 
-이 가이드는 AI 이미지 생성 모델(Gemini, Midjourney, DALL-E 등)을 사용하여 동화책 삽화를 직접 생성할 때 사용할 수 있는 **영문 프롬프트와 매핑 파일 경로** 목록입니다.
+이 가이드는 AI 이미지 생성 모델(Gemini, Midjourney, DALL-E 등)을 사용하여 동화책 삽화를 직접 생성할 때 사용할 수 있는 **파일명, 이미지 생성 영문 프롬프트, 그리고 매핑되는 대본** 목록입니다.
 
 > [!TIP]
 > **디자인 일관성(Consistency) 유지 비결**
@@ -9,98 +9,542 @@
 
 ---
 
-## 🐰 1. 꼬마 토끼의 용기 상자 (`creative_2`)
-아이가 어두운 방을 두려워하는 아기 토끼 토토에게 용기를 선물하는 이야기입니다. (1페이지당 1장 구조)
+## 🧚‍♀️ [creative_1] 로롱이와 무지개 요정 (착한 마음과 나눔)
+* **설명**: 로롱이와 무지개 요정 - 10페이지 아동 맞춤 스토리라인
 
-| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
-| :--- | :---: | :--- | :--- |
-| **`creative_2/creative_2_1.jpg`** | Page 1 | 숲속 마을에 살고 있는 귀여운 아기 토끼 토토는 밤만 되면 방 안이 어두워져서 무척 두려워했어요. | A cover illustration of a cute baby rabbit with big sparkly eyes looking scared in a dark cozy bedroom. The Korean text "꼬마 토끼의 용기 상자" is written in bubbly, warm golden 3D typography at the top. Whimsical watercolor children's book style. |
-| **`creative_2/creative_2_2.jpg`** | Page 2 | 침대에 누워 이불을 머리끝까지 뒤집어쓰고 눈을 질끈 감아도, 시계 소리마저 무서운 도깨비 소리 같았지요. | Cute baby rabbit shivering under a fluffy blanket in bed, look of fear on its face. Soft lamp light, cozy children's room setting, clock visible on the wall. Whimsical watercolor style. |
-| **`creative_2/creative_2_3.jpg`** | Page 3 | 이 소식을 들은 친절한 친구 민지(이)가 토토의 방으로 찾아와 예쁘고 반짝이는 황금 상자를 건넸어요. | A kind little girl with a warm smile is presenting a beautiful, glowing golden box to a scared baby rabbit in a cozy bedroom setting. Magical warm light, watercolor style. |
-| **`creative_2/creative_2_4.jpg`** | Page 4 | "토토야, 이건 마음속에 꼭 숨어 있는 비밀 용기를 꺼내주는 마술 상자야!" | Close-up of a beautifully decorated, glowing golden box resting on a child's hands. Soft sparkling gold dust floating around, magical fairytale atmosphere, watercolor style. |
-| **`creative_2/creative_2_5.jpg`** | Page 5 | 토토는 민지이의 말을 듣고 조심조심 황금 상자를 열었고, 그 안에서는 몽환적인 황금빛 가루가 흘러나왔어요. | The cute baby rabbit holds the golden box and gently opens it. Warm golden light and sparkling dust float out, illuminating the rabbit's face with a look of wonder. Watercolor style. |
-| **`creative_2/creative_2_6.jpg`** | Page 6 | 황금빛 가루가 토토의 작은 어깨를 부드럽게 감싸 안아주자, 마음이 스르륵 따뜻하고 든든해졌어요. | The glowing golden light wraps around the baby rabbit's shoulders like a soft magic scarf. The rabbit has a warm, comforted expression, feeling brave. Watercolor style. |
-| **`creative_2/creative_2_7.jpg`** | Page 7 | 토토는 떨리는 손을 내밀어 굳게 닫혀 있던 커다란 창문을 열고 밤하늘을 올려다보았어요. | The brave baby rabbit extends its paw and opens a large glass bedroom window, looking out to the night sky, curious and no longer afraid. Watercolor style. |
-| **`creative_2/creative_2_8.jpg`** | Page 8 | 창밖에는 무서운 귀신 대신 반짝반짝 다정하게 윙크해 주는 아기 별들이 가득 떠 있었답니다. | View out the window showing a beautiful starry night sky. Friendly little stars with smiling faces in the sky are winking down. Soft dark blue and purple tones, magical dreamlike watercolor style. |
-| **`creative_2/creative_2_9.jpg`** | Page 9 | 토토는 이제 어두운 밤이 되어도 무섭지 않았고, 예쁜 은하수 이불을 덮고 쿨쿨 꿀잠을 잘 자게 되었어요. | Cute baby rabbit sleeping peacefully in bed under a soft starry-patterned blanket, smiling. Cozy room, stars visible outside the window, warm and safe atmosphere. Watercolor style. |
-| **`creative_2/creative_2_10.jpg`** | Page 10 | 민지이의 황금 상자 덕분에 토토는 숲속 마을에서 밤을 가장 사랑하는 용감한 꼬마 토끼가 되었답니다. | The brave rabbit is happily playing in a sunny forest clearing with other friendly animal friends, wearing a tiny golden star badge. Bright, cheerful morning light, whimsical watercolor style. |
-
----
-
-## 🧚‍♀️ 2. 로롱이와 무지개 요정 (`creative_1`)
-주인공이 잃어버린 붓 대신 크레파스를 무지개 요정에게 나누어 주고 예쁜 반지를 얻는 이야기입니다.
-
-| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
-| :--- | :---: | :--- | :--- |
-| **`creative_1/creative_1_1.png`** | Page 1~2 | 어느 아주 맑고 화창한 날 아침, 민지(이)는 마법의 무지개 숲속으로 신나는 산책을 떠났어요... | A cover illustration of a cute baby flying squirrel with tiny wings sitting on a pastel rainbow. The Korean text "로롱이와 무지개 요정" is written in cute, colorful 3D typography at the top. Whimsical watercolor style. |
-| **`creative_1/creative_1_3.png`** | Page 3~4 | 한참을 걷던 민지(이)는 커다란 버섯 나무 아래에서 울고 있는 꼬마 무지개 요정을 만났어요... | A cute baby flying squirrel with tiny wings meets a crying little rainbow fairy under a giant glowing mushroom tree in a magical forest. Soft pastel pink, purple and violet tones, sparkly watercolor style. |
-| **`creative_1/creative_1_5.png`** | Page 5~6 | 민지(이)는 따뜻한 미소를 지으며 가방 속에서 반짝반짝 요술 크레파스를 꺼내어 요정에게 나누어 주었어요... | A cute baby flying squirrel is sharing colorful, shiny magic crayons from a small pouch with a smiling little rainbow fairy. Magical garden setting, sparkling stars, pastel colors, watercolor. |
-| **`creative_1/creative_1_7.png`** | Page 7~8 | 요정은 기뻐하며 크레파스를 받아 쥐었고, 하늘 위에 커다란 오색 빛깔 무지개를 그리기 시작했어요... | A cute little rainbow fairy uses a magical crayon to paint a bright, beautiful multi-colored rainbow across a soft purple sky. Soft pastel clouds, sparkling stars, dreamy watercolor style. |
-| **`creative_1/creative_1_9.png`** | Page 9~10 | 무지개 요정은 너무 고마워하며 착한 민지이의 손가락에 반짝이는 핑크빛 별빛 반지를 끼워주었어요... | A smiling little rainbow fairy slides a glowing pink star ring onto the paw of a cute baby flying squirrel. Magical forest background, sparkling gold fairy dust, warm pastel colors, watercolor style. |
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_1_1.png` | A cover illustration of a cute baby flying squirrel with tiny wings sitting on a pastel rainbow. The Korean text "로롱이와 무지개 요정" is written in cute, colorful 3D typography at the top. Whimsical watercolor style. | 어느 아주 맑고 화창한 날 아침, 민지는 마법의 무지개 숲속으로 신나는 산책을 떠났어요. |
+| `creative_1_2.png` | A cover illustration of a cute baby flying squirrel with tiny wings sitting on a pastel rainbow. The Korean text "로롱이와 무지개 요정" is written in cute, colorful 3D typography at the top. Whimsical watercolor style. | 숲속에는 알록달록 무지개 꽃들이 피어 있었고, 달콤한 솜사탕 향기가 바람을 타고 솔솔 불어왔답니다. |
+| `creative_1_3.png` | A cute baby flying squirrel with tiny wings meets a crying little rainbow fairy under a giant glowing mushroom tree in a magical forest. Soft pastel pink, purple and violet tones, sparkly watercolor style. | 한참을 걷던 민지는 커다란 버섯 나무 아래에서 울고 있는 꼬마 무지개 요정을 만났어요. |
+| `creative_1_4.png` | A cute baby flying squirrel with tiny wings meets a crying little rainbow fairy under a giant glowing mushroom tree in a magical forest. Soft pastel pink, purple and violet tones, sparkly watercolor style. | 요정은 눈물을 뚝뚝 흘리며 말했어요. '하늘을 색칠할 내 마법의 무지개 붓을 잃어버렸어.' |
+| `creative_1_5.png` | A cute baby flying squirrel is sharing colorful, shiny magic crayons from a small pouch with a smiling little rainbow fairy. Magical garden setting, sparkling stars, pastel colors, watercolor. | 민지는 따뜻한 미소를 지으며 가방 속에서 반짝반짝 요술 크레파스를 꺼내어 요정에게 나누어 주었어요. |
+| `creative_1_6.png` | A cute baby flying squirrel is sharing colorful, shiny magic crayons from a small pouch with a smiling little rainbow fairy. Magical garden setting, sparkling stars, pastel colors, watercolor. | '속상해하지 마! 내 요술 크레파스로 무지개를 칠해봐. 아주 예쁜 색이 나올 거야!' |
+| `creative_1_7.png` | A cute little rainbow fairy uses a magical crayon to paint a bright, beautiful multi-colored rainbow across a soft purple sky. Soft pastel clouds, sparkling stars, dreamy watercolor style. | 요정은 기뻐하며 크레파스를 받아 쥐었고, 하늘 위에 커다란 오색 빛깔 무지개를 그리기 시작했어요. |
+| `creative_1_8.png` | A cute little rainbow fairy uses a magical crayon to paint a bright, beautiful multi-colored rainbow across a soft purple sky. Soft pastel clouds, sparkling stars, dreamy watercolor style. | 그러자 깜깜했던 숲속 하늘이 환하게 밝아지며, 은하수 별가루가 눈부시게 쏟아져 내렸답니다. |
+| `creative_1_9.png` | A smiling little rainbow fairy slides a glowing pink star ring onto the paw of a cute baby flying squirrel. Magical forest background, sparkling gold fairy dust, warm pastel colors, watercolor style. | 무지개 요정은 너무 고마워하며 착한 민지이의 손가락에 반짝이는 핑크빛 별빛 반지를 끼워주었어요. |
+| `creative_1_10.png` | A smiling little rainbow fairy slides a glowing pink star ring onto the paw of a cute baby flying squirrel. Magical forest background, sparkling gold fairy dust, warm pastel colors, watercolor style. | 서로 나누는 기쁨을 배운 민지는 예쁜 별빛 반지와 함께 행복한 마음으로 집으로 돌아왔답니다. |
 
 ---
 
-## 👠 3. 신데렐라 (`classic_1`)
-착한 신데렐라가 요정 할머니를 만나 유리구두의 주인공이 되는 명작 이야기입니다.
+## 🐰 [creative_2] 꼬마 토끼의 용기 상자 (두려움을 이기는 용기)
+* **설명**: 꼬마 토끼의 용기 상자 - 10페이지 아동 맞춤 스토리라인
 
-| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
-| :--- | :---: | :--- | :--- |
-| **`classic_1/classic_1_1.png`** | Page 1~2 | 아주 먼 옛날, 마음씨가 착하고 고운 아름다운 소녀 신데렐라가 새어머니와 언니들과 함께 살고 있었어요... | A dreamlike book cover illustration of Cinderella. A beautiful princess in a glowing blue ballgown next to a pumpkin carriage. Prominently features the Korean text "신데렐라" in elegant gold typography at the top. Fairytale watercolor style. |
-| **`classic_1/classic_1_3.png`** | Page 3~4 | 신데렐라는 부엌바닥에서 재를 뒤집어쓰고 일하면서도 늘 마음속에 환한 희망을 잃지 않았어요... | Cinderella in a ragged dress is sitting on a wooden stool in a dusty stone kitchen, crying softly as her stepsisters leave in a carriage. Warm fire glow, soft watercolor style. |
-| **`classic_1/classic_1_5.png`** | Page 5~6 | 하지만 언니들은 자신들만 예쁘게 단장하고 가버렸고, 신데렐라는 혼자 부엌에 남아 울었답니다... | A kind, glowing fairy godmother is waving a magic wand over Cinderella, transforming her ragged clothes into a beautiful glowing blue ballgown. Sparkles, stars, soft watercolor style. |
-| **`classic_1/classic_1_7.png`** | Page 7~8 | 요술봉을 톡톡 흔들자 신데렐라의 낡은 옷은 눈부신 드레스로, 호박은 황금빛 마차로 마법처럼 바뀌었어요... | A glowing golden pumpkin carriage is parked outside a grand castle at night. Sparkles in the air, full moon, soft dreamlike fairytale style, watercolor. |
-| **`classic_1/classic_1_9.png`** | Page 9~10 | 무도회에서 왕자님과 즐거운 춤을 추던 신데렐라는 열두 시 종이 울리자 서둘러 뛰어 나오다 유리구두... | A handsome prince is sliding a tiny glowing glass slipper onto Cinderella's foot. It fits perfectly! Cinderella is smiling, magical celebration sparkles, soft watercolor fairytale style. |
-
----
-
-## ⭐ 4. 아기 별들의 밤하늘 축제 (`creative_3`)
-어두워진 밤하늘을 위해 주인공과 동물들이 협동하여 노래를 부르고 아기 별들을 다시 반짝이게 돕는 이야기입니다. (1페이지당 1장 구조)
-
-| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
-| :--- | :---: | :--- | :--- |
-| **`creative_3/creative_3_1.jpg`** | Page 1 | 일 년에 한 번씩 찾아오는 은하수 광장의 아기 별들의 댄스 축제 날이 마침내 찾아왔어요. | A cover illustration for a children's fairytale book. A group of tiny cute smiling baby stars are dancing on a sparkling river of stardust in a deep purple night sky. Bouncy colorful Korean text "아기 별들의 밤하늘 축제" is written in glowing letters at the top. Whimsical watercolor children's book style. |
-| **`creative_3/creative_3_2.jpg`** | Page 2 | 하지만 갑자기 시커먼 먹구름 괴물이 하늘을 덮어버려서 아기 별들의 눈부신 빛이 꽁꽁 가려졌어요. | A giant dark grumpy storm cloud monster sweeps across the starry sky, covering the sparkling little stars and casting a dark shadow over the land. Soft watercolor style. |
-| **`creative_3/creative_3_3.jpg`** | Page 3 | 하늘이 깜깜해지자 은하수 축제를 기대하던 숲속 동물 친구들은 큰 실망에 빠져 고개를 숙였어요. | A group of cute friendly forest animals (a little bear, squirrel, and deer) are sitting on a grassy hill, looking up at the dark night sky with sad faces. Soft glowing moon hidden behind clouds, watercolor style. |
-| **`creative_3/creative_3_4.jpg`** | Page 4 | 이때 지혜로운 민지(이)가 나서며 동물 친구들을 불렀어요. '모두 높은 산 위로 올라가자!' | A kind little girl/boy is standing on a high mountain peak at night, calling out and waving to a group of cute forest animals to follow. Bright sparkling stars peeking through clouds, watercolor style. |
-| **`creative_3/creative_3_5.jpg`** | Page 5 | 민지(이)와 곰돌이, 다람쥐는 손에 손을 꼬옥 잡고 밤하늘을 향해 아주 예쁜 희망의 노래를 불렀어요. | A group of children and cute forest animals are holding hands in a circle on top of a mountain under the night sky, singing together happily. Whimsical watercolor style. |
-| **`creative_3/creative_3_6.jpg`** | Page 6 | 친구들의 다정하고 따뜻한 노랫소리가 먹구름을 지나 하늘 꼭대기 아기 별들의 귀에 닿았답니다. | Glowing musical notes and sparkles float up from the singing animals on the mountain peak, traveling through the dark storm clouds toward the hidden stars. Soft dreamlike watercolor style. |
-| **`creative_3/creative_3_7.jpg`** | Page 7 | 아기 별들은 용기를 내어 서로의 작은 손을 잡았고, 빛을 꽁꽁 뭉쳐 더욱 강한 빛을 뿜었어요. | A group of tiny cute baby stars in the sky are holding hands, their bodies glowing brighter and brighter as they gather their light together. Sparkles, magical watercolor style. |
-| **`creative_3/creative_3_8.jpg`** | Page 8 | 모두가 힘을 합치자 커다란 시커먼 먹구름 괴물은 휙 날아가 버렸고, 하늘은 다시 눈부셔졌어요. | The dark grumpy storm cloud monster is blown away by the combined brilliant light of the glowing baby stars. The night sky becomes bright and clear again, watercolor style. |
-| **`creative_3/creative_3_9.jpg`** | Page 9 | 은하수 광장에는 오색찬란한 아기 별들의 환상적인 댄스 축제가 성대하게 시작되었답니다. | A grand, magical stardust dance festival under the night sky. Tiny smiling baby stars and cute forest animals are dancing together on a glowing silver silver-blue Milky Way field. Watercolor fairytale style. |
-| **`creative_3/creative_3_10.jpg`** | Page 10 | 민지(이)와 별들은 힘을 합치면 그 어떤 어둠도 물리칠 수 있다는 멋진 지혜를 깨달았답니다. | A smiling baby star winks down from the bright starry sky toward a happy child who is looking up from a bedroom window, holding hands with a toy squirrel. Cozy room, warm and happy atmosphere, watercolor style. |
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_2_1.jpg` | A cover illustration of a cute baby rabbit with big sparkly eyes looking scared in a dark cozy bedroom. The Korean text "꼬마 토끼의 용기 상자" is written in bubbly, warm golden 3D typography at the top. Whimsical watercolor children's book style. | 숲속 마을에 살고 있는 귀여운 아기 토끼 토토는 밤만 되면 방 안이 어두워져서 무척 두려워했어요. |
+| `creative_2_2.jpg` | Cute baby rabbit shivering under a fluffy blanket in bed, look of fear on its face. Soft lamp light, cozy children's room setting, clock visible on the wall. Whimsical watercolor style. | 침대에 누워 이불을 머리끝까지 뒤집어쓰고 눈을 질끈 감아도, 시계 소리마저 무서운 도깨비 소리 같았지요. |
+| `creative_2_3.jpg` | A kind little girl with a warm smile is presenting a beautiful, glowing golden box to a scared baby rabbit in a cozy bedroom setting. Magical warm light, watercolor style. | 이 소식을 들은 친절한 친구 민지가 토토의 방으로 찾아와 예쁘고 반짝이는 황금 상자를 건넸어요. |
+| `creative_2_4.jpg` | Close-up of a beautifully decorated, glowing golden box resting on a child's hands. Soft sparkling gold dust floating around, magical fairytale atmosphere, watercolor style. | '토토야, 이건 마음속에 꼭 숨어 있는 비밀 용기를 꺼내주는 마술 상자야!' |
+| `creative_2_5.jpg` | The cute baby rabbit holds the golden box and gently opens it. Warm golden light and sparkling dust float out, illuminating the rabbit's face with a look of wonder. Watercolor style. | 토토는 민지이의 말을 듣고 조심조심 황금 상자를 열었고, 그 안에서는 몽환적인 황금빛 가루가 흘러나왔어요. |
+| `creative_2_6.jpg` | The glowing golden light wraps around the baby rabbit's shoulders like a soft magic scarf. The rabbit has a warm, comforted expression, feeling brave. Watercolor style. | 황금빛 가루가 토토의 작은 어깨를 부드럽게 감싸 안아주자, 마음이 스르륵 따뜻하고 든든해졌어요. |
+| `creative_2_7.jpg` | The brave baby rabbit extends its paw and opens a large glass bedroom window, looking out to the night sky, curious and no longer afraid. Watercolor style. | 토토는 떨리는 손을 내밀어 굳게 닫혀 있던 커다란 창문을 열고 밤하늘을 올려다보았어요. |
+| `creative_2_8.jpg` | View out the window showing a beautiful starry night sky. Friendly little stars with smiling faces in the sky are winking down. Soft dark blue and purple tones, magical dreamlike watercolor style. | 창밖에는 무서운 귀신 대신 반짝반짝 다정하게 윙크해 주는 아기 별들이 가득 떠 있었답니다. |
+| `creative_2_9.jpg` | Cute baby rabbit sleeping peacefully in bed under a soft starry-patterned blanket, smiling. Cozy room, stars visible outside the window, warm and safe atmosphere. Watercolor style. | 토토는 이제 어두운 밤이 되어도 무섭지 않았고, 예쁜 은하수 이불을 덮고 쿨쿨 꿀잠을 잘 자게 되었어요. |
+| `creative_2_10.jpg` | The brave rabbit is happily playing in a sunny forest clearing with other friendly animal friends, wearing a tiny golden star badge. Bright, cheerful morning light, whimsical watercolor style. | 민지이의 황금 상자 덕분에 토토는 숲속 마을에서 밤을 가장 사랑하는 용감한 꼬마 토끼가 되었답니다. |
 
 ---
 
-## 🦁 5. 과자 나라의 다정한 사자 (`creative_4`)
-분홍색 솜사탕 갈기를 지닌 사자 레오 왕이 곤경에 처한 아기 다람쥐를 돕기 위해 자신의 달콤한 갈기를 떼어 나누어 주는 배려와 친절의 이야기입니다. (1페이지당 1장 구조)
+## ⭐ [creative_3] 아기 별들의 밤하늘 축제 (서로 돕는 협동심)
+* **설명**: 아기 별들의 밤하늘 축제 - 10페이지 아동 맞춤 스토리라인
 
-| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
-| :--- | :---: | :--- | :--- |
-| **`creative_4/creative_4_1.jpg`** | Page 1 | 분홍색 솜사탕 갈기를 뽐내는 다정한 사자 레오는 달콤한 과자 나라를 평화롭게 다스리는 멋진 왕이었어요. | A cover illustration for a children's fairytale book. A friendly cute king lion with a fluffy pink cotton candy mane is sitting on a waffle throne in a magical candy land. Bouncy colorful Korean text "과자 나라의 다정한 사자" is written in glowing letters at the top. Whimsical children's book watercolor style. |
-| **`creative_4/creative_4_2.jpg`** | Page 2 | 레오 왕은 매일 아침 맛있는 쿠키 꽃밭을 가꾸고 초콜릿 강을 돌보며 온 정성을 다했답니다. | The cute friendly king lion with a pink cotton candy mane is watering a flowerbed of chocolate cookies in a bright candy kingdom. Sweet rivers of melted chocolate nearby, watercolor style. |
-| **`creative_4/creative_4_3.jpg`** | Page 3 | 어느 날 오후, 호기심 많은 민지(이)가 알록달록 마카롱 길을 따라 걷다가 레오 왕의 성에 방문했어요. | A curious little girl with a warm smile is walking along a path made of colorful sweet macarons, heading towards a grand pastel candy castle. Whimsical watercolor style. |
-| **`creative_4/creative_4_4.jpg`** | Page 4 | 그때 성문 밖에서 젤리 열쇠를 잃어버리고 훌쩍훌쩍 울고 있는 꼬마 아기 다람쥐가 눈에 띄었어요. | A tiny cute baby squirrel is crying outside a grand candy castle gate because it lost its key made of shiny red jelly. The friendly king lion and a little girl look on with concern. Watercolor style. |
-| **`creative_4/creative_4_5.jpg`** | Page 5 | 아기 다람쥐는 집에 들어가지 못해 몹시 배가 고프고 발이 아파서 한 걸음도 걸을 수가 없었지요. | The tiny baby squirrel is sitting sadly on a macaron path, rubbing its eyes, looking hungry and tired. Soft warm colors, cozy but sad candy land background, watercolor style. |
-| **`creative_4/creative_4_6.jpg`** | Page 6 | 친절한 레오 왕은 자신의 갈기에서 폭신하고 달콤한 딸기맛 솜사탕을 한 웅큼 떼어 다람쥐에게 주었어요. | The kind king lion is gently tearing a fluffy piece of sweet strawberry cotton candy from his own pink mane and giving it to the hungry baby squirrel. Warm, touching atmosphere, watercolor style. |
-| **`creative_4/creative_4_7.jpg`** | Page 7 | 민지(이)는 가방을 뒤져 돋보기를 꺼낸 뒤, 마카롱 틈새에 숨겨져 있던 젤리 열쇠를 열심히 찾았답니다. | A little girl uses a magnifying glass to search for a lost red jelly key between the cracks of colorful sweet macarons on a path. Whimsical watercolor style. |
-| **`creative_4/creative_4_8.jpg`** | Page 8 | 마침내 초콜릿 풀숲 밑에서 반짝이던 젤리 열쇠를 발견했고, 다람쥐는 기뻐서 펄쩍 뛰어올랐어요. | A little girl finds a shiny red jelly key hidden under a patch of green chocolate grass. The tiny baby squirrel is jumping with joy, happy atmosphere, watercolor style. |
-| **`creative_4/creative_4_9.jpg`** | Page 9 | 다람쥐는 고마움의 표시로 레오 왕과 민지이에게 하트 모양 마들렌을 두 손 가득 전했답니다. | The cute baby squirrel is happily presenting a plate of heart-shaped madeline cakes to the kind king lion and the little girl as a thank you. Warm and grateful atmosphere, watercolor style. |
-| **`creative_4/creative_4_10.jpg`** | Page 10 | 배려하고 나누는 마음이 퍼지자, 맛있는 과자 나라는 더욱 달콤하고 행복한 천국이 되었답니다. | A group of cute forest animals and the kind king lion are having a happy picnic party in a beautiful candy meadow under a soft rainbow sky. Bright, cheerful watercolor style. |
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_3_1.jpg` | A cover illustration for a children's fairytale book. A group of tiny cute smiling baby stars are dancing on a sparkling river of stardust in a deep purple night sky. Bouncy colorful Korean text "아기 별들의 밤하늘 축제" is written in glowing letters at the top. Whimsical watercolor children's book style. | 일 년에 한 번씩 찾아오는 은하수 광장의 아기 별들의 댄스 축제 날이 마침내 찾아왔어요. |
+| `creative_3_2.jpg` | A giant dark grumpy storm cloud monster sweeps across the starry sky, covering the sparkling little stars and casting a dark shadow over the land. Soft watercolor style. | 하지만 갑자기 시커먼 먹구름 괴물이 하늘을 덮어버려서 아기 별들의 눈부신 빛이 꽁꽁 가려졌어요. |
+| `creative_3_3.jpg` | A group of cute friendly forest animals (a little bear, squirrel, and deer) are sitting on a grassy hill, looking up at the dark night sky with sad faces. Soft glowing moon hidden behind clouds, watercolor style. | 하늘이 깜깜해지자 은하수 축제를 기대하던 숲속 동물 친구들은 큰 실망에 빠져 고개를 숙였어요. |
+| `creative_3_4.jpg` | A kind little girl/boy is standing on a high mountain peak at night, calling out and waving to a group of cute forest animals to follow. Bright sparkling stars peeking through clouds, watercolor style. | 이때 지혜로운 민지가 나서며 동물 친구들을 불렀어요. '모두 높은 산 위로 올라가자!' |
+| `creative_3_5.jpg` | A group of children and cute forest animals are holding hands in a circle on top of a mountain under the night sky, singing together happily. Whimsical watercolor style. | 민지와 곰돌이, 다람쥐는 손에 손을 꼬옥 잡고 밤하늘을 향해 아주 예쁜 희망의 노래를 불렀어요. |
+| `creative_3_6.jpg` | Glowing musical notes and sparkles float up from the singing animals on the mountain peak, traveling through the dark storm clouds toward the hidden stars. Soft dreamlike watercolor style. | 친구들의 다정하고 따뜻한 노랫소리가 먹구름을 지나 하늘 꼭대기 아기 별들의 귀에 닿았답니다. |
+| `creative_3_7.jpg` | A group of tiny cute baby stars in the sky are holding hands, their bodies glowing brighter and brighter as they gather their light together. Sparkles, magical watercolor style. | 아기 별들은 용기를 내어 서로의 작은 손을 잡았고, 빛을 꽁꽁 뭉쳐 더욱 강한 빛을 뿜었어요. |
+| `creative_3_8.jpg` | The dark grumpy storm cloud monster is blown away by the combined brilliant light of the glowing baby stars. The night sky becomes bright and clear again, watercolor style. | 모두가 힘을 합치자 커다란 시커먼 먹구름 괴물은 휙 날아가 버렸고, 하늘은 다시 눈부셔졌어요. |
+| `creative_3_9.jpg` | A grand, magical stardust dance festival under the night sky. Tiny smiling baby stars and cute forest animals are dancing together on a glowing silver silver-blue Milky Way field. Watercolor fairytale style. | 은하수 광장에는 오색찬란한 아기 별들의 환상적인 댄스 축제가 성대하게 시작되었답니다. |
+| `creative_3_10.jpg` | A smiling baby star winks down from the bright starry sky toward a happy child who is looking up from a bedroom window, holding hands with a toy squirrel. Cozy room, warm and happy atmosphere, watercolor style. | 민지와 별들은 힘을 합치면 그 어떤 어둠도 물리칠 수 있다는 멋진 지혜를 깨달았답니다. |
 
 ---
 
-## 🪄 6. 마법 빗자루와 요술 하프 (`creative_5`)
-아름다운 소리를 내지 못해 슬퍼하는 하프와 외톨이 빗자루가 만나 손을 잡고 음악을 연주해 평생 함께할 단짝 친구가 되는 이야기입니다. (1페이지당 1장 구조)
+## 🦁 [creative_4] 과자 나라의 다정한 사자 (배려와 친절)
+* **설명**: 과자 나라의 다정한 사자 - 10페이지 아동 맞춤 스토리라인
 
-| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
-| :--- | :---: | :--- | :--- |
-| **`creative_5/creative_5_1.jpg`** | Page 1 | 하늘나라 궁전에는 노래하는 요술 하프 루루가 있었지만, 스스로 아름다운 목소리를 내지 못해 늘 슬퍼했어요. | A cover illustration for a children's fairytale book. A cute gold harp with gentle eyes is standing next to a cheerful magic wooden broom in a glowing sky palace garden. Bouncy colorful Korean text "마법 빗자루와 요술 하프" is written in glowing letters at the top. Whimsical watercolor children's book style. |
-| **`creative_5/creative_5_2.jpg`** | Page 2 | 그늘진 정원에는 마법 빗자루 슈슈가 혼자 먼지를 쓸고 다니느라 친구가 없어 무척 외로워했답니다. | A lonely magic wooden broom with a cute face is sweeping dust alone in a quiet, shadowy palace garden. Whimsical watercolor style. |
-| **`creative_5/creative_5_3.jpg`** | Page 3 | 이를 본 민지(이)는 두 친구의 외로운 사정을 알고, 다 함께 모여 노는 모임을 가졌어요. | A friendly little girl with a warm smile is introducing the sad gold harp and the lonely magic wooden broom to each other in a sunny garden clearing. Cozy and welcoming atmosphere, watercolor style. |
-| **`creative_5/creative_5_4.jpg`** | Page 4 | '루루야, 슈슈야! 너희 둘의 마법을 합치면 아주 놀라운 일이 일어날 수 있어! 한번 손을 잡아봐!' | A friendly little girl is gesturing with excitement, encouraging the magic wooden broom and the gold harp to hold hands/touch. Bright sparkling stars in the air, fairytale watercolor style. |
-| **`creative_5/creative_5_5.jpg`** | Page 5 | 마법 빗자루 슈슈가 깃털 꼬리로 요술 하프 루루의 은빛 현을 부드럽고 상냥하게 톡 건드렸어요. | The magic wooden broom gently strokes the shiny silver strings of the gold harp with its soft feathers. A warm and hopeful light glows from the point of contact, watercolor style. |
-| **`creative_5/creative_5_6.jpg`** | Page 6 | 그 순간, 하프에서 별빛이 찬란하게 튀며 숲속을 가득 메우는 맑고 고운 아기 요정의 멜로디가 울려 퍼졌어요. | Brilliant colorful sparkles and glowing music notes burst out as the broom strokes the harp. The air is filled with magical, bright melodies, painting the environment with soft colors. Whimsical watercolor style. |
-| **`creative_5/creative_5_7.jpg`** | Page 7 | 루루는 마침내 아름다운 노랫소리를 갖게 되었고, 슈슈는 발걸음에 맞춰 춤을 신나게 추었어요. | The gold harp is singing happily with a big smile, and the magic wooden broom is dancing and spinning around in circles with joy. Whimsical children's book watercolor style. |
-| **`creative_5/creative_5_8.jpg`** | Page 8 | 하늘나라 친구들은 음악 소리에 맞춰 둥글게 모여 춤을 추며 모두가 즐거운 축제를 만끽했답니다. | A group of cute fairytale characters and animals are dancing in a circle in the sky palace garden, enjoying the beautiful harp music. Colorful flowers, bright happy watercolor style. |
-| **`creative_5/creative_5_9.jpg`** | Page 9 | 이제 루루와 슈슈는 어디를 가든 함께 다니는 하늘나라 최고의 단짝 친구가 되었어요. | The magic wooden broom and the gold harp are walking side by side down a sparkling corridor, happy and holding hands as best friends. Watercolor style. |
-| **`creative_5/creative_5_10.jpg`** | Page 10 | 민지(이)의 따뜻한 중재 덕분에 두 외로운 장난감은 평생 함께할 영혼의 우정을 얻게 되었답니다. | A friendly little girl is smiling as she watches the magic broom and the gold harp play together under a warm, glowing sunset sky. Cozy, happy watercolor style. |
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_4_1.jpg` | A cover illustration for a children's fairytale book. A friendly cute king lion with a fluffy pink cotton candy mane is sitting on a waffle throne in a magical candy land. Bouncy colorful Korean text "과자 나라의 다정한 사자" is written in glowing letters at the top. Whimsical children's book watercolor style. | 분홍색 솜사탕 갈기를 뽐내는 다정한 사자 레오는 달콤한 과자 나라를 평화롭게 다스리는 멋진 왕이었어요. |
+| `creative_4_2.jpg` | The cute friendly king lion with a pink cotton candy mane is watering a flowerbed of chocolate cookies in a bright candy kingdom. Sweet rivers of melted chocolate nearby, watercolor style. | 레오 왕은 매일 아침 맛있는 쿠키 꽃밭을 가꾸고 초콜릿 강을 돌보며 온 정성을 다했답니다. |
+| `creative_4_3.jpg` | A curious little girl with a warm smile is walking along a path made of colorful sweet macarons, heading towards a grand pastel candy castle. Whimsical watercolor style. | 어느 날 오후, 호기심 많은 민지가 알록달록 마카롱 길을 따라 걷다가 레오 왕의 성에 방문했어요. |
+| `creative_4_4.jpg` | A tiny cute baby squirrel is crying outside a grand candy castle gate because it lost its key made of shiny red jelly. The friendly king lion and a little girl look on with concern. Watercolor style. | 그때 성문 밖에서 젤리 열쇠를 잃어버리고 훌쩍훌쩍 울고 있는 꼬마 아기 다람쥐가 눈에 띄었어요. |
+| `creative_4_5.jpg` | The tiny baby squirrel is sitting sadly on a macaron path, rubbing its eyes, looking hungry and tired. Soft warm colors, cozy but sad candy land background, watercolor style. | 아기 다람쥐는 집에 들어가지 못해 몹시 배가 고프고 발이 아파서 한 걸음도 걸을 수가 없었지요. |
+| `creative_4_6.jpg` | The kind king lion is gently tearing a fluffy piece of sweet strawberry cotton candy from his own pink mane and giving it to the hungry baby squirrel. Warm, touching atmosphere, watercolor style. | 친절한 레오 왕은 자신의 갈기에서 폭신하고 달콤한 딸기맛 솜사탕을 한 웅큼 떼어 다람쥐에게 주었어요. |
+| `creative_4_7.jpg` | A little girl uses a magnifying glass to search for a lost red jelly key between the cracks of colorful sweet macarons on a path. Whimsical watercolor style. | 민지는 가방을 뒤져 돋보기를 꺼낸 뒤, 마카롱 틈새에 숨겨져 있던 젤리 열쇠를 열심히 찾았답니다. |
+| `creative_4_8.jpg` | A little girl finds a shiny red jelly key hidden under a patch of green chocolate grass. The tiny baby squirrel is jumping with joy, happy atmosphere, watercolor style. | 마침내 초콜릿 풀숲 밑에서 반짝이던 젤리 열쇠를 발견했고, 다람쥐는 기뻐서 펄쩍 뛰어올랐어요. |
+| `creative_4_9.jpg` | The cute baby squirrel is happily presenting a plate of heart-shaped madeline cakes to the kind king lion and the little girl as a thank you. Warm and grateful atmosphere, watercolor style. | 다람쥐는 고마움의 표시로 레오 왕과 민지이에게 하트 모양 마들렌을 두 손 가득 전했답니다. |
+| `creative_4_10.jpg` | A group of cute forest animals and the kind king lion are having a happy picnic party in a beautiful candy meadow under a soft rainbow sky. Bright, cheerful watercolor style. | 배려하고 나누는 마음이 퍼지자, 맛있는 과자 나라를 더욱 달콤하고 행복한 천국이 되었답니다. |
+
+---
+
+## 🪄 [creative_5] 마법 빗자루와 요술 하프 (소중한 친구 사이의 우정)
+* **설명**: 마법 빗자루와 요술 하프 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_5_1.jpg` | A cover illustration for a children's fairytale book. A cute gold harp with gentle eyes is standing next to a cheerful magic wooden broom in a glowing sky palace garden. Bouncy colorful Korean text "마법 빗자루와 요술 하프" is written in glowing letters at the top. Whimsical watercolor children's book style. | 하늘나라 궁전에는 노래하는 요술 하프 루루가 있었지만, 스스로 아름다운 목소리를 내지 못해 늘 슬퍼했어요. |
+| `creative_5_2.jpg` | A lonely magic wooden broom with a cute face is sweeping dust alone in a quiet, shadowy palace garden. Whimsical watercolor style. | 그늘진 정원에는 마법 빗자루 슈슈가 혼자 먼지를 쓸고 다니느라 친구가 없어 무척 외로워했답니다. |
+| `creative_5_3.jpg` | A friendly little girl with a warm smile is introducing the sad gold harp and the lonely magic wooden broom to each other in a sunny garden clearing. Cozy and welcoming atmosphere, watercolor style. | 이를 본 민지는 두 친구의 외로운 사정을 알고, 다 함께 모여 노는 모임을 가졌어요. |
+| `creative_5_4.jpg` | A friendly little girl is gesturing with excitement, encouraging the magic wooden broom and the gold harp to hold hands/touch. Bright sparkling stars in the air, fairytale watercolor style. | '루루야, 슈슈야! 너희 둘의 마법을 합치면 아주 놀라운 일이 일어날 수 있어! 한번 손을 잡아봐!' |
+| `creative_5_5.jpg` | The magic wooden broom gently strokes the shiny silver strings of the gold harp with its soft feathers. A warm and hopeful light glows from the point of contact, watercolor style. | 마법 빗자루 슈슈가 깃털 꼬리로 요술 하프 루루의 은빛 현을 부드럽고 상냥하게 톡 건드렸어요. |
+| `creative_5_6.jpg` | Brilliant colorful sparkles and glowing music notes burst out as the broom strokes the harp. The air is filled with magical, bright melodies, painting the environment with soft colors. Whimsical watercolor style. | 그 순간, 하프에서 별빛이 찬란하게 튀며 숲속을 가득 메우는 맑고 고운 아기 요정의 멜로디가 울려 퍼졌어요. |
+| `creative_5_7.jpg` | The gold harp is singing happily with a big smile, and the magic wooden broom is dancing and spinning around in circles with joy. Whimsical children's book watercolor style. | 루루는 마침내 아름다운 노랫소리를 갖게 되었고, 슈슈는 발걸음에 맞춰 춤을 신나게 추었어요. |
+| `creative_5_8.jpg` | A group of cute fairytale characters and animals are dancing in a circle in the sky palace garden, enjoying the beautiful harp music. Colorful flowers, bright happy watercolor style. | 하늘나라 친구들은 음악 소리에 맞춰 둥글게 모여 춤을 추며 모두가 즐거운 축제를 만끽했답니다. |
+| `creative_5_9.jpg` | The magic wooden broom and the gold harp are walking side by side down a sparkling corridor, happy and holding hands as best friends. Watercolor style. | 이제 루루와 슈슈는 어디를 가든 함께 다니는 하늘나라 최고의 단짝 친구가 되었어요. |
+| `creative_5_10.jpg` | A friendly little girl is smiling as she watches the magic broom and the gold harp play together under a warm, glowing sunset sky. Cozy, happy watercolor style. | 민지의 따뜻한 중재 덕분에 두 외로운 장난감은 평생 함께할 영혼의 우정을 얻게 되었답니다. |
+
+---
+
+## 🐚 [creative_6] 반짝반짝 조개껍데기 (거짓말을 하지 않는 정직)
+* **설명**: 반짝반짝 조개껍데기 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_6_1.jpg` | A cover illustration for a children's fairytale book. Features a cute little starfish and a friendly little mermaid in a beautiful setting. The Korean text "반짝반짝 조개껍데기" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 에메랄드 바다 밑바닥에는 꼬마 불가사리 별이가 고운 은빛 모래알 사이에서 낮잠을 자고 있었어요. |
+| `creative_6_2.jpg` | a cute little starfish and a friendly little mermaid under a starry night sky with twinkling yellow stars, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 별이는 우연히 분홍빛 모래 언덕 틈새에서 진주처럼 영롱하게 빛나는 분홍 조개껍데기를 주웠어요. |
+| `creative_6_3.jpg` | a cute little starfish and a friendly little mermaid with a guilty look on face, looking down, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 너무 신기하고 예뻐서 다른 친구들에게 보여주며 '이건 원래부터 내 것이었어' 하고 거짓말을 했지요. |
+| `creative_6_4.jpg` | a cute little starfish and a friendly little mermaid happily smiling and posing, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 그 예쁜 조개껍데기는 저편 산호초에서 꼬마 인어 공주가 잃어버리고 훌쩍이던 단짝 물건이었어요. |
+| `creative_6_5.jpg` | a cute little starfish and a friendly little mermaid under a starry night sky with twinkling yellow stars, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 정직한 민지가 별이에게 부드럽게 다가가 속삭였어요. '별이야, 정직이 가장 귀한 별빛이야.' |
+| `creative_6_6.jpg` | a cute little starfish and a friendly little mermaid with a guilty look on face, looking down, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '거짓말로 가진 예쁜 조개보다는, 정직하게 돌려주고 얻은 꼬마 인어의 웃음이 더 가치 있단다.' |
+| `creative_6_7.jpg` | a cute little starfish and a friendly little mermaid under a starry night sky with twinkling yellow stars, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 별이는 가슴이 두근거렸지만 용기를 내어 꼬마 인어에게 찾아가 조개껍데기를 정직하게 내밀었어요. |
+| `creative_6_8.jpg` | a cute little starfish and a friendly little mermaid happily smiling and posing, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '인어야 미안해, 실은 내가 주운 물건이야.' 꼬마 인어는 깜짝 놀라며 기쁜 눈물을 흘렸어요. |
+| `creative_6_9.jpg` | a cute little starfish and a friendly little mermaid swimming deep under the sparkling blue sea, giving a beautiful shiny gift box, under a starry night sky with twinkling yellow stars, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 인어는 별이의 솔직함에 감동하여 바다 요정들이 만든 가장 아름다운 진주 왕관을 선물해 주었답니다. |
+| `creative_6_10.jpg` | a cute little starfish and a friendly little mermaid under a starry night sky with twinkling yellow stars, emerald blue sea sand dune background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지의 지혜 덕분에 불가사리 별이는 마음을 지키는 정직함이 가장 밝게 빛난다는 것을 배웠답니다. |
+
+---
+
+## 🌳 [creative_7] 구름 위 도토리 나무 (기다릴 줄 아는 인내심)
+* **설명**: 구름 위 도토리 나무 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_7_1.jpg` | A cover illustration for a children's fairytale book. Features a cute baby squirrel in a beautiful setting. The Korean text "구름 위 도토리 나무" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 하늘 위 뭉게구름 정원에는 아기 다람쥐 로롱이와 민지가 마법의 골드 도토리 씨앗을 가지고 왔어요. |
+| `creative_7_2.jpg` | a cute baby squirrel happily smiling and posing, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 둘은 구름 흙을 파서 씨앗을 꾹 묻어두고, 이슬비 구름을 불러 시원한 물을 가득 주었답니다. |
+| `creative_7_3.jpg` | a cute baby squirrel happily smiling and posing, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 다음 날 아침이 되어도 구름 흙 위로는 아무런 싹도 파릇하게 돋아나지 않았어요. |
+| `creative_7_4.jpg` | a cute baby squirrel happily smiling and posing, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 조급한 로롱이는 흙을 발로 차며 속상해했어요. '씨앗이 고장 났나 봐! 당장 파내 버릴래!' |
+| `creative_7_5.jpg` | a cute baby squirrel happily smiling and posing, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 화가 난 로롱이를 다독이며 말했어요. '마법 나무는 뿌리가 먼저 자라서 시간이 필요해.' |
+| `creative_7_6.jpg` | a cute baby squirrel singing happily with musical notes floating around, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 로롱이와 민지는 매일 아침 구름 밭으로 찾아와 노래를 불러주고 이슬을 뿌리며 기다렸어요. |
+| `creative_7_7.jpg` | a cute baby squirrel happily smiling and posing, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 삼 일째, 오 일째가 되어도 변화가 없었지만 둘은 서로를 격려하며 희망을 잃지 않고 인내했답니다. |
+| `creative_7_8.jpg` | a cute baby squirrel flying high in the sky among soft pastel clouds, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 마침내 일주일 뒤, 구름 속에서 찬란한 황금빛 줄기가 번쩍이더니 하늘 높이 거대한 나무가 쑥 자라났어요. |
+| `creative_7_9.jpg` | a cute baby squirrel walking on a green forest path filled with sunshine, gathering golden acorns in the grass, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 가지마다 달콤한 솜사탕 맛 황금 도토리가 주렁주렁 매달렸고, 숲속 친구들을 위한 대축제가 열렸답니다. |
+| `creative_7_10.jpg` | a cute baby squirrel happily smiling and posing, glowing fluffy cloud garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 로롱이는 민지이와 함께 기다리는 힘인 인내심이 마법보다 훨씬 강하다는 것을 깨닫고 신나게 웃었답니다. |
+
+---
+
+## 🐻 [creative_8] 아기 곰의 달콤한 꿀단지 (다정한 마음과 친절)
+* **설명**: 아기 곰의 달콤한 꿀단지 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_8_1.jpg` | A cover illustration for a children's fairytale book. Features a cute chubby baby bear holding a gold honey pot in a beautiful setting. The Korean text "아기 곰의 달콤한 꿀단지" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 숲속 커다란 꿀벌 나무 아래에는 욕심꾸러기 아기 곰 웅이가 맛있는 꿀단지를 안고 숨어 있었어요. |
+| `creative_8_2.jpg` | a cute chubby baby bear holding a gold honey pot eating sweet golden honey from a jar, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 웅이는 세상에서 달콤한 꿀을 가장 좋아해서, 누구에게도 꿀을 한 방울도 보여주고 싶지 않았지요. |
+| `creative_8_3.jpg` | a cute chubby baby bear holding a gold honey pot happily smiling and posing, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그때 저 멀리 바람에 날려 날개가 다친 가녀린 아기 파랑새 한 마리가 힘없이 바닥으로 뚝 떨어졌어요. |
+| `creative_8_4.jpg` | a cute chubby baby bear holding a gold honey pot happily smiling and posing, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 파랑새는 며칠 동안 밥을 먹지 못해 목소리조차 내지 못하고 부르르 떨며 눈물을 흘렸답니다. |
+| `creative_8_5.jpg` | a cute chubby baby bear holding a gold honey pot happily smiling and posing, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 민지는 웅이에게 다가가 속삭였어요. '웅이야, 배고픈 친구에게 친절을 나누는 건 어떨까?' |
+| `creative_8_6.jpg` | a cute chubby baby bear holding a gold honey pot eating sweet golden honey from a jar, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '다정한 친절은 우리가 먹는 그 어떤 달콤한 꿀보다 우리 마음을 훨씬 더 달게 만들어준단다.' |
+| `creative_8_7.jpg` | a cute chubby baby bear holding a gold honey pot eating sweet golden honey from a jar, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 웅이는 아까웠지만 눈을 질끈 감고 가장 큰 숟가락으로 황금빛 꿀을 듬뿍 떠서 파랑새에게 아~ 하고 주었어요. |
+| `creative_8_8.jpg` | a cute chubby baby bear holding a gold honey pot singing happily with musical notes floating around, giving a beautiful shiny gift box, eating sweet golden honey from a jar, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 달콤한 꿀을 한 입 먹은 파랑새는 눈이 번쩍 뜨이더니, 날개를 파닥이며 예쁜 노래를 선물했답니다. |
+| `creative_8_9.jpg` | a cute chubby baby bear holding a gold honey pot flying high in the sky among soft pastel clouds, under a starry night sky with twinkling yellow stars, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 파랑새는 고맙다며 밤하늘 별자리가 숨겨진 보물 지도를 웅이와 민지이에게 건네주었어요. |
+| `creative_8_10.jpg` | a cute chubby baby bear holding a gold honey pot walking on a green forest path filled with sunshine, eating sweet golden honey from a jar, honeybee forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 웅이는 꿀보다 훨씬 달콤한 친절의 기쁨을 깨닫고, 숲속 친구들과 함께 매일 맛있는 음식을 나누어 먹었답니다. |
+
+---
+
+## 🐬 [creative_9] 분홍 돌고래의 멜로디 (나 자신을 사랑하는 마음)
+* **설명**: 분홍 돌고래의 멜로디 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_9_1.jpg` | A cover illustration for a children's fairytale book. Features a beautiful pink baby dolphin in a beautiful setting. The Korean text "분홍 돌고래의 멜로디" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 깊고 고요한 남쪽 바다 밑바닥에는 예쁜 연분홍빛 몸을 가진 아기 돌고래 핑키가 살고 있었어요. |
+| `creative_9_2.jpg` | a beautiful pink baby dolphin flying high in the sky among soft pastel clouds, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 핑키는 주변의 다른 돌고래 친구들이 모두 반짝이는 멋진 하늘색 피부를 가진 것이 늘 부러웠답니다. |
+| `creative_9_3.jpg` | a beautiful pink baby dolphin happily smiling and posing, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 자신만 다르게 생긴 것 같아 슬픈 핑키는 매일 커다란 바위 그늘 속에 몸을 숨긴 채 한숨만 쉬었어요. |
+| `creative_9_4.jpg` | a beautiful pink baby dolphin happily smiling and posing, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이 소식을 들은 다정한 단짝 민지가 잠수복을 입고 예쁜 소라 껍데기 피리를 들고 찾아왔어요. |
+| `creative_9_5.jpg` | a beautiful pink baby dolphin happily smiling and posing, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '핑키야, 다른 건 이상한 게 아니야! 넌 노을빛을 품은 세상에 단 하나뿐인 아주 소중한 보석이란다!' |
+| `creative_9_6.jpg` | a beautiful pink baby dolphin happily smiling and posing, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 핑키를 위해 소라 피리로 신비롭고 쾌활한 해저 아리랑 멜로디를 연주하기 시작했어요. |
+| `creative_9_7.jpg` | a beautiful pink baby dolphin flying high in the sky among soft pastel clouds, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 핑키는 용기를 내어 피리 소리에 맞춰 하늘 위로 뛰어올라 멋진 3단 분홍 회전 묘기를 보여주었어요. |
+| `creative_9_8.jpg` | a beautiful pink baby dolphin swimming deep under the sparkling blue sea, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 물 위로 떠오른 핑키의 연분홍빛 몸이 저녁 노을빛과 눈부시게 겹치며 온 바다가 루비처럼 붉게 물들었답니다. |
+| `creative_9_9.jpg` | a beautiful pink baby dolphin swimming deep under the sparkling blue sea, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 바다 친구들은 핑키의 아름답고 독특한 색에 감탄하며 꼬리를 흔들며 박수를 아낌없이 쳤어요. |
+| `creative_9_10.jpg` | a beautiful pink baby dolphin singing happily with musical notes floating around, swimming deep under the sparkling blue sea, under a starry night sky with twinkling yellow stars, deep blue sea with glowing corals at sunset, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 핑키는 마침내 자신의 특별함을 사랑하게 되었고, 민지이와 함께 매일 푸른 바다를 신나게 가르며 노래했답니다. |
+
+---
+
+## 🔍 [creative_10] 꼬마 요정의 요술 돋보기 (세상을 향한 호기심)
+* **설명**: 꼬마 요정의 요술 돋보기 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_10_1.jpg` | A cover illustration for a children's fairytale book. Features a cute little baby fairy with a magnifying glass in a beautiful setting. The Korean text "꼬마 요정의 요술 돋보기" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 마법 숲속 비밀 서랍 속에는 장난꾸러기 아기 요정 미미가 귀중하게 아끼는 은빛 요술 돋보기가 숨어 있었어요. |
+| `creative_10_2.jpg` | a cute little baby fairy with a magnifying glass happily smiling and posing, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이 요술 돋보기는 평범한 풀밭을 대단한 마법 정원처럼 확대하여 신기하게 보여주는 보물이었지요. |
+| `creative_10_3.jpg` | a cute little baby fairy with a magnifying glass happily smiling and posing, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 오늘 아침, 호기심 많은 민지가 요정 미미와 단짝이 되어 돋보기를 들고 정원 탐험을 떠났어요. |
+| `creative_10_4.jpg` | a cute little baby fairy with a magnifying glass happily smiling and posing, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 둘은 돋보기를 조심히 기울여 파란색 나뭇잎 위에 맺힌 차가운 아침 이슬방울을 들여다보았답니다. |
+| `creative_10_5.jpg` | a cute little baby fairy with a magnifying glass walking on a green forest path filled with sunshine, inside a magnificent palace hall, with a bright colorful rainbow across the sky, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 돋보기 속 이슬방울 안에는 숲속 무지개 요정이 반짝반짝 요술을 부리는 아주 작은 궁전이 비추고 있었어요. |
+| `creative_10_6.jpg` | a cute little baby fairy with a magnifying glass walking on a green forest path filled with sunshine, holding a small cute backpack, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 바쁘게 기어가던 꼬마 붉은 개미들의 가방에는 숲속 동물들을 위한 달콤한 각설탕 보석들이 가득했지요. |
+| `creative_10_7.jpg` | a cute little baby fairy with a magnifying glass surrounded by blooming colorful flowers, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 평범해 보이던 민들레 꽃씨들은 노란 요술 털코트를 입은 귀여운 꼬마 아기새처럼 사랑스러웠어요. |
+| `creative_10_8.jpg` | a cute little baby fairy with a magnifying glass happily smiling and posing, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 세상은 눈여겨보고 궁금해할수록 훨씬 더 신기하고 재미있는 비밀들이 무궁무진하게 샘솟았답니다. |
+| `creative_10_9.jpg` | a cute little baby fairy with a magnifying glass under a starry night sky with twinkling yellow stars, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 미미 요정과 민지는 세상을 탐험하는 호기심이야말로 일상을 특별하게 해주는 마법이라는 걸 알았어요. |
+| `creative_10_10.jpg` | a cute little baby fairy with a magnifying glass under a starry night sky with twinkling yellow stars, magical forest meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 내일 또 어떤 신비로운 비밀을 돋보기로 만나게 될까 기대하며 총총한 별빛 눈으로 미소 지었어요. |
+
+---
+
+## 🐧 [creative_11] 날아라 아기 펭귄 (꿈을 향해 도전하기)
+* **설명**: 날아라 아기 펭귄 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_11_1.jpg` | A cover illustration for a children's fairytale book. Features a cute little baby penguin in a beautiful setting. The Korean text "날아라 아기 펭귄" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 눈부신 남극 은빛 빙판 위에 살고 있는 아기 펭귄 퐁이는 하늘을 훨훨 나는 꿈을 꾸었어요. |
+| `creative_11_2.jpg` | a cute little baby penguin happily smiling and posing, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 갈매기나 독수리처럼 멋진 날개를 크게 펄럭이며 흰 구름 사이를 자유롭게 가르고 싶었지요. |
+| `creative_11_3.jpg` | a cute little baby penguin happily smiling and posing, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 다른 뚱뚱한 펭귄 친구들은 코웃음을 쳤어요. '펭귄은 뚱뚱해서 절대 날 수 없어! 꿈 깨!' |
+| `creative_11_4.jpg` | a cute little baby penguin happily smiling and posing, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 날개가 짧은 퐁이는 크게 실망하여 빙판 가장자리에 홀로 앉아 눈물을 똑똑 흘렸답니다. |
+| `creative_11_5.jpg` | a cute little baby penguin happily smiling and posing, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이때 따뜻한 마음의 민지가 눈썰매를 끌고 다가와 퐁이의 작은 검은 날개를 꼭 쥐어 주었어요. |
+| `creative_11_6.jpg` | a cute little baby penguin flying high in the sky among soft pastel clouds, walking on a yellow brick road, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '퐁이야, 하늘만 길이 아니야! 저 깊고 투명한 바닷속은 오직 너만을 위한 푸른 하늘이야!' |
+| `creative_11_7.jpg` | a cute little baby penguin swimming deep under the sparkling blue sea, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 퐁이와 함께 언덕 위로 신나게 올라가 힘껏 달려 은빛 바다를 향해 번쩍 날아올랐어요! |
+| `creative_11_8.jpg` | a cute little baby penguin swimming deep under the sparkling blue sea, flying high in the sky among soft pastel clouds, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 바다로 슝~ 뛰어든 퐁이는 짧은 날개를 흔들자, 마치 하늘을 비행하듯 물속을 훨훨 날기 시작했어요. |
+| `creative_11_9.jpg` | a cute little baby penguin happily smiling and posing, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 물고기 요정들은 신나게 춤을 추는 퐁이의 곁으로 모여 반짝이는 오색 은빛 거품 터널을 만들어주었답니다. |
+| `creative_11_10.jpg` | a cute little baby penguin swimming deep under the sparkling blue sea, antarctic white icy snow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지이의 응원 덕분에 멋지게 꿈을 이룬 퐁이는 남극 바다에서 가장 신나게 나는 행복한 펭귄이 되었답니다. |
+
+---
+
+## ✉️ [creative_12] 숲속 친구들의 감사 편지 (고마운 마음 표현하기)
+* **설명**: 숲속 친구들의 감사 편지 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_12_1.jpg` | A cover illustration for a children's fairytale book. Features a friendly white dove postman holding colorful letters in a beautiful setting. The Korean text "숲속 친구들의 감사 편지" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 숲속 우체통 앞에는 매일 아침 편지를 전해주는 다정한 비둘기 우체부 폴 아저씨가 서 계셨어요. |
+| `creative_12_2.jpg` | a friendly white dove postman holding colorful letters happily smiling and posing, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 폴 아저씨가 감기에 걸려 목소리가 나오지 않고 날개가 너무 쑤셔 날아갈 수가 없게 되었답니다. |
+| `creative_12_3.jpg` | a friendly white dove postman holding colorful letters walking on a green forest path filled with sunshine, holding a small cute backpack, holding a tiny envelope/letter, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 우체부 가방 안에는 숲속 친구들이 서로에게 전하고 싶은 감사 편지들이 한 가득 쌓여 있었지요. |
+| `creative_12_4.jpg` | a friendly white dove postman holding colorful letters happily smiling and posing, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 의리 넘치는 민지가 아저씨의 모자를 대신 쓰고 일일 감사 우체부가 되기로 약속했어요. |
+| `creative_12_5.jpg` | a friendly white dove postman holding colorful letters gathering golden acorns in the grass, holding a tiny envelope/letter, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 다람쥐 집에 들러 '도토리를 나누어주어 고마워'라는 마음이 담긴 핑크빛 편지를 건넸어요. |
+| `creative_12_6.jpg` | a friendly white dove postman holding colorful letters holding a tiny envelope/letter, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 또 아기 노루에게는 '지난 비오는 날 우산을 씌워주어 늘 고마웠어'라고 적힌 노란 편지를 전했지요. |
+| `creative_12_7.jpg` | a friendly white dove postman holding colorful letters holding a tiny envelope/letter, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 편지를 받은 동물 친구들은 너무 감동하여 가슴이 따뜻해졌고 눈에는 기쁨의 눈물이 고였답니다. |
+| `creative_12_8.jpg` | a friendly white dove postman holding colorful letters walking on a green forest path filled with sunshine, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 숲속 마을 곳곳에서는 '고마워'라는 다정한 속삭임과 감동의 포옹이 아지랑이처럼 몽글몽글 피어났어요. |
+| `creative_12_9.jpg` | a friendly white dove postman holding colorful letters giving a beautiful shiny gift box, eating sweet golden honey from a jar, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 동물들은 힘을 모아 감기 몸살에 걸린 폴 아저씨를 위해 따뜻한 레몬차와 꿀 케이크를 구워 선물했어요. |
+| `creative_12_10.jpg` | a friendly white dove postman holding colorful letters holding a tiny envelope/letter, warm cozy forest village background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 고마운 마음은 표현할수록 세상 모두를 행복하게 만드는 마술 편지라는 것을 듬뿍 느꼈답니다. |
+
+---
+
+## 🦋 [creative_13] 노래하는 노란 나비 (부모님과 가족에 대한 사랑)
+* **설명**: 노래하는 노란 나비 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_13_1.jpg` | A cover illustration for a children's fairytale book. Features a cute little yellow butterfly in a beautiful setting. The Korean text "노래하는 노란 나비" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 꽃향기가 가득한 달콤한 나비 마을에는 날개가 노란색 장미를 닮은 꼬마 나비 나비가 살았어요. |
+| `creative_13_2.jpg` | a cute little yellow butterfly chasing a beautiful butterfly, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 나비는 늘 엄마 아빠 나비의 커다란 날개 품안에서 따뜻하고 안전하게 매일 춤을 추며 지냈답니다. |
+| `creative_13_3.jpg` | a cute little yellow butterfly eating sweet golden honey from a jar, chasing a beautiful butterfly, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 어느 날 아침, 엄마 나비가 밤새 감기에 심하게 걸려 꿀을 따러 한 걸음도 정원에 나가지 못했어요. |
+| `creative_13_4.jpg` | a cute little yellow butterfly chasing a beautiful butterfly, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 나비는 아픈 엄마를 낫게 해주고 싶어 혼자 힘으로 맑은 정원 속으로 이슬을 모으러 가기로 다짐했지요. |
+| `creative_13_5.jpg` | a cute little yellow butterfly surrounded by blooming colorful flowers, eating sweet golden honey from a jar, chasing a beautiful butterfly, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 정원은 너무 넓고 험해서 꼬마 나비 혼자서는 가장 향기로운 꿀 꽃을 찾기가 무척 힘들었어요. |
+| `creative_13_6.jpg` | a cute little yellow butterfly walking on a green forest path filled with sunshine, surrounded by blooming colorful flowers, chasing a beautiful butterfly, walking on a yellow brick road, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이때 숲속 길잡이 민지가 잠자리채 대신 꽃바구니를 들고 와 나비의 손을 다정하게 잡아주었어요. |
+| `creative_13_7.jpg` | a cute little yellow butterfly chasing a beautiful butterfly, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지와 나비는 정원 가장 깊은 곳으로 가서 하트 모양 분홍 장미에서 흐르는 마법 이슬을 땄어요. |
+| `creative_13_8.jpg` | a cute little yellow butterfly happily smiling and posing, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 집으로 돌아와 엄마 입에 달콤한 마법 이슬을 흘려주자, 엄마는 큰 한숨을 쉬며 눈을 번쩍 떴답니다. |
+| `creative_13_9.jpg` | a cute little yellow butterfly chasing a beautiful butterfly, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 엄마 아빠 나비는 기운을 차려 나비와 민지이를 소중하고 따뜻하게 양 날개로 가득 감싸 안아주었어요. |
+| `creative_13_10.jpg` | a cute little yellow butterfly happily smiling and posing, beautiful rose garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 사랑하는 가족의 품이야말로 세상에서 가장 포근하고 안전한 쉼터라는 걸 깨닫고 행복해했어요. |
+
+---
+
+## 🌱 [creative_14] 초록 이파리의 약속 (자연을 보호하는 마음)
+* **설명**: 초록 이파리의 약속 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_14_1.jpg` | A cover illustration for a children's fairytale book. Features a tiny green seedling sprouting in a cute pot in a beautiful setting. The Korean text "초록 이파리의 약속" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 아파트 뒷마당 공터 구석에는 사람들이 밟고 지나가는 자리에 시들어가는 작은 새싹이 살고 있었어요. |
+| `creative_14_2.jpg` | a tiny green seedling sprouting in a cute pot watering a tiny green plant in a pot, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 새싹은 공기마저 탁하고 먼지가 가득해서 더 이상 잎을 틔우지 못하고 시들시들 한숨을 내쉬었지요. |
+| `creative_14_3.jpg` | a tiny green seedling sprouting in a cute pot surrounded by blooming colorful flowers, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 다정한 어린이 민지는 예쁜 분홍색 꽃 모양 물뿌리개를 가져와 깨끗한 물을 듬뿍 주었어요. |
+| `creative_14_4.jpg` | a tiny green seedling sprouting in a cute pot watering a tiny green plant in a pot, surrounded by tasty candy and gingerbread house, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그리고 새싹 주변에 버려진 아이스크림 막대기와 과자 비닐봉지들을 허리 굽혀 깨끗이 주워 모았답니다. |
+| `creative_14_5.jpg` | a tiny green seedling sprouting in a cute pot happily smiling and posing, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 흙이 무너지지 않도록 나무젓가락으로 예쁜 작은 안전 울타리도 튼튼하게 만들어주었지요. |
+| `creative_14_6.jpg` | a tiny green seedling sprouting in a cute pot singing happily with musical notes floating around, watering a tiny green plant in a pot, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 매일 오후 3시가 되면 민지는 물뿌리개를 들고 공터로 달려와 '새싹아 잘 자라라' 하고 노래했어요. |
+| `creative_14_7.jpg` | a tiny green seedling sprouting in a cute pot watering a tiny green plant in a pot, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지이의 극진한 사랑과 보살핌 속에 작은 새싹은 무럭무럭 자라 커다란 세 갈래 초록 이파리를 폈어요. |
+| `creative_14_8.jpg` | a tiny green seedling sprouting in a cute pot surrounded by blooming colorful flowers, with a bright colorful rainbow across the sky, watering a tiny green plant in a pot, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 일주일 뒤, 새싹은 놀랍게도 향기가 온 동네로 퍼지는 예쁜 요정 무지개 꽃 한 송이를 피워 올렸답니다. |
+| `creative_14_9.jpg` | a tiny green seedling sprouting in a cute pot jumping with joy and smiling happily, chasing a beautiful butterfly, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 정원은 초록이 가득한 나비들의 놀이터가 되었고 동네 어른들도 모두 기뻐하며 미소를 머금었어요. |
+| `creative_14_10.jpg` | a tiny green seedling sprouting in a cute pot happily smiling and posing, beautiful magical flower garden background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 작고 힘없는 풀잎 하나라도 소중히 아끼는 자연 사랑의 약속을 앞으로도 꼭 지키기로 했답니다. |
+
+---
+
+## ⏰ [creative_15] 시계 요정의 째깍 모험 (규칙적인 생활 습관)
+* **설명**: 시계 요정의 째깍 모험 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_15_1.jpg` | A cover illustration for a children's fairytale book. Features a cute clock gear fairy in a beautiful setting. The Korean text "시계 요정의 째깍 모험" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 알록달록 장난감 방 선반 꼭대기에는 시간을 지키는 시계 태엽 요정 틱톡이가 숨어 살고 있었어요. |
+| `creative_15_2.jpg` | a cute clock gear fairy happily smiling and posing, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 틱톡이는 아이들이 제시간에 일어나 밥을 먹고 양치를 잘하도록 매일 태엽을 감으며 관리했답니다. |
+| `creative_15_3.jpg` | a cute clock gear fairy lying on a cozy bed under a warm blanket, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 밤 10시가 넘어도 민지는 인형 놀이를 더 하고 싶어 침대에 가지 않고 버티고 있었어요. |
+| `creative_15_4.jpg` | a cute clock gear fairy singing happily with musical notes floating around, looking at a large wall clock, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 틱톡 요정은 시계 바늘을 타고 스르륵 내려와 민지이의 코끝에 앉아 째깍째깍 요정 노래를 불렀어요. |
+| `creative_15_5.jpg` | a cute clock gear fairy happily smiling and posing, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '지금 일찍 자야 내일 아침 마법의 우주 열차를 타는 꿈나라 모험을 씩씩하게 떠날 수 있어!' |
+| `creative_15_6.jpg` | a cute clock gear fairy singing happily with musical notes floating around, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 틱톡이의 귀여운 콧노래를 듣고 욕심을 내려놓은 채 양치질을 치카치카 깨끗이 했어요. |
+| `creative_15_7.jpg` | a cute clock gear fairy covered with a soft fluffy colorful blanket, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그리고 이불을 덮고 눈을 감자, 틱톡 요정은 보랏빛 은하수 꿈나라 지도를 베개 밑에 놓아두었답니다. |
+| `creative_15_8.jpg` | a cute clock gear fairy happily smiling and posing, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 다음 날 아침 7시, 틱톡 요정의 부드러운 뻐꾹 소리에 민지는 눈을 번쩍 뜨고 상쾌하게 일어났어요. |
+| `creative_15_9.jpg` | a cute clock gear fairy surrounded by blooming colorful flowers, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 일찍 자고 일찍 일어나는 좋은 습관 덕분에 민지이의 뺨은 아침 장미꽃처럼 붉고 씩씩해졌답니다. |
+| `creative_15_10.jpg` | a cute clock gear fairy happily smiling and posing, cozy toy room with shelves background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 약속된 시간에 맞춰 생활하는 바른 습관이 몸과 마음을 건강하게 하는 마법임을 배웠답니다. |
+
+---
+
+## 🐣 [creative_16] 울어도 괜찮아, 삐악이 (슬픈 감정을 표현하고 위로하기)
+* **설명**: 울어도 괜찮아, 삐악이 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_16_1.jpg` | A cover illustration for a children's fairytale book. Features a cute crying little yellow chick being hugged in a beautiful setting. The Korean text "울어도 괜찮아, 삐악이" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 잔디밭 유치원 구석에는 노란 깃털이 부드러운 아기 병아리 삐악이가 울먹이며 웅크리고 있었어요. |
+| `creative_16_2.jpg` | a cute crying little yellow chick being hugged flying high in the sky among soft pastel clouds, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 삐악이는 아끼던 반짝이는 하늘색 유리구슬을 모래밭 틈에 잃어버려서 가슴이 너무너무 아팠답니다. |
+| `creative_16_3.jpg` | a cute crying little yellow chick being hugged happily smiling and posing, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 친구들이 울보라고 부르며 다시는 놀아주지 않을까 봐, 억지로 눈물을 참으며 입술을 깨물었어요. |
+| `creative_16_4.jpg` | a cute crying little yellow chick being hugged happily smiling and posing, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 참으려고 할수록 목이 막히고 가슴이 답답해서 삐악이는 숨도 제대로 쉬지 못하고 끙끙 앓았지요. |
+| `creative_16_5.jpg` | a cute crying little yellow chick being hugged happily smiling and posing, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 상냥한 민지가 따뜻한 손을 내밀어 삐악이의 작고 슬픈 어깨를 꼭 안아주었어요. |
+| `creative_16_6.jpg` | a cute crying little yellow chick being hugged happily smiling and posing, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '삐악아, 참지 마. 속상하고 슬플 때는 마음껏 소리 내어 울어도 괜찮아. 눈물은 나쁜 게 아니야.' |
+| `creative_16_7.jpg` | a cute crying little yellow chick being hugged happily smiling and posing, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 삐악이는 민지이의 따뜻한 가슴에 안겨 마침내 삐약삐약 엉엉 참았던 슬픈 눈물을 다 쏟아냈어요. |
+| `creative_16_8.jpg` | a cute crying little yellow chick being hugged looking sad with small tears in eyes, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 한참을 울고 나니, 신기하게도 답답했던 가슴이 바람이 불듯 한결 가볍고 시원해졌답니다. |
+| `creative_16_9.jpg` | a cute crying little yellow chick being hugged flying high in the sky among soft pastel clouds, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 삐악이의 눈물을 닦아주고 함께 흙을 파내어 잃어버린 하늘색 구슬도 마침내 찾아주었어요. |
+| `creative_16_10.jpg` | a cute crying little yellow chick being hugged happily smiling and posing, warm sunny meadow background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 슬픈 마음을 표현하고 나누는 법을 배운 삐악이는 민지이에게 고마워하며 다시 힘차게 웃어보였답니다. |
+
+---
+
+## 🦌 [creative_17] 밤비의 안전한 숲길 (안전 약속을 지키는 습관)
+* **설명**: 밤비의 안전한 숲길 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_17_1.jpg` | A cover illustration for a children's fairytale book. Features a cute baby deer walking safely on a path in a beautiful setting. The Korean text "밤비의 안전한 숲길" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 풀꽃이 가득한 평화로운 숲가에는 다리가 긴 귀여운 꼬마 아기 사슴 밤비가 살고 있었어요. |
+| `creative_17_2.jpg` | a cute baby deer walking safely on a path walking on a green forest path filled with sunshine, surrounded by blooming colorful flowers, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 밤비는 건너편 노란 민들레 꽃밭을 발견하고 너무 기쁜 나머지 숲속 건널목으로 무작정 뛰어가려 했지요. |
+| `creative_17_3.jpg` | a cute baby deer walking safely on a path walking on a yellow brick road, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 건널목 앞 도로는 동물 요정들의 빠른 나무 썰매들이 쌩쌩 달리는 아주 위험한 길이었어요. |
+| `creative_17_4.jpg` | a cute baby deer walking safely on a path happily smiling and posing, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 안전 도우미 민지가 깜짝 놀라 밤비의 귀여운 멜빵끈을 뒤에서 얼른 잡아당겼어요. |
+| `creative_17_5.jpg` | a cute baby deer walking safely on a path walking on a yellow brick road, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '밤비야 멈춰! 길을 건널 때는 아무리 급해도 먼저 세 걸음 뒤로 물러서서 멈춰 서야 한단다!' |
+| `creative_17_6.jpg` | a cute baby deer walking safely on a path happily smiling and posing, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 밤비의 손을 꼭 잡고 초록색 신호등 불빛이 반짝하고 들어올 때까지 차분하게 기다렸어요. |
+| `creative_17_7.jpg` | a cute baby deer walking safely on a path flying high in the sky among soft pastel clouds, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그리고 초록 불빛이 켜지자, 이번엔 손을 하늘 위로 번쩍 들어 썰매 운전사 아저씨들에게 보여주었지요. |
+| `creative_17_8.jpg` | a cute baby deer walking safely on a path happily smiling and posing, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '오른쪽 보고, 왼쪽 보고, 차가 오는지 멈췄는지 눈을 마주하며 조심조심 건너가는 거야!' |
+| `creative_17_9.jpg` | a cute baby deer walking safely on a path surrounded by blooming colorful flowers, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 밤비와 민지는 약속한 보행 안전 규칙을 외치며 안전하게 민들레 꽃밭에 안전하게 도착했어요. |
+| `creative_17_10.jpg` | a cute baby deer walking safely on a path happily smiling and posing, beautiful green forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 밤비는 생명을 지키는 안전 약속이야말로 세상에서 가장 소중하게 지켜야 할 비밀 방패임을 배웠답니다. |
+
+---
+
+## 🌸 [creative_18] 모두 다른 꽃밭 (다양성을 인정하고 존중하기)
+* **설명**: 모두 다른 꽃밭 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_18_1.jpg` | A cover illustration for a children's fairytale book. Features a beautiful garden with different colorful flowers blooming in a beautiful setting. The Korean text "모두 다른 꽃밭" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 마법의 둥근 정원에는 보라색 장미, 파란색 민들레, 그리고 아무런 향기도 나지 않는 수줍은 하얀 풀꽃이 살았어요. |
+| `creative_18_2.jpg` | a beautiful garden with different colorful flowers blooming surrounded by blooming colorful flowers, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 꽃들은 매일 아침 서로 잘났다며 큰소리로 뽐냈고, 색이 다른 친구들을 은근히 놀리며 가시를 세웠답니다. |
+| `creative_18_3.jpg` | a beautiful garden with different colorful flowers blooming surrounded by blooming colorful flowers, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 보라 장미는 파란 민들레에게 '너의 파란색은 꽃답지 않고 너무 차가워 보여' 하며 다가오지 못하게 했지요. |
+| `creative_18_4.jpg` | a beautiful garden with different colorful flowers blooming surrounded by blooming colorful flowers, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하얀 풀꽃에게는 '향기도 없는 심심한 풀잎은 이 화려한 정원에 어울리지 않아' 하고 마음 아프게 했어요. |
+| `creative_18_5.jpg` | a beautiful garden with different colorful flowers blooming surrounded by blooming colorful flowers, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 조화의 요정 민지가 꽃들에게 다가가 동그란 울타리 정원을 만들고 속삭였어요. |
+| `creative_18_6.jpg` | a beautiful garden with different colorful flowers blooming with a bright colorful rainbow across the sky, holding a shiny red apple, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '친구들아, 빨간색만 가득한 사과나무밭보다 온갖 고운 색깔이 섞인 무지개가 훨씬 눈부시지 않니?' |
+| `creative_18_7.jpg` | a beautiful garden with different colorful flowers blooming happily smiling and posing, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '너희들의 다른 생김새와 다른 향기가 서로 어우러질 때, 이 정원은 세상에서 가장 환상적으로 빛난단다.' |
+| `creative_18_8.jpg` | a beautiful garden with different colorful flowers blooming surrounded by blooming colorful flowers, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 꽃들은 부끄러워하며 가시를 거두었고 서로의 다른 이파리를 비비며 다정하게 노랫소리를 모았답니다. |
+| `creative_18_9.jpg` | a beautiful garden with different colorful flowers blooming surrounded by blooming colorful flowers, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 신기하게도 세 색깔이 모인 꽃밭에서는 은하수 요정들이 춤을 추는 마법의 멜로디 향기가 새롭게 풍겨났어요. |
+| `creative_18_10.jpg` | a beautiful garden with different colorful flowers blooming surrounded by blooming colorful flowers, bright sunny flowerbed background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 서로 다름을 존중할 때 비로소 가장 조화롭고 눈부신 우정의 꽃밭이 피어난다는 것을 배웠답니다. |
+
+---
+
+## ☁️ [creative_19] 그림 그리는 구름 요정 (상상력과 창의성 기르기)
+* **설명**: 그림 그리는 구름 요정 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_19_1.jpg` | A cover illustration for a children's fairytale book. Features a cute fluffy cloud fairy painting with a magic brush in a beautiful setting. The Korean text "그림 그리는 구름 요정" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 푸른 하늘 한가운데에는 몽실몽실 춤을 추는 아기 구름 요정 뭉게가 살고 있었어요. |
+| `creative_19_2.jpg` | a cute fluffy cloud fairy painting with a magic brush flying high in the sky among soft pastel clouds, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 뭉게 요정은 하늘을 커다란 도화지 삼아 바람 붓을 들고 날마다 새로운 변신 그림을 그렸답니다. |
+| `creative_19_3.jpg` | a cute fluffy cloud fairy painting with a magic brush flying high in the sky among soft pastel clouds, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 어느 날 오후, 하늘을 올려다보던 창의적인 단짝 민지가 하늘을 향해 크게 손나팔을 불었어요. |
+| `creative_19_4.jpg` | a cute fluffy cloud fairy painting with a magic brush flying high in the sky among soft pastel clouds, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '뭉게 요정아! 이번엔 우주선을 탄 분홍색 꼬마 아기 코끼리 한 마리를 하늘에 띄워줘!' |
+| `creative_19_5.jpg` | a cute fluffy cloud fairy painting with a magic brush in front of a grand fairytale castle, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 뭉게 요정은 신나서 바람을 휘감아 몸을 둥글게 굴렸고 이내 펄럭이는 큰 귀를 가진 코끼리를 완성했어요. |
+| `creative_19_undefined.jpg` | a cute fluffy cloud fairy painting with a magic brush happily smiling and posing, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 코끼리는 엉금엉금 걸어 우주선 구름 속으로 들어가 은하수를 여행하듯 멋진 꼬리를 흔들었답니다. |
+| `creative_19_undefined.jpg` | a cute fluffy cloud fairy painting with a magic brush happily smiling and posing, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이번엔 민지가 '날개 달린 달콤한 고래 초콜릿!' 하고 창의적인 생각을 소리 높여 뿜어냈어요. |
+| `creative_19_undefined.jpg` | a cute fluffy cloud fairy painting with a magic brush flying high in the sky among soft pastel clouds, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 뭉게 요정은 꼬리를 흔들며 하늘 가득 초콜릿 구름 거품을 뿜어내어 아름답게 변신하였답니다. |
+| `creative_19_undefined.jpg` | a cute fluffy cloud fairy painting with a magic brush flying high in the sky among soft pastel clouds, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 상상하고 소망하는 것은 하늘에서 구름 요정의 춤을 통해 무엇이든 아름답고 재미있게 태어났어요. |
+| `creative_19_undefined.jpg` | a cute fluffy cloud fairy painting with a magic brush happily smiling and posing, pastel sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 상상하는 작은 생각 주머니 하나가 세상을 오색빛깔로 바꾸는 가장 위대한 요술봉임을 깨달았답니다. |
+
+---
+
+## 🧸 [creative_20] 장난감 나라의 양보 시합 (양보하고 사이좋게 놀기)
+* **설명**: 장난감 나라의 양보 시합 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `creative_20_1.jpg` | A cover illustration for a children's fairytale book. Features cute living toys sharing a toy box in a beautiful setting. The Korean text "장난감 나라의 양보 시합" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 알록달록 놀이방 책상 아래에는 꼬마 빨간 기차와 보드라운 갈색 아기 곰 인형이 살고 있었어요. |
+| `creative_20_2.jpg` | cute living toys sharing a toy box playing with cute wooden toys, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 오늘 아침, 놀이방 한가운데에는 반짝이는 오색 은하수 미끄럼틀 장난감이 새롭게 놓여 있었답니다. |
+| `creative_20_3.jpg` | cute living toys sharing a toy box walking on a yellow brick road, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 기차와 곰 인형은 미끄럼틀을 자기가 먼저 타겠다며 앞다투어 달려가 길을 막아섰어요. |
+| `creative_20_4.jpg` | cute living toys sharing a toy box happily smiling and posing, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '이건 내 미끄럼틀이야! 비켜!' 기차는 경적을 빵빵 울렸고 곰 인형은 미끄럼틀을 꼬옥 안고 놓지 않았어요. |
+| `creative_20_5.jpg` | cute living toys sharing a toy box playing with cute wooden toys, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이를 본 지혜로운 민지가 두 장난감 사이에 부드러운 하트 카드를 내려놓으며 말했답니다. |
+| `creative_20_6.jpg` | cute living toys sharing a toy box happily smiling and posing, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '기차야, 곰 인형아! 미끄럼틀은 차례대로 양보하며 타는 놀이야. 같이 타야 기쁨이 백 배가 된단다.' |
+| `creative_20_7.jpg` | cute living toys sharing a toy box happily smiling and posing, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 빨간 기차는 민지이의 조언을 듣고 한 걸음 물러나 경적을 울리며 곰 인형에게 '먼저 타' 하고 속삭였어요. |
+| `creative_20_8.jpg` | cute living toys sharing a toy box happily smiling and posing, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 곰 인형은 감동하여 밝게 미소 지으며 미끄럼틀 위를 슝~ 하고 신나고 씩씩하게 내려왔답니다. |
+| `creative_20_9.jpg` | cute living toys sharing a toy box happily smiling and posing, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이번엔 곰 인형이 기차의 엉덩이를 살며시 밀어주었고, 기차도 칙칙폭폭 소리를 내며 신나게 하강했어요. |
+| `creative_20_10.jpg` | cute living toys sharing a toy box playing with cute wooden toys, colorful kids playroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 민지는 양보를 통해 장난감 나라가 다시 웃음으로 가득 찬 사이좋은 천국이 된 것을 보고 행복하게 웃었답니다. |
+
+---
+
+## 👠 [classic_1] 신데렐라 (착한 마음씨와 희망)
+* **설명**: 신데렐라 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_1_1.png` | A dreamlike book cover illustration of Cinderella. A beautiful princess in a glowing blue ballgown next to a pumpkin carriage. Prominently features the Korean text "신데렐라" in elegant gold typography at the top. Fairytale watercolor style. | 아주 먼 옛날, 마음씨가 착하고 고운 아름다운 소녀 신데렐라가 새어머니와 언니들과 함께 살고 있었어요. |
+| `classic_1_2.png` | A dreamlike book cover illustration of Cinderella. A beautiful princess in a glowing blue ballgown next to a pumpkin carriage. Prominently features the Korean text "신데렐라" in elegant gold typography at the top. Fairytale watercolor style. | 새어머니와 언니들은 신데렐라에게 매일 쓸고 닦는 힘든 청소와 집안일만 하루 종일 잔뜩 시켰답니다. |
+| `classic_1_3.png` | Cinderella in a ragged dress is sitting on a wooden stool in a dusty stone kitchen, crying softly as her stepsisters leave in a carriage. Warm fire glow, soft watercolor style. | 신데렐라는 부엌바닥에서 재를 뒤집어쓰고 일하면서도 늘 마음속에 환한 희망과 웃음을 잃지 않았어요. |
+| `classic_1_4.png` | Cinderella in a ragged dress is sitting on a wooden stool in a dusty stone kitchen, crying softly as her stepsisters leave in a carriage. Warm fire glow, soft watercolor style. | 어느 날, 왕실에서 나라 안의 모든 처녀들을 초대하는 화려하고 성대한 무도회가 열린다는 소식이 왔어요. |
+| `classic_1_5.png` | A kind, glowing fairy godmother is waving a magic wand over Cinderella, transforming her ragged clothes into a beautiful glowing blue ballgown. Sparkles, stars, soft watercolor style. | 하지만 언니들은 자신들만 예쁘게 단장하고 가버렸고, 신데렐라는 혼자 부엌에 남아 훌쩍훌쩍 울었답니다. |
+| `classic_1_6.png` | A kind, glowing fairy godmother is waving a magic wand over Cinderella, transforming her ragged clothes into a beautiful glowing blue ballgown. Sparkles, stars, soft watercolor style. | 그때 빛나는 아기 요정 할머니가 마법의 요술봉을 흔들며 은하수 별가루 속에서 갑자기 나타나셨어요. |
+| `classic_1_7.png` | A glowing golden pumpkin carriage is parked outside a grand castle at night. Sparkles in the air, full moon, soft dreamlike fairytale style, watercolor. | 요술봉을 톡톡 흔들자 신데렐라의 낡은 옷은 눈부신 드레스로, 호박은 황금빛 마차로 마법처럼 바뀌었어요. |
+| `classic_1_8.png` | A glowing golden pumpkin carriage is parked outside a grand castle at night. Sparkles in the air, full moon, soft dreamlike fairytale style, watercolor. | '신데렐라야, 단 열두 시 종이 울리기 전에는 마법이 풀리니 반드시 그 전에 꼭 돌아와야 한단다.' |
+| `classic_1_9.png` | A handsome prince is sliding a tiny glowing glass slipper onto Cinderella's foot. It fits perfectly! Cinderella is smiling, magical celebration sparkles, soft watercolor fairytale style. | 무도회에서 왕자님과 즐거운 춤을 추던 신데렐라는 열두 시 종이 울리자 서둘러 뛰어 나오다 유리구두 한 짝을 흘렸어요. |
+| `classic_1_10.png` | A handsome prince is sliding a tiny glowing glass slipper onto Cinderella's foot. It fits perfectly! Cinderella is smiling, magical celebration sparkles, soft watercolor fairytale style. | 왕자님은 유리구두가 꼭 맞는 착한 신데렐라를 마침내 찾아냈고, 둘은 영원히 행복하게 살았답니다. |
+
+---
+
+## 🍎 [classic_2] 백설공주 (진실한 우정과 따뜻한 사랑)
+* **설명**: 백설공주 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_2_1.jpg` | A cover illustration for a children's fairytale book. Features beautiful Snow White princess with a red apple in a beautiful setting. The Korean text "백설공주" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 아주 먼 옛날, 눈처럼 하얀 피부와 붉은 입술을 가진 마음씨 예쁜 백설공주가 궁전에 살고 있었어요. |
+| `classic_2_2.jpg` | beautiful Snow White princess with a red apple happily smiling and posing, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 시기심이 무척 많은 새 왕비는 요술거울에게 매일 세상에서 누가 제일 예쁜지 물어보았답니다. |
+| `classic_2_3.jpg` | beautiful Snow White princess with a red apple walking on a green forest path filled with sunshine, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '세상에서 백설공주가 가장 아름답습니다'라는 대답에 화가 난 왕비를 피해 공주는 깊은 숲으로 도망쳤어요. |
+| `classic_2_4.jpg` | beautiful Snow White princess with a red apple walking on a green forest path filled with sunshine, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 숲속을 헤매던 공주는 아주 작고 귀여운 나무 오두막집을 발견하고 조심스럽게 문을 열었답니다. |
+| `classic_2_5.jpg` | beautiful Snow White princess with a red apple happily smiling and posing, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그곳은 친절하고 귀여운 일곱 난쟁이 형제들의 보금자리였고, 난쟁이들은 공주를 반갑게 환영했어요. |
+| `classic_2_6.jpg` | beautiful Snow White princess with a red apple happily smiling and posing, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 공주는 일곱 난쟁이들과 함께 맛있는 찌개를 나누어 먹으며 즐겁고 평화로운 나날을 보냈답니다. |
+| `classic_2_7.jpg` | beautiful Snow White princess with a red apple holding a shiny red apple, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 못된 왕비가 장사꾼으로 변장하여 독이 든 새빨간 마법 사과를 공주에게 전하고 말았어요. |
+| `classic_2_8.jpg` | beautiful Snow White princess with a red apple holding a shiny red apple, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 사과를 한 입 베어 문 공주는 차갑게 쓰러져 깊은 마법의 잠에 깊숙이 빠져 버렸답니다. |
+| `classic_2_9.jpg` | beautiful Snow White princess with a red apple walking on a green forest path filled with sunshine, walking on a yellow brick road, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 시간이 흘러 숲을 지나가던 다정한 이웃 나라 왕자님이 백설공주를 보고 진심 어린 손길을 건넸어요. |
+| `classic_2_10.jpg` | beautiful Snow White princess with a red apple inside a magnificent palace hall, cozy forest cottage background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 잠에서 깨어난 공주는 난쟁이들과 왕자님의 큰 환호 속에 궁전으로 돌아가 오래오래 사랑하며 살았답니다. |
+
+---
+
+## 👑 [classic_3] 잠자는 숲속의 공주 (역경을 극복하는 사랑)
+* **설명**: 잠자는 숲속의 공주 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_3_1.jpg` | A cover illustration for a children's fairytale book. Features beautiful Sleeping Beauty princess sleeping peacefully in a beautiful setting. The Korean text "잠자는 숲속의 공주" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 마법의 왕국에는 모든 요정들의 축복을 받으며 아름다운 오로라 아기 공주님이 태어났어요. |
+| `classic_3_2.jpg` | beautiful Sleeping Beauty princess sleeping peacefully happily smiling and posing, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 축제에 초대받지 못한 심술쟁이 마녀 말레피센트가 무서운 저주를 내리고 말았답니다. |
+| `classic_3_3.jpg` | beautiful Sleeping Beauty princess sleeping peacefully happily smiling and posing, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '공주는 열여섯 살이 되는 날, 날카로운 물레 바늘에 찔려 깊은 죽음의 잠에 빠지리라!' |
+| `classic_3_4.jpg` | beautiful Sleeping Beauty princess sleeping peacefully happily smiling and posing, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 왕은 물레를 모두 불태웠지만, 마법의 운명처럼 공주는 물레 바늘에 콕 찔려 백 년의 잠에 빠졌어요. |
+| `classic_3_5.jpg` | beautiful Sleeping Beauty princess sleeping peacefully in front of a grand fairytale castle, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 공주와 성 안의 모든 동물, 군사들도 그 자리에 멈춰 서서 부드럽게 깊은 잠을 자기 시작했지요. |
+| `classic_3_6.jpg` | beautiful Sleeping Beauty princess sleeping peacefully in front of a grand fairytale castle, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 성 주변에는 무시무시하고 뾰족한 가시 장미 덩굴들이 거대하게 자라나 성 전체를 꽁꽁 가두어 버렸어요. |
+| `classic_3_7.jpg` | beautiful Sleeping Beauty princess sleeping peacefully happily smiling and posing, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 백 년의 세월이 흐른 어느 맑은 아침, 소문을 들은 용감한 필립 왕자님이 마법 검을 들고 찾아왔어요. |
+| `classic_3_8.jpg` | beautiful Sleeping Beauty princess sleeping peacefully in front of a grand fairytale castle, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 왕자님은 불을 뿜는 초록색 용 괴물을 물리치고 뾰족한 가시 장미 덩굴들을 씩씩하게 헤치고 성으로 갔어요. |
+| `classic_3_9.jpg` | beautiful Sleeping Beauty princess sleeping peacefully lying on a cozy bed under a warm blanket, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 왕자님이 침대에 잠들어 있는 아름다운 공주님의 손을 따스하게 잡자, 공주의 감긴 눈이 번쩍 떠졌답니다. |
+| `classic_3_10.jpg` | beautiful Sleeping Beauty princess sleeping peacefully in front of a grand fairytale castle, rose flower covered castle bedroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 온 성의 마법이 풀려 따뜻한 태양이 비추었고, 성 안에는 행복한 요정들의 춤과 축제 음악이 울려 퍼졌답니다. |
+
+---
+
+## 🧜‍♀️ [classic_4] 인어공주 (바다 너머의 꿈과 용기)
+* **설명**: 인어공주 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_4_1.jpg` | A cover illustration for a children's fairytale book. Features beautiful Little Mermaid swimming with fish in a beautiful setting. The Korean text "인어공주" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 바람이 시원하게 부는 깊고 푸른 바닷속 조개 궁전에는 목소리가 예쁜 아기 인어공주 에리얼이 살았어요. |
+| `classic_4_2.jpg` | beautiful Little Mermaid swimming with fish swimming deep under the sparkling blue sea, flying high in the sky among soft pastel clouds, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 에리얼은 바다 위 은빛 밤하늘과 걸어 다니는 인간 세상에 대해 날마다 신기해하며 꿈을 꾸었지요. |
+| `classic_4_3.jpg` | beautiful Little Mermaid swimming with fish swimming deep under the sparkling blue sea, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 어느 폭풍우 치던 무서운 밤, 바다에 빠져 허우적대던 이웃 나라의 멋진 왕자님을 에리얼이 안아 구해주었어요. |
+| `classic_4_4.jpg` | beautiful Little Mermaid swimming with fish happily smiling and posing, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 왕자님을 다시 만나고 싶었던 에리얼은 육지 사람이 되기 위해 무서운 마녀 우르술라를 찾아갔답니다. |
+| `classic_4_5.jpg` | beautiful Little Mermaid swimming with fish singing happily with musical notes floating around, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 에리얼은 예쁜 물고기 노래 목소리를 마녀에게 주는 대신, 아름다운 두 다리를 얻어 물 위로 올라갔어요. |
+| `classic_4_6.jpg` | beautiful Little Mermaid swimming with fish happily smiling and posing, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 목소리가 나오지 않아 말을 하지는 못했지만, 다정하고 멋진 왕자님은 에리얼을 따뜻하게 맞아주었지요. |
+| `classic_4_7.jpg` | beautiful Little Mermaid swimming with fish in front of a grand fairytale castle, surrounded by blooming colorful flowers, riding in a glowing golden carriage, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 에리얼은 왕자님과 성 안의 마차를 타고 예쁜 초록 정원을 달리고 꽃구경을 하며 씩씩하게 즐거워했어요. |
+| `classic_4_8.jpg` | beautiful Little Mermaid swimming with fish happily smiling and posing, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 마녀가 목소리를 훔쳐 가짜 약혼녀로 변장하여 왕자님을 빼앗으려는 음모를 꾸몄답니다. |
+| `classic_4_9.jpg` | beautiful Little Mermaid swimming with fish swimming deep under the sparkling blue sea, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 바다 동물 친구들이 힘을 모아 마녀의 목걸이를 깨뜨리자 에리얼의 목소리가 마침내 시원하게 돌아왔어요. |
+| `classic_4_10.jpg` | beautiful Little Mermaid swimming with fish swimming deep under the sparkling blue sea, jumping with joy and smiling happily, colorful deep sea coral background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 진실을 안 왕자님은 기뻐했고, 에리얼은 아빠 바다 왕의 축복 속에 예쁜 인간이 되어 결혼식을 올렸답니다. |
+
+---
+
+## 🌹 [classic_5] 미녀와 야수 (진실한 내면의 아름다움)
+* **설명**: 미녀와 야수 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_5_1.jpg` | A cover illustration for a children's fairytale book. Features beautiful Belle princess and a friendly furry Beast in a beautiful setting. The Korean text "미녀와 야수" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 시골마을 책방에는 책 읽기와 상상을 좋아하는 마음씨 착하고 똑똑한 소녀 벨이 살고 있었어요. |
+| `classic_5_2.jpg` | beautiful Belle princess and a friendly furry Beast in front of a grand fairytale castle, dancing with a friendly furry Beast, walking on a yellow brick road, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 벨은 길을 잃은 아버지를 구하기 위해 마법에 걸려 무서운 겉모습을 가진 야수의 어두운 성으로 들어갔답니다. |
+| `classic_5_3.jpg` | beautiful Belle princess and a friendly furry Beast in front of a grand fairytale castle, dancing with a friendly furry Beast, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 처음에는 으르렁거리는 야수가 무서웠지만 성 안의 찻잔 요정과 촛대 아저씨가 벨을 환대해 주었어요. |
+| `classic_5_4.jpg` | beautiful Belle princess and a friendly furry Beast dancing with a friendly furry Beast, walking on a yellow brick road, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 벨은 정원에서 길 잃은 새들에게 모이를 주고 다치지 않게 보살피는 야수의 숨겨진 상냥함을 알았어요. |
+| `classic_5_5.jpg` | beautiful Belle princess and a friendly furry Beast in front of a grand fairytale castle, giving a beautiful shiny gift box, dancing with a friendly furry Beast, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 야수는 벨을 위해 성의 커다란 마법 책방을 선물해 주었고 둘은 매일 재미있는 책 이야기를 나누었어요. |
+| `classic_5_6.jpg` | beautiful Belle princess and a friendly furry Beast in front of a grand fairytale castle, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 어두웠던 성 안에는 노란 촛불과 함께 부드러운 오르골 춤곡 멜로디가 매일 은은하게 울려 퍼졌지요. |
+| `classic_5_7.jpg` | beautiful Belle princess and a friendly furry Beast in front of a grand fairytale castle, surrounded by blooming colorful flowers, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 성 안의 유리병 속에 든 붉은 장미꽃의 마지막 이파리가 시들어 툭 떨어지고 있었답니다. |
+| `classic_5_8.jpg` | beautiful Belle princess and a friendly furry Beast surrounded by blooming colorful flowers, dancing with a friendly furry Beast, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 마지막 꽃잎이 떨어지기 직전, 벨은 야수의 손을 꼭 쥐며 '내 눈엔 네가 제일 아름다워' 하고 고백했어요. |
+| `classic_5_9.jpg` | beautiful Belle princess and a friendly furry Beast in front of a grand fairytale castle, dancing with a friendly furry Beast, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그 순간 번쩍이는 마법의 오색 빛이 성을 감쌌고 무서운 야수는 잘생긴 필립 왕자님으로 돌아왔어요. |
+| `classic_5_10.jpg` | beautiful Belle princess and a friendly furry Beast happily smiling and posing, grand library palace setting, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 벨과 왕자님은 아름답게 활짝 핀 장미 정원에서 왈츠 춤을 추며 온 왕국과 함께 영원히 행복했답니다. |
+
+---
+
+## 🍪 [classic_6] 헨젤과 그레텔 (지혜와 남매의 우애)
+* **설명**: 헨젤과 그레텔 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_6_1.jpg` | A cover illustration for a children's fairytale book. Features Hansel and Gretel children next to a candy house in a beautiful setting. The Korean text "헨젤과 그레텔" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 깊고 고요한 숲속 아주 작은 오두막집에는 의리 넘치는 남매 헨젤과 그레텔이 살고 있었어요. |
+| `classic_6_2.jpg` | Hansel and Gretel children next to a candy house walking on a green forest path filled with sunshine, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 가난한 부모님을 따라 숲속 깊은 곳으로 나무를 하러 가던 날, 헨젤은 주머니에 조약돌을 듬뿍 채웠답니다. |
+| `classic_6_3.jpg` | Hansel and Gretel children next to a candy house walking on a yellow brick road, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 헨젤은 걸어가면서 달빛에 반짝이는 하얀 조약돌을 하나씩 길바닥에 툭툭 떨어뜨려 흔적을 표시했어요. |
+| `classic_6_4.jpg` | Hansel and Gretel children next to a candy house happily smiling and posing, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 덕분에 밤이 되어도 남매는 조약돌 빛을 따라 집으로 무사히 돌아올 수가 있었답니다. |
+| `classic_6_5.jpg` | Hansel and Gretel children next to a candy house walking on a yellow brick road, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 어느 날, 조약돌 대신 떨어뜨린 빵부스러기를 새들이 다 쪼아 먹어 버려 남매는 결국 길을 잃었어요. |
+| `classic_6_6.jpg` | Hansel and Gretel children next to a candy house walking on a green forest path filled with sunshine, surrounded by tasty candy and gingerbread house, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 배가 고파 숲속을 헤매던 남매 눈에 지붕은 초콜릿이요 문은 알록달록 사탕으로 된 과자 집이 나타났어요. |
+| `classic_6_7.jpg` | Hansel and Gretel children next to a candy house walking on a green forest path filled with sunshine, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그곳은 아이들을 잡아두려는 무서운 숲속 마녀가 살고 있는 위험한 마술 덫이었답니다. |
+| `classic_6_8.jpg` | Hansel and Gretel children next to a candy house happily smiling and posing, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 마녀는 헨젤을 쇠창살에 가두고 그레텔에게 빵을 굽는 화로에 불을 지피라고 명령했어요. |
+| `classic_6_9.jpg` | Hansel and Gretel children next to a candy house happily smiling and posing, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 그레텔은 지혜를 내어 마녀를 큰 화로 속에 쏙 밀어 넣었고, 갇혀 있던 오빠 헨젤을 극적으로 구해냈어요. |
+| `classic_6_10.jpg` | Hansel and Gretel children next to a candy house happily smiling and posing, mysterious forest background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 남매는 보석 주머니를 들고 맑은 강을 오리 배를 타고 건너 아빠 품으로 무사히 안겼답니다. |
+
+---
+
+## 👒 [classic_7] 빨간 모자 (부모님과의 약속과 안전 규칙)
+* **설명**: 빨간 모자 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_7_1.jpg` | A cover illustration for a children's fairytale book. Features Little Red Riding Hood with a picnic basket in a beautiful setting. The Korean text "빨간 모자" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 숲속 예쁜 마을에는 매일 귀여운 빨간 모자를 펄펄 휘날리며 뛰어노는 꼬마 빨간 모자가 살았어요. |
+| `classic_7_2.jpg` | Little Red Riding Hood with a picnic basket surrounded by blooming colorful flowers, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 어느 아침, 엄마는 아프신 시골 할머니께 갖다 드릴 고소한 쿠키 꽃바구니를 빨간 모자에게 주셨어요. |
+| `classic_7_3.jpg` | Little Red Riding Hood with a picnic basket walking on a green forest path filled with sunshine, walking on a yellow brick road, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '빨간 모자야, 숲길을 갈 때는 다른 한눈을 팔지 말고 반드시 크고 밝은 안전한 길로만 다녀야 해.' |
+| `classic_7_4.jpg` | Little Red Riding Hood with a picnic basket walking on a green forest path filled with sunshine, surrounded by blooming colorful flowers, chasing a beautiful butterfly, walking on a yellow brick road, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 숲속 길을 가던 빨간 모자는 노란 나비와 향기로운 꽃송이를 따라 깊은 그늘 숲길로 들어갔어요. |
+| `classic_7_5.jpg` | Little Red Riding Hood with a picnic basket walking on a green forest path filled with sunshine, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 풀숲 뒤에서 눈을 번쩍이던 음흉한 늑대가 나타나 할머니 집 주소를 상냥하게 물어보았답니다. |
+| `classic_7_6.jpg` | Little Red Riding Hood with a picnic basket happily smiling and posing, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 빨간 모자는 생각 없이 늑대에게 할머니 주소를 재잘재잘 알려주었고 늑대는 서둘러 달려갔어요. |
+| `classic_7_7.jpg` | Little Red Riding Hood with a picnic basket lying on a cozy bed under a warm blanket, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 늑대는 할머니 집에 먼저 도착해 할머니를 장롱에 가두고 침대 위에 안경을 쓴 채 누워 기다렸어요. |
+| `classic_7_8.jpg` | Little Red Riding Hood with a picnic basket lying on a cozy bed under a warm blanket, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 할머니 집에 도착한 빨간 모자는 침대에 누운 늑대를 보고 깜짝 놀랐어요. '할머니 귀가 왜 이리 커요?' |
+| `classic_7_9.jpg` | Little Red Riding Hood with a picnic basket happily smiling and posing, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | '널 더 잘 들으려고 그렇지!' 늑대가 이빨을 보이며 뛰쳐나왔을 때 용감한 사냥꾼 아저씨가 총을 들고 나타났어요. |
+| `classic_7_10.jpg` | Little Red Riding Hood with a picnic basket happily smiling and posing, beautiful forest path background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 사냥꾼 아저씨 덕분에 구출된 빨간 모자는 엄마와의 안전 약속을 평생 꼭 지키겠다고 눈물을 닦으며 다짐했답니다. |
+
+---
+
+## 🦁 [classic_8] 오즈의 마법사 (서로의 부족함을 채우는 우정)
+* **설명**: 오즈의 마법사 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_8_1.jpg` | A cover illustration for a children's fairytale book. Features Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion in a beautiful setting. The Korean text "오즈의 마법사" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 켄사스 벌판에 살던 소녀 도로시는 어느 날 불어닥친 거대한 태풍 구름에 휩쓸려 오즈 나라에 뚝 떨어졌어요. |
+| `classic_8_2.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion in front of a grand fairytale castle, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 집으로 돌아갈 방법을 찾던 도로시는 소원을 들어주는 에메랄드 성의 오즈 마법사 소문을 들었답니다. |
+| `classic_8_3.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion walking on a yellow brick road, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 길을 떠난 도로시는 머리 속에 생각 주머니가 없는 허수아비 친구를 만나 황금 길을 씩씩하게 걸었어요. |
+| `classic_8_4.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion happily smiling and posing, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 조금 걷다 보니 가슴에 따뜻한 사랑의 심장이 들어있지 않아 삐걱거리는 슬픈 양철 나무꾼을 만났답니다. |
+| `classic_8_5.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion walking on a green forest path filled with sunshine, walking on a yellow brick road, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 깊은 숲속 그늘 길목에서는 덩치는 산만하지만 꼬마 쥐 한 마리 앞에서도 부들부들 떠는 겁쟁이 사자를 만났지요. |
+| `classic_8_6.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion walking on a yellow brick road, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 네 친구는 서로의 소원을 다 빌기 위해 손을 꼭 맞잡고 긴 에메랄드빛 황금 벽돌 길을 걸어갔어요. |
+| `classic_8_7.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion walking on a yellow brick road, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 길 중간에 위험한 나쁜 서쪽 마녀가 물개를 보내 방해했지만 사자가 용기를 내어 가슴을 펴고 어흥 포효했어요. |
+| `classic_8_8.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion walking on a green forest path filled with sunshine, walking on a yellow brick road, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 나무꾼은 도끼로 길을 다듬고 허수아비는 번뜩이는 지혜를 짜내어 마법 숲을 마침내 무사히 통과했답니다. |
+| `classic_8_9.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion happily smiling and posing, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 마침내 소원은 외부 마법사가 주는 것이 아니라 이미 서로를 돕는 마음 속에 있었다는 걸 알았어요. |
+| `classic_8_10.jpg` | Dorothy with straw Scarecrow, Tin Woodman, and Cowardly Lion holding a sparkling glass slipper, yellow brick road emerald city background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 도로시는 신비로운 은빛 구두 뒤꿈치를 톡톡 세 번 부딪쳐 사랑하는 가족들이 기다리는 집으로 슝~ 돌아왔답니다. |
+
+---
+
+## 🧚 [classic_9] 피터팬 (꿈과 희망을 향한 동심)
+* **설명**: 피터팬 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_9_1.jpg` | A cover illustration for a children's fairytale book. Features Peter Pan and Tinkerbell flying through clouds in a beautiful setting. The Korean text "피터팬" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 깜깜하고 별빛이 찬란한 밤하늘, 웬디의 방 창문 너머로 날아다니는 요정 나라의 피터팬이 찾아왔어요. |
+| `classic_9_2.jpg` | Peter Pan and Tinkerbell flying through clouds under a starry night sky with twinkling yellow stars, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 피터팬은 웬디와 동생들을 향해 팅커벨의 요술 주머니 속 노란색 반짝이 별가루를 솔솔 뿌려주었답니다. |
+| `classic_9_3.jpg` | Peter Pan and Tinkerbell flying through clouds lying on a cozy bed under a warm blanket, flying high in the sky among soft pastel clouds, under a starry night sky with twinkling yellow stars, looking at a large wall clock, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 별가루를 맞은 아이들은 침대 위에서 두둥실 떠올라 하늘 높이 런던 시계탑 위를 펄펄 날아갔어요. |
+| `classic_9_4.jpg` | Peter Pan and Tinkerbell flying through clouds happily smiling and posing, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 구름 터널을 건너 다다른 곳은 어린아이들이 영원히 늙지 않는 꿈과 모험의 신비한 섬 네버랜드였답니다. |
+| `classic_9_5.jpg` | Peter Pan and Tinkerbell flying through clouds walking on a yellow brick road, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 네버랜드 섬 바닷가 둥지에는 길 잃은 귀여운 인디언 아기 요정들과 신기한 동물들이 가득 살았어요. |
+| `classic_9_6.jpg` | Peter Pan and Tinkerbell flying through clouds swimming deep under the sparkling blue sea, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하지만 바다 위 해적선에서는 날카로운 외갈고리 철 손을 휘두르는 못된 해적 캡틴 후크 선장이 노리고 있었지요. |
+| `classic_9_7.jpg` | Peter Pan and Tinkerbell flying through clouds swimming deep under the sparkling blue sea, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 후크 선장은 팅커벨 요정을 유리병 속에 가두고 웬디 남매를 바다 악어 밥으로 주려고 협박했어요. |
+| `classic_9_8.jpg` | Peter Pan and Tinkerbell flying through clouds happily smiling and posing, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 피터팬은 마법 단검을 뽑아 공중에서 후크 선장과 휙휙 멋진 펜싱 칼싸움 대결을 펼쳐 물리쳤답니다. |
+| `classic_9_9.jpg` | Peter Pan and Tinkerbell flying through clouds swimming deep under the sparkling blue sea, looking at a large wall clock, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 해적들은 째깍째깍 소리를 내며 다가오는 거대 시계 태엽 악어를 보고 무서워 바다로 퐁당 도망쳤어요. |
+| `classic_9_10.jpg` | Peter Pan and Tinkerbell flying through clouds happily smiling and posing, starry London night sky background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 웬디 남매는 따뜻한 집으로 돌아왔지만, 꿈꾸는 마음과 동심을 잊지 않는 한 언제든 피터팬을 기억하기로 했답니다. |
+
+---
+
+## 🐰 [classic_10] 이상한 나라의 앨리스 (끝없는 상상력과 즐거운 호기심)
+* **설명**: 이상한 나라의 앨리스 - 10페이지 아동 맞춤 스토리라인
+
+| 파일명 | 프롬프트 | 대본 |
+| :--- | :--- | :--- |
+| `classic_10_1.jpg` | A cover illustration for a children's fairytale book. Features Alice looking at a white rabbit with a pocket watch in a beautiful setting. The Korean text "이상한 나라의 앨리스" is written in bubbly, warm glowing 3D typography at the top. Whimsical watercolor children's book illustration style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience. | 시원한 봄바람이 솔솔 부는 오후, 앨리스는 풀밭에 누워 책을 읽다가 흰 양복 조끼를 입은 하얀 토끼를 보았어요. |
+| `classic_10_2.jpg` | Alice looking at a white rabbit with a pocket watch looking at a large wall clock, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 토끼는 시계를 들여다보며 '늦었다 늦었어!' 하고 종종걸음으로 달려가다 나무 둥치 굴속으로 쏙 들어갔답니다. |
+| `classic_10_3.jpg` | Alice looking at a white rabbit with a pocket watch happily smiling and posing, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 호기심 많은 앨리스는 흰 토끼를 따라 어두운 굴속으로 슝 뛰어내렸고 아래로 아래로 한참을 떨어졌어요. |
+| `classic_10_4.jpg` | Alice looking at a white rabbit with a pocket watch singing happily with musical notes floating around, surrounded by blooming colorful flowers, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 도착한 곳은 꽃들이 노래를 부르고 고양이가 공중에서 스르륵 웃으며 사라지는 이상한 마법 세계였답니다. |
+| `classic_10_5.jpg` | Alice looking at a white rabbit with a pocket watch happily smiling and posing, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 앨리스는 '날 마셔요'라고 쓰인 유리병의 신기한 물약을 마시자 키가 천장까지 쑥 커졌어요. |
+| `classic_10_6.jpg` | Alice looking at a white rabbit with a pocket watch happily smiling and posing, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 옆의 요술 초콜릿 케이크를 한 조각 맛보자 이번엔 개미만큼 조그맣게 작아져서 방방 뛰어다녔지요. |
+| `classic_10_7.jpg` | Alice looking at a white rabbit with a pocket watch singing happily with musical notes floating around, walking on a green forest path filled with sunshine, walking on a yellow brick road, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 이상한 숲 길목에서는 모자 장수의 유쾌한 차 모임에 참석하여 노래와 수수께끼 놀이를 신나게 즐겼어요. |
+| `classic_10_8.jpg` | Alice looking at a white rabbit with a pocket watch happily smiling and posing, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 하트 여왕의 정원에 가서는 카드로 만든 알록달록 병정들과 홍학 채로 고슴도치를 굴리는 공치기 놀이를 했지요. |
+| `classic_10_9.jpg` | Alice looking at a white rabbit with a pocket watch flying high in the sky among soft pastel clouds, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 우당탕탕 소동 속에서 카드들이 하늘 위로 가득 날아올라 앨리스의 얼굴을 부드럽게 스쳐 지나갔답니다. |
+| `classic_10_10.jpg` | Alice looking at a white rabbit with a pocket watch happily smiling and posing, wonderland giant mushroom background, whimsical watercolor children's book illustration, cute cartoon style, soft pastel colors, warm fairytale lighting, 5-year-old girl target audience | 잠에서 깨어난 앨리스는 머리맡에 쏟아지는 아침 나뭇잎을 털어내며 꿈속의 이상한 모험을 행복하게 회상했답니다. |
+
+---
