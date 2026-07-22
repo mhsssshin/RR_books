@@ -68,3 +68,21 @@
 | **`creative_3/creative_3_8.jpg`** | Page 8 | 모두가 힘을 합치자 커다란 시커먼 먹구름 괴물은 휙 날아가 버렸고, 하늘은 다시 눈부셔졌어요. | The dark grumpy storm cloud monster is blown away by the combined brilliant light of the glowing baby stars. The night sky becomes bright and clear again, watercolor style. |
 | **`creative_3/creative_3_9.jpg`** | Page 9 | 은하수 광장에는 오색찬란한 아기 별들의 환상적인 댄스 축제가 성대하게 시작되었답니다. | A grand, magical stardust dance festival under the night sky. Tiny smiling baby stars and cute forest animals are dancing together on a glowing silver silver-blue Milky Way field. Watercolor fairytale style. |
 | **`creative_3/creative_3_10.jpg`** | Page 10 | 민지(이)와 별들은 힘을 합치면 그 어떤 어둠도 물리칠 수 있다는 멋진 지혜를 깨달았답니다. | A smiling baby star winks down from the bright starry sky toward a happy child who is looking up from a bedroom window, holding hands with a toy squirrel. Cozy room, warm and happy atmosphere, watercolor style. |
+
+---
+
+## 🦁 5. 과자 나라의 다정한 사자 (`creative_4`)
+분홍색 솜사탕 갈기를 지닌 사자 레오 왕이 곤경에 처한 아기 다람쥐를 돕기 위해 자신의 달콤한 갈기를 떼어 나누어 주는 배려와 친절의 이야기입니다. (1페이지당 1장 구조)
+
+| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
+| :--- | :---: | :--- | :--- |
+| **`creative_4/creative_4_1.jpg`** | Page 1 | 분홍색 솜사탕 갈기를 뽐내는 다정한 사자 레오는 달콤한 과자 나라를 평화롭게 다스리는 멋진 왕이었어요. | A cover illustration for a children's fairytale book. A friendly cute king lion with a fluffy pink cotton candy mane is sitting on a waffle throne in a magical candy land. Bouncy colorful Korean text "과자 나라의 다정한 사자" is written in glowing letters at the top. Whimsical children's book watercolor style. |
+| **`creative_4/creative_4_2.jpg`** | Page 2 | 레오 왕은 매일 아침 맛있는 쿠키 꽃밭을 가꾸고 초콜릿 강을 돌보며 온 정성을 다했답니다. | The cute friendly king lion with a pink cotton candy mane is watering a flowerbed of chocolate cookies in a bright candy kingdom. Sweet rivers of melted chocolate nearby, watercolor style. |
+| **`creative_4/creative_4_3.jpg`** | Page 3 | 어느 날 오후, 호기심 많은 민지(이)가 알록달록 마카롱 길을 따라 걷다가 레오 왕의 성에 방문했어요. | A curious little girl with a warm smile is walking along a path made of colorful sweet macarons, heading towards a grand pastel candy castle. Whimsical watercolor style. |
+| **`creative_4/creative_4_4.jpg`** | Page 4 | 그때 성문 밖에서 젤리 열쇠를 잃어버리고 훌쩍훌쩍 울고 있는 꼬마 아기 다람쥐가 눈에 띄었어요. | A tiny cute baby squirrel is crying outside a grand candy castle gate because it lost its key made of shiny red jelly. The friendly king lion and a little girl look on with concern. Watercolor style. |
+| **`creative_4/creative_4_5.jpg`** | Page 5 | 아기 다람쥐는 집에 들어가지 못해 몹시 배가 고프고 발이 아파서 한 걸음도 걸을 수가 없었지요. | The tiny baby squirrel is sitting sadly on a macaron path, rubbing its eyes, looking hungry and tired. Soft warm colors, cozy but sad candy land background, watercolor style. |
+| **`creative_4/creative_4_6.jpg`** | Page 6 | 친절한 레오 왕은 자신의 갈기에서 폭신하고 달콤한 딸기맛 솜사탕을 한 웅큼 떼어 다람쥐에게 주었어요. | The kind king lion is gently tearing a fluffy piece of sweet strawberry cotton candy from his own pink mane and giving it to the hungry baby squirrel. Warm, touching atmosphere, watercolor style. |
+| **`creative_4/creative_4_7.jpg`** | Page 7 | 민지(이)는 가방을 뒤져 돋보기를 꺼낸 뒤, 마카롱 틈새에 숨겨져 있던 젤리 열쇠를 열심히 찾았답니다. | A little girl uses a magnifying glass to search for a lost red jelly key between the cracks of colorful sweet macarons on a path. Whimsical watercolor style. |
+| **`creative_4/creative_4_8.jpg`** | Page 8 | 마침내 초콜릿 풀숲 밑에서 반짝이던 젤리 열쇠를 발견했고, 다람쥐는 기뻐서 펄쩍 뛰어올랐어요. | A little girl finds a shiny red jelly key hidden under a patch of green chocolate grass. The tiny baby squirrel is jumping with joy, happy atmosphere, watercolor style. |
+| **`creative_4/creative_4_9.jpg`** | Page 9 | 다람쥐는 고마움의 표시로 레오 왕과 민지이에게 하트 모양 마들렌을 두 손 가득 전했답니다. | The cute baby squirrel is happily presenting a plate of heart-shaped madeline cakes to the kind king lion and the little girl as a thank you. Warm and grateful atmosphere, watercolor style. |
+| **`creative_4/creative_4_10.jpg`** | Page 10 | 배려하고 나누는 마음이 퍼지자, 맛있는 과자 나라는 더욱 달콤하고 행복한 천국이 되었답니다. | A group of cute forest animals and the kind king lion are having a happy picnic party in a beautiful candy meadow under a soft rainbow sky. Bright, cheerful watercolor style. |
