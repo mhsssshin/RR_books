@@ -86,3 +86,21 @@
 | **`creative_4/creative_4_8.jpg`** | Page 8 | 마침내 초콜릿 풀숲 밑에서 반짝이던 젤리 열쇠를 발견했고, 다람쥐는 기뻐서 펄쩍 뛰어올랐어요. | A little girl finds a shiny red jelly key hidden under a patch of green chocolate grass. The tiny baby squirrel is jumping with joy, happy atmosphere, watercolor style. |
 | **`creative_4/creative_4_9.jpg`** | Page 9 | 다람쥐는 고마움의 표시로 레오 왕과 민지이에게 하트 모양 마들렌을 두 손 가득 전했답니다. | The cute baby squirrel is happily presenting a plate of heart-shaped madeline cakes to the kind king lion and the little girl as a thank you. Warm and grateful atmosphere, watercolor style. |
 | **`creative_4/creative_4_10.jpg`** | Page 10 | 배려하고 나누는 마음이 퍼지자, 맛있는 과자 나라는 더욱 달콤하고 행복한 천국이 되었답니다. | A group of cute forest animals and the kind king lion are having a happy picnic party in a beautiful candy meadow under a soft rainbow sky. Bright, cheerful watercolor style. |
+
+---
+
+## 🪄 6. 마법 빗자루와 요술 하프 (`creative_5`)
+아름다운 소리를 내지 못해 슬퍼하는 하프와 외톨이 빗자루가 만나 손을 잡고 음악을 연주해 평생 함께할 단짝 친구가 되는 이야기입니다. (1페이지당 1장 구조)
+
+| 파일 경로 | 페이지 | 동화 본문 내용 | 이미지 생성 영문 프롬프트 (Prompt) |
+| :--- | :---: | :--- | :--- |
+| **`creative_5/creative_5_1.jpg`** | Page 1 | 하늘나라 궁전에는 노래하는 요술 하프 루루가 있었지만, 스스로 아름다운 목소리를 내지 못해 늘 슬퍼했어요. | A cover illustration for a children's fairytale book. A cute gold harp with gentle eyes is standing next to a cheerful magic wooden broom in a glowing sky palace garden. Bouncy colorful Korean text "마법 빗자루와 요술 하프" is written in glowing letters at the top. Whimsical watercolor children's book style. |
+| **`creative_5/creative_5_2.jpg`** | Page 2 | 그늘진 정원에는 마법 빗자루 슈슈가 혼자 먼지를 쓸고 다니느라 친구가 없어 무척 외로워했답니다. | A lonely magic wooden broom with a cute face is sweeping dust alone in a quiet, shadowy palace garden. Whimsical watercolor style. |
+| **`creative_5/creative_5_3.jpg`** | Page 3 | 이를 본 민지(이)는 두 친구의 외로운 사정을 알고, 다 함께 모여 노는 모임을 가졌어요. | A friendly little girl with a warm smile is introducing the sad gold harp and the lonely magic wooden broom to each other in a sunny garden clearing. Cozy and welcoming atmosphere, watercolor style. |
+| **`creative_5/creative_5_4.jpg`** | Page 4 | '루루야, 슈슈야! 너희 둘의 마법을 합치면 아주 놀라운 일이 일어날 수 있어! 한번 손을 잡아봐!' | A friendly little girl is gesturing with excitement, encouraging the magic wooden broom and the gold harp to hold hands/touch. Bright sparkling stars in the air, fairytale watercolor style. |
+| **`creative_5/creative_5_5.jpg`** | Page 5 | 마법 빗자루 슈슈가 깃털 꼬리로 요술 하프 루루의 은빛 현을 부드럽고 상냥하게 톡 건드렸어요. | The magic wooden broom gently strokes the shiny silver strings of the gold harp with its soft feathers. A warm and hopeful light glows from the point of contact, watercolor style. |
+| **`creative_5/creative_5_6.jpg`** | Page 6 | 그 순간, 하프에서 별빛이 찬란하게 튀며 숲속을 가득 메우는 맑고 고운 아기 요정의 멜로디가 울려 퍼졌어요. | Brilliant colorful sparkles and glowing music notes burst out as the broom strokes the harp. The air is filled with magical, bright melodies, painting the environment with soft colors. Whimsical watercolor style. |
+| **`creative_5/creative_5_7.jpg`** | Page 7 | 루루는 마침내 아름다운 노랫소리를 갖게 되었고, 슈슈는 발걸음에 맞춰 춤을 신나게 추었어요. | The gold harp is singing happily with a big smile, and the magic wooden broom is dancing and spinning around in circles with joy. Whimsical children's book watercolor style. |
+| **`creative_5/creative_5_8.jpg`** | Page 8 | 하늘나라 친구들은 음악 소리에 맞춰 둥글게 모여 춤을 추며 모두가 즐거운 축제를 만끽했답니다. | A group of cute fairytale characters and animals are dancing in a circle in the sky palace garden, enjoying the beautiful harp music. Colorful flowers, bright happy watercolor style. |
+| **`creative_5/creative_5_9.jpg`** | Page 9 | 이제 루루와 슈슈는 어디를 가든 함께 다니는 하늘나라 최고의 단짝 친구가 되었어요. | The magic wooden broom and the gold harp are walking side by side down a sparkling corridor, happy and holding hands as best friends. Watercolor style. |
+| **`creative_5/creative_5_10.jpg`** | Page 10 | 민지(이)의 따뜻한 중재 덕분에 두 외로운 장난감은 평생 함께할 영혼의 우정을 얻게 되었답니다. | A friendly little girl is smiling as she watches the magic broom and the gold harp play together under a warm, glowing sunset sky. Cozy, happy watercolor style. |
