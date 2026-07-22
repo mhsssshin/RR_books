@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const childName = localStorage.getItem('rorong_child_name') || '우리 아이';
   const favColor = localStorage.getItem('rorong_fav_color') || 'pink';
   const bookContainer = document.querySelector('.book-viewer');
+  const readPageBtns = document.querySelectorAll('.read-page-btn');
   
   // Set theme background based on user's preference
   if (favColor === 'pink') {
@@ -82,6 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
         page.classList.remove('active');
       }
     });
+
+    // Reset all whole page reading buttons when turning pages
+    if (readPageBtns) {
+      readPageBtns.forEach(btn => {
+        btn.classList.remove('playing');
+        btn.textContent = '🔊 페이지 읽기';
+      });
+    }
+    window.speechSynthesis.cancel();
 
     // Update buttons visibility
     prevBtn.style.display = idx === 0 ? 'none' : 'flex';
@@ -171,12 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return processed.length > 0 ? processed : clean;
   };
 
-  const speakText = (text, element) => {
+  const speakText = (text, element, isWordOnly = true) => {
     // Stop any current voice output
     window.speechSynthesis.cancel();
 
-    // Clean text by stripping Korean particles
-    const cleanedText = cleanWordForTTS(text);
+    // Clean text by stripping Korean particles only if it's a word-only TTS
+    const cleanedText = isWordOnly ? cleanWordForTTS(text) : text;
 
     // Create a new utterance
     currentUtterance = new SpeechSynthesisUtterance(cleanedText);
@@ -194,14 +204,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     currentUtterance.onstart = () => {
       element.classList.add('speaking');
+      if (!isWordOnly) {
+        element.classList.add('playing');
+        element.textContent = '⏹️ 멈추기';
+      }
     };
 
     currentUtterance.onend = () => {
       element.classList.remove('speaking');
+      if (!isWordOnly) {
+        element.classList.remove('playing');
+        element.textContent = '🔊 페이지 읽기';
+      }
     };
 
     currentUtterance.onerror = () => {
       element.classList.remove('speaking');
+      if (!isWordOnly) {
+        element.classList.remove('playing');
+        element.textContent = '🔊 페이지 읽기';
+      }
     };
 
     window.speechSynthesis.speak(currentUtterance);
@@ -515,4 +537,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     drawConfetti();
   };
+
+  // 6. Read Whole Page TTS Setup
+  readPageBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      
+      if (btn.classList.contains('playing')) {
+        window.speechSynthesis.cancel();
+        btn.classList.remove('playing');
+        btn.textContent = '🔊 페이지 읽기';
+        return;
+      }
+
+      readPageBtns.forEach(otherBtn => {
+        otherBtn.classList.remove('playing');
+        otherBtn.textContent = '🔊 페이지 읽기';
+      });
+
+      const textSide = btn.closest('.text-side');
+      const paragraph = textSide.querySelector('.story-paragraph');
+      const textToRead = paragraph.textContent.trim();
+
+      speakText(textToRead, btn, false);
+    });
+  });
 });

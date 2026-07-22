@@ -36,6 +36,7 @@ const generateHTML = (story) => {
         </div>
       </div>
       <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
         <div class="story-text-container">
           <p class="story-paragraph">${page.text}</p>
         </div>

@@ -564,3 +564,57 @@ body {
     padding: 4px 12px;
   }
 }
+
+/* Read Page Button Styling */
+.read-page-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: white;
+  border: 3px solid #ffe4e1;
+  color: #ff69b4;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Gaegu', cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 5;
+}
+
+.read-page-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.15);
+  border-color: #ff69b4;
+}
+
+.read-page-btn:active {
+  transform: translateY(1px);
+}
+
+.read-page-btn.playing {
+  background: #ffe4e1;
+  border-color: #ff69b4;
+  color: #ff1493;
+  animation: pulseButton 1s infinite alternate;
+}
+
+@keyframes pulseButton {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+@media (max-width: 768px) {
+  .read-page-btn {
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-width: 2px;
+  }
+}
