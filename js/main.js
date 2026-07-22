@@ -128,12 +128,111 @@ document.addEventListener('DOMContentLoaded', () => {
     modalOverlay.classList.add('active');
   });
 
-  // 3. Dynamic Book Loading from stories.json
   let allBooks = [];
   let activeCategory = 'creative'; // Default to creative stories
   const gridContainer = document.getElementById('books-grid');
   const creativeTabBtn = document.getElementById('tab-creative');
   const classicTabBtn = document.getElementById('tab-classic');
+  const indicatorsContainer = document.getElementById('carousel-indicators');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+
+  // Drag and Swipe Carousel variables
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  let dragMoved = false;
+
+  // Carousel mouse dragging event listeners
+  gridContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    dragMoved = false;
+    gridContainer.classList.add('dragging');
+    startX = e.pageX - gridContainer.offsetLeft;
+    scrollLeft = gridContainer.scrollLeft;
+  });
+
+  gridContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+    gridContainer.classList.remove('dragging');
+  });
+
+  gridContainer.addEventListener('mouseup', () => {
+    isDown = false;
+    gridContainer.classList.remove('dragging');
+  });
+
+  gridContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - gridContainer.offsetLeft;
+    const walk = (x - startX) * 1.6;
+    if (Math.abs(x - startX) > 8) {
+      dragMoved = true;
+    }
+    gridContainer.scrollLeft = scrollLeft - walk;
+  });
+
+  // Calculate active center card
+  const handleCarouselScroll = () => {
+    const cards = gridContainer.querySelectorAll('.book-card');
+    if (cards.length === 0) return;
+
+    const containerRect = gridContainer.getBoundingClientRect();
+    const containerCenter = containerRect.left + containerRect.width / 2;
+
+    let closestCard = null;
+    let closestDistance = Infinity;
+    let closestIndex = 0;
+
+    cards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(cardCenter - containerCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestCard = card;
+        closestIndex = index;
+      }
+    });
+
+    cards.forEach(card => {
+      if (card === closestCard) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+
+    // Update active dot indicator
+    const dots = indicatorsContainer.querySelectorAll('.indicator-dot');
+    dots.forEach((dot, idx) => {
+      if (idx === closestIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  };
+
+  gridContainer.addEventListener('scroll', handleCarouselScroll);
+
+  // Arrow click controls
+  const scrollCarousel = (direction) => {
+    RorongAudio.playBubble();
+    const cardWidth = window.innerWidth <= 768 ? 190 : 280;
+    const gap = window.innerWidth <= 768 ? 15 : 30;
+    const scrollAmount = cardWidth + gap;
+    
+    gridContainer.scrollBy({
+      left: direction === 'next' ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+  };
+
+  prevBtn.addEventListener('click', () => scrollCarousel('prev'));
+  nextBtn.addEventListener('click', () => scrollCarousel('next'));
 
   const fetchAndRenderBooks = async () => {
     try {
@@ -143,17 +242,18 @@ document.addEventListener('DOMContentLoaded', () => {
       renderBooks();
     } catch (e) {
       console.error('Error loading stories:', e);
-      gridContainer.innerHTML = '<div style="font-size:1.8rem; color:#d81b60; grid-column: 1/-1;">동화책을 불러오는데 실패했어요 😢</div>';
+      gridContainer.innerHTML = '<div style="font-size:1.8rem; color:#d81b60; padding: 20px;">동화책을 불러오는데 실패했어요 😢</div>';
     }
   };
 
   const renderBooks = () => {
     gridContainer.innerHTML = '';
+    indicatorsContainer.innerHTML = '';
     
     // Filter books based on selected tab
     const filtered = allBooks.filter(book => book.type === activeCategory);
 
-    filtered.forEach(book => {
+    filtered.forEach((book, idx) => {
       // Load saved rating from localStorage
       const savedRating = localStorage.getItem(`rorong_rating_${book.id}`);
       let ratingHtml = '';
@@ -184,7 +284,11 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      card.addEventListener('click', () => {
+      card.addEventListener('click', (e) => {
+        if (dragMoved) {
+          e.preventDefault();
+          return;
+        }
         RorongAudio.playBubble();
         // Redirect to modular HTML book page
         setTimeout(() => {
@@ -193,7 +297,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       gridContainer.appendChild(card);
+
+      // Create indicator dot
+      const dot = document.createElement('div');
+      dot.className = 'indicator-dot';
+      if (idx === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        RorongAudio.playBubble();
+        const cardWidth = window.innerWidth <= 768 ? 190 : 280;
+        const gap = window.innerWidth <= 768 ? 15 : 30;
+        gridContainer.scrollTo({
+          left: idx * (cardWidth + gap),
+          behavior: 'smooth'
+        });
+      });
+      indicatorsContainer.appendChild(dot);
     });
+
+    // Reset scroll to start on render
+    gridContainer.scrollLeft = 0;
+    // Set first card active immediately
+    setTimeout(handleCarouselScroll, 100);
   };
 
   // Tab switching click handlers
