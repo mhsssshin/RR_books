@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>바다 탐험선 요술 보물 찾기 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 바다 탐험선 요술 보물 찾기 (잠수함 & 호기심)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_boy_04">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_1.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="노란 잠수함 보트는 깊고 푸른 바닷속 신비로운 보물을 찾아 탐험하는 것을 무척 좋아하는 친구였어요." data-english-text="Yellow submarine Boat loved to explore the deep blue sea looking for mysterious treasures.">노란 잠수함 보트는 깊고 푸른 바닷속 신비로운 보물을 찾아 탐험하는 것을 무척 좋아하는 친구였어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_2.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="어느 날 아침, 보트는 바다 밑바닥 조개 광장에서 낡았지만 반짝이는 오색 보물지도를 발견했어요." data-english-text="One morning, Boat found a worn but sparkling colorful treasure map in the seashell square at the bottom of the sea.">어느 날 아침, 보트는 바다 밑바닥 조개 광장에서 낡았지만 반짝이는 오색 보물지도를 발견했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_3.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="보물지도에는 깊은 해저 동굴 속에 아기 물고기들을 위한 신비한 보석 초롱이 숨겨져 있다고 적혀 있었지요." data-english-text="The map said a magic gemstone lantern for baby fish was hidden inside a deep sea cave.">보물지도에는 깊은 해저 동굴 속에 아기 물고기들을 위한 신비한 보석 초롱이 숨겨져 있다고 적혀 있었지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_4.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="보트와 [이름](이)는 가방을 챙겨 탐험을 떠났고, 어두컴컴하고 구불구불한 바다 동굴에 도착했어요." data-english-text="Boat and [이름] packed their bags and set off on the adventure, arriving at the dark, twisty sea cave.">보트와 [이름](이)는 가방을 챙겨 탐험을 떠났고, 어두컴컴하고 구불구불한 바다 동굴에 도착했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_5.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="동굴 속은 너무 캄캄해서 바위 기둥에 부딪힐 뻔했지만, 보트는 앞등에 불을 밝히며 씩씩하게 헤엄쳤어요." data-english-text="The cave was so dark they almost bumped into rock pillars, but Boat swam bravely, shining his front light.">동굴 속은 너무 캄캄해서 바위 기둥에 부딪힐 뻔했지만, 보트는 앞등에 불을 밝히며 씩씩하게 헤엄쳤어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_6.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="그때 동굴 벽 틈새에 큰 돌이 끼어 길을 잃고 훌쩍이는 아기 문어 요정을 만나게 되었답니다." data-english-text="Then they met a little baby octopus fairy crying because a big rock trapped it in a cave crack.">그때 동굴 벽 틈새에 큰 돌이 끼어 길을 잃고 훌쩍이는 아기 문어 요정을 만나게 되었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_7.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="[이름](이)는 잠수함 로봇 팔을 움직여 동굴 틈새의 무거운 돌을 영차영차 조심스럽게 들어 올려 주었어요." data-english-text="[이름] used the submarine's robotic arm to gently lift the heavy rock from the cave crack.">[이름](이)는 잠수함 로봇 팔을 움직여 동굴 틈새의 무거운 돌을 영차영차 조심스럽게 들어 올려 주었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_8.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="구해진 아기 문어는 고마워하며 먹물 별가루를 뿜어 보물 상자가 숨겨진 비밀 문을 알려주었답니다." data-english-text="The rescued baby octopus thanked them by shooting ink stardust to reveal the secret door to the treasure chest.">구해진 아기 문어는 고마워하며 먹물 별가루를 뿜어 보물 상자가 숨겨진 비밀 문을 알려주었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_9.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="비밀 문 안에서 드디어 아기 물고기들을 환하게 비춰줄 예쁘고 빛나는 보석 초롱을 찾아내었어요." data-english-text="Inside the secret door, they finally found the beautiful, glowing gemstone lantern to light up the baby fish.">비밀 문 안에서 드디어 아기 물고기들을 환하게 비춰줄 예쁘고 빛나는 보석 초롱을 찾아내었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_04/creative_boy_04_10.jpg" alt="바다 탐험선 요술 보물 찾기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">⚓</div>
+          <div class="moral-tag">잠수함 & 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="보트는 보물을 찾는 것보다 어려움에 처한 친구를 구하는 탐험이 훨씬 더 기쁘다는 것을 깨달았답니다." data-english-text="Boat realized that helping a friend in trouble is a much happier adventure than just finding treasure.">보트는 보물을 찾는 것보다 어려움에 처한 친구를 구하는 탐험이 훨씬 더 기쁘다는 것을 깨달았답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장난감 나라의 양보 시합 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 장난감 나라의 양보 시합 (양보하고 사이좋게 놀기)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_girl_20">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_1.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="알록달록 놀이방 책상 아래에는 꼬마 빨간 기차와 보드라운 갈색 아기 곰 인형이 살고 있었어요." data-english-text="In the toy box, Doll and Robot fought over the red toy car, pulling it back and forth.">알록달록 놀이방 책상 아래에는 꼬마 빨간 기차와 보드라운 갈색 아기 곰 인형이 살고 있었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_2.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="오늘 아침, 놀이방 한가운데에는 반짝이는 오색 은하수 미끄럼틀 장난감이 새롭게 놓여 있었답니다." data-english-text="The car wheel almost popped off, and both toys were angry and pouting.">오늘 아침, 놀이방 한가운데에는 반짝이는 오색 은하수 미끄럼틀 장난감이 새롭게 놓여 있었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_3.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="기차와 곰 인형은 미끄럼틀을 자기가 먼저 타겠다며 앞다투어 달려가 길을 막아섰어요." data-english-text="Wise [이름] came and placed a blue toy train next to the red car.">기차와 곰 인형은 미끄럼틀을 자기가 먼저 타겠다며 앞다투어 달려가 길을 막아섰어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_4.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="'이건 내 미끄럼틀이야! 비켜!' 기차는 경적을 빵빵 울렸고 곰 인형은 미끄럼틀을 꼬옥 안고 놓지 않았어요." data-english-text="'Doll, you ride the train first, and Robot, you drive the car. Then let's swap!'">'이건 내 미끄럼틀이야! 비켜!' 기차는 경적을 빵빵 울렸고 곰 인형은 미끄럼틀을 꼬옥 안고 놓지 않았어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_5.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="이를 본 지혜로운 [이름](이)가 두 장난감 사이에 부드러운 하트 카드를 내려놓으며 말했답니다." data-english-text="Doll and Robot looked at each other, nodded, and started to play together.">이를 본 지혜로운 [이름](이)가 두 장난감 사이에 부드러운 하트 카드를 내려놓으며 말했답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_6.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="'기차야, 곰 인형아! 미끄럼틀은 차례대로 양보하며 타는 놀이야. 같이 타야 기쁨이 백 배가 된단다.'" data-english-text="They shared the tracks, built a big block station, and laughed happily.">'기차야, 곰 인형아! 미끄럼틀은 차례대로 양보하며 타는 놀이야. 같이 타야 기쁨이 백 배가 된단다.'</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_7.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="빨간 기차는 [이름]이의 조언을 듣고 한 걸음 물러나 경적을 울리며 곰 인형에게 '먼저 타' 하고 속삭였어요." data-english-text="When Tick-Tock rang the bell, they swapped the toys without fighting.">빨간 기차는 [이름]이의 조언을 듣고 한 걸음 물러나 경적을 울리며 곰 인형에게 '먼저 타' 하고 속삭였어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_8.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="곰 인형은 감동하여 밝게 미소 지으며 미끄럼틀 위를 슝~ 하고 신나고 씩씩하게 내려왔답니다." data-english-text="Playing together was much more fun than playing alone, and they smiled wide.">곰 인형은 감동하여 밝게 미소 지으며 미끄럼틀 위를 슝~ 하고 신나고 씩씩하게 내려왔답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_9.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="이번엔 곰 인형이 기차의 엉덩이를 살며시 밀어주었고, 기차도 칙칙폭폭 소리를 내며 신나게 하강했어요." data-english-text="They cleaned up the toys together, putting them neatly in the box.">이번엔 곰 인형이 기차의 엉덩이를 살며시 밀어주었고, 기차도 칙칙폭폭 소리를 내며 신나게 하강했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_20/creative_girl_20_10.jpg" alt="장난감 나라의 양보 시합" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🧸</div>
+          <div class="moral-tag">양보하고 사이좋게 놀기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="[이름](이)는 양보를 통해 장난감 나라가 다시 웃음으로 가득 찬 사이좋은 천국이 된 것을 보고 행복하게 웃었답니다." data-english-text="[이름] and the toys learned that sharing and yielding makes playtime happy for everyone.">[이름](이)는 양보를 통해 장난감 나라가 다시 웃음으로 가득 찬 사이좋은 천국이 된 것을 보고 행복하게 웃었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

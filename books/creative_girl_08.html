@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아기 곰의 달콤한 꿀단지 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 아기 곰의 달콤한 꿀단지 (다정한 마음과 친절)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_girl_08">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_1.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="숲속 커다란 꿀벌 나무 아래에는 욕심꾸러기 아기 곰 웅이가 맛있는 꿀단지를 안고 숨어 있었어요." data-english-text="Under a big honeybee tree in the forest, greedy baby bear Ungy hid with a sweet honey jar.">숲속 커다란 꿀벌 나무 아래에는 욕심꾸러기 아기 곰 웅이가 맛있는 꿀단지를 안고 숨어 있었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_2.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="웅이는 세상에서 달콤한 꿀을 가장 좋아해서, 누구에게도 꿀을 한 방울도 보여주고 싶지 않았지요." data-english-text="Ungy loved sweet honey more than anything and didn't want to share even a single drop.">웅이는 세상에서 달콤한 꿀을 가장 좋아해서, 누구에게도 꿀을 한 방울도 보여주고 싶지 않았지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_3.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="그때 저 멀리 바람에 날려 날개가 다친 가녀린 아기 파랑새 한 마리가 힘없이 바닥으로 뚝 떨어졌어요." data-english-text="Then, a weak little bluebird with a hurt wing fell to the ground on the wind.">그때 저 멀리 바람에 날려 날개가 다친 가녀린 아기 파랑새 한 마리가 힘없이 바닥으로 뚝 떨어졌어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_4.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="파랑새는 며칠 동안 밥을 먹지 못해 목소리조차 내지 못하고 부르르 떨며 눈물을 흘렸답니다." data-english-text="The bluebird had not eaten for days, could not make a sound, and shivered with tears.">파랑새는 며칠 동안 밥을 먹지 못해 목소리조차 내지 못하고 부르르 떨며 눈물을 흘렸답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_5.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="이를 본 [이름](이)는 웅이에게 다가가 속삭였어요. '웅이야, 배고픈 친구에게 친절을 나누는 건 어떨까?'" data-english-text="Seeing this, [이름] went to Ungy and whispered, 'Ungy, how about sharing kindness with a hungry friend?'">이를 본 [이름](이)는 웅이에게 다가가 속삭였어요. '웅이야, 배고픈 친구에게 친절을 나누는 건 어떨까?'</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_6.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="'다정한 친절은 우리가 먹는 그 어떤 달콤한 꿀보다 우리 마음을 훨씬 더 달게 만들어준단다.'" data-english-text="'Kindness makes our hearts much sweeter than the sweetest honey we eat.'">'다정한 친절은 우리가 먹는 그 어떤 달콤한 꿀보다 우리 마음을 훨씬 더 달게 만들어준단다.'</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_7.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="웅이는 아까웠지만 눈을 질끈 감고 가장 큰 숟가락으로 황금빛 꿀을 듬뿍 떠서 파랑새에게 아~ 하고 주었어요." data-english-text="Ungy closed his eyes, took a big spoonful of golden honey, and fed it to the bluebird.">웅이는 아까웠지만 눈을 질끈 감고 가장 큰 숟가락으로 황금빛 꿀을 듬뿍 떠서 파랑새에게 아~ 하고 주었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_8.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="달콤한 꿀을 한 입 먹은 파랑새는 눈이 번쩍 뜨이더니, 날개를 파닥이며 예쁜 노래를 선물했답니다." data-english-text="Eating the sweet honey, the bluebird's eyes popped open, and it sang a beautiful song as a gift.">달콤한 꿀을 한 입 먹은 파랑새는 눈이 번쩍 뜨이더니, 날개를 파닥이며 예쁜 노래를 선물했답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_9.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="파랑새는 고맙다며 밤하늘 별자리가 숨겨진 보물 지도를 웅이와 [이름]이에게 건네주었어요." data-english-text="Sharing sweet honey made Ungy's heart feel so happy, and they became sweet friends.">파랑새는 고맙다며 밤하늘 별자리가 숨겨진 보물 지도를 웅이와 [이름]이에게 건네주었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_08/creative_girl_08_10.jpg" alt="아기 곰의 달콤한 꿀단지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🐻</div>
+          <div class="moral-tag">다정한 마음과 친절</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="웅이는 꿀보다 훨씬 달콤한 친절의 기쁨을 깨닫고, 숲속 친구들과 함께 매일 맛있는 음식을 나누어 먹었답니다." data-english-text="[이름] smiled warmly, watching them hold hands under the sunny forest trees.">웅이는 꿀보다 훨씬 달콤한 친절의 기쁨을 깨닫고, 숲속 친구들과 함께 매일 맛있는 음식을 나누어 먹었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

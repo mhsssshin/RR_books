@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우주 구조대 로봇 로니 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 우주 구조대 로봇 로니 (우주 모험 & 협동)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_boy_01">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_1.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="우주 정거장에 사는 꼬마 구조대 로봇 로니는 반짝반짝 별들을 지키는 씩씩한 친구였어요." data-english-text="Little rescue robot Roni lived in the space station and was a brave friend who protected the twinkling stars.">우주 정거장에 사는 꼬마 구조대 로봇 로니는 반짝반짝 별들을 지키는 씩씩한 친구였어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_2.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="어느 날 밤, 우주 너머에서 빨간 불꽃을 뿜는 작은 아기 별똥별이 길을 잃고 훌쩍이며 날아왔어요." data-english-text="One night, from across space, a little baby shooting star crying and spitting red sparks flew in.">어느 날 밤, 우주 너머에서 빨간 불꽃을 뿜는 작은 아기 별똥별이 길을 잃고 훌쩍이며 날아왔어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_3.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="아기 별똥별은 엄마 은하수를 잃어버려 캄캄한 우주 미로 속에 갇혀서 집에 갈 수 없었지요." data-english-text="The baby shooting star had lost its mother Milky Way and was trapped in the dark space maze, unable to go home.">아기 별똥별은 엄마 은하수를 잃어버려 캄캄한 우주 미로 속에 갇혀서 집에 갈 수 없었지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_4.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="착한 로니는 가슴의 무지개 전등을 켜고 동물 우주 비행사 친구들에게 도움을 요청했어요." data-english-text="Kind Roni turned on the rainbow light on his chest and asked his animal astronaut friends for help.">착한 로니는 가슴의 무지개 전등을 켜고 동물 우주 비행사 친구들에게 도움을 요청했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_5.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text=""친구들아! 아기 별똥별이 엄마 품으로 갈 수 있게 힘을 합쳐 우주 다리를 만들자!"" data-english-text=""Friends! Let's work together to build a space bridge so the baby shooting star can go to its mother!"">"친구들아! 아기 별똥별이 엄마 품으로 갈 수 있게 힘을 합쳐 우주 다리를 만들자!"</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_6.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="지혜로운 [이름](이)는 우주 탐사선을 몰고 와 반짝이는 은하수 레일을 길게 깔아주었어요." data-english-text="Wise [이름] drove a space probe and laid a long, twinkling Milky Way rail for them.">지혜로운 [이름](이)는 우주 탐사선을 몰고 와 반짝이는 은하수 레일을 길게 깔아주었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_7.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="힘센 곰돌이 비행사는 커다란 우주 자석을 던져 별똥별이 다리를 타고 미끄러지듯 날아가게 도왔지요." data-english-text="The strong bear astronaut threw a big space magnet to help the shooting star slide along the bridge.">힘센 곰돌이 비행사는 커다란 우주 자석을 던져 별똥별이 다리를 타고 미끄러지듯 날아가게 도왔지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_8.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="모두가 힘을 합치자 어두운 우주 미로에 눈부신 황금빛 무지개 다리가 완성되었답니다." data-english-text="With everyone working together, a brilliant golden rainbow bridge was completed in the dark space maze.">모두가 힘을 합치자 어두운 우주 미로에 눈부신 황금빛 무지개 다리가 완성되었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_9.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="아기 별똥별은 기뻐하며 다리를 건넜고, 멀리서 걱정하던 엄마 은하수 품으로 쏙 안겼어요." data-english-text="The baby shooting star crossed the bridge happily and flew right into its worried mother Milky Way's arms.">아기 별똥별은 기뻐하며 다리를 건넜고, 멀리서 걱정하던 엄마 은하수 품으로 쏙 안겼어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_01/creative_boy_01_10.jpg" alt="우주 구조대 로봇 로니" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚀</div>
+          <div class="moral-tag">우주 모험 & 협동</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="로니와 친구들은 함께 도우면 그 어떤 우주 미로도 쉽게 헤쳐 나갈 수 있다는 것을 배웠답니다." data-english-text="Roni and his friends learned that when they help each other, they can easily get through any space maze.">로니와 친구들은 함께 도우면 그 어떤 우주 미로도 쉽게 헤쳐 나갈 수 있다는 것을 배웠답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

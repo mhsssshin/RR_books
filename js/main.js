@@ -46,11 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalOverlay = document.getElementById('profile-modal');
   const nameInput = document.getElementById('name-input');
   const colorOptions = document.querySelectorAll('.color-option');
+  const genderOptions = document.querySelectorAll('.gender-option');
   const submitProfileBtn = document.getElementById('submit-profile-btn');
   const profileCard = document.getElementById('profile-card');
   const greetingEl = document.getElementById('profile-greeting');
+  const avatarEl = document.querySelector('.profile-avatar');
   
   let tempFavColor = 'pink';
+  let tempGender = 'girl';
 
   // Apply visual theme to dashboard background
   const applyTheme = (color) => {
@@ -78,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const checkProfile = () => {
     const savedName = localStorage.getItem('rorong_child_name');
     const savedColor = localStorage.getItem('rorong_fav_color');
+    const savedGender = localStorage.getItem('rorong_gender') || 'girl';
 
     if (!savedName || !savedColor) {
       // First time user -> Show Profile Setup Modal
@@ -85,8 +89,49 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       greetingEl.textContent = getGreetingText(savedName);
       applyTheme(savedColor);
+      avatarEl.textContent = savedGender === 'boy' ? '👦' : '👧';
+      
+      // Auto switch default tab based on gender
+      activeCategory = savedGender === 'boy' ? 'creative-boy' : 'creative-girl';
+      updateTabUI();
     }
   };
+
+  // Profile Modal Gender Option Click
+  genderOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      RorongAudio.playBubble();
+      genderOptions.forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      tempGender = opt.getAttribute('data-gender');
+      
+      // Auto name suggestion & default color recommendation
+      const currentName = nameInput.value.trim();
+      if (tempGender === 'boy') {
+        if (!currentName || currentName === '민지' || currentName === '로아') {
+          nameInput.value = '로이';
+        }
+        // Switch recommended color to mint/gold
+        colorOptions.forEach(o => o.classList.remove('selected'));
+        const mintOption = document.querySelector('.color-option[data-color="mint"]');
+        if (mintOption) {
+          mintOption.classList.add('selected');
+          tempFavColor = 'mint';
+        }
+      } else {
+        if (!currentName || currentName === '로이' || currentName === '민수') {
+          nameInput.value = '로아';
+        }
+        // Switch recommended color to pink/lavender
+        colorOptions.forEach(o => o.classList.remove('selected'));
+        const pinkOption = document.querySelector('.color-option[data-color="pink"]');
+        if (pinkOption) {
+          pinkOption.classList.add('selected');
+          tempFavColor = 'pink';
+        }
+      }
+    });
+  });
 
   // Profile Modal Color Option Click
   colorOptions.forEach(opt => {
@@ -100,19 +145,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Submit Profile Setup
   submitProfileBtn.addEventListener('click', () => {
-    const nameVal = nameInput.value.trim() || '우리 아이';
+    const nameVal = nameInput.value.trim() || (tempGender === 'boy' ? '로이' : '로아');
     
     localStorage.setItem('rorong_child_name', nameVal);
     localStorage.setItem('rorong_fav_color', tempFavColor);
+    localStorage.setItem('rorong_gender', tempGender);
 
     RorongAudio.playChime();
     
-    // Update Greeting & theme
+    // Update Greeting, theme & avatar
     greetingEl.textContent = getGreetingText(nameVal);
     applyTheme(tempFavColor);
+    avatarEl.textContent = tempGender === 'boy' ? '👦' : '👧';
 
     // Close Modal
     modalOverlay.classList.remove('active');
+
+    // Auto set tab based on saved gender
+    activeCategory = tempGender === 'boy' ? 'creative-boy' : 'creative-girl';
+    updateTabUI();
+    renderBooks();
 
     // Trigger Mascot Jump
     triggerMascotJump('만나서 반가워! 책 고르자!');
@@ -122,9 +174,20 @@ document.addEventListener('DOMContentLoaded', () => {
   profileCard.addEventListener('click', () => {
     const currentName = localStorage.getItem('rorong_child_name') || '';
     const currentColor = localStorage.getItem('rorong_fav_color') || 'pink';
+    const currentGender = localStorage.getItem('rorong_gender') || 'girl';
     
     nameInput.value = currentName;
     tempFavColor = currentColor;
+    tempGender = currentGender;
+
+    // Set active options
+    genderOptions.forEach(opt => {
+      if (opt.getAttribute('data-gender') === currentGender) {
+        opt.classList.add('selected');
+      } else {
+        opt.classList.remove('selected');
+      }
+    });
 
     colorOptions.forEach(opt => {
       if (opt.getAttribute('data-color') === currentColor) {
@@ -138,10 +201,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   let allBooks = [];
-  let activeCategory = 'creative'; // Default to creative stories
   const gridContainer = document.getElementById('books-grid');
-  const creativeTabBtn = document.getElementById('tab-creative');
+  const creativeGirlTabBtn = document.getElementById('tab-creative-girl');
+  const creativeBoyTabBtn = document.getElementById('tab-creative-boy');
   const classicTabBtn = document.getElementById('tab-classic');
+  
+  let activeCategory = 'creative-girl'; // Default
+  
+  const updateTabUI = () => {
+    [creativeGirlTabBtn, creativeBoyTabBtn, classicTabBtn].forEach(btn => {
+      if (btn) btn.classList.remove('active');
+    });
+    if (activeCategory === 'creative-girl' && creativeGirlTabBtn) {
+      creativeGirlTabBtn.classList.add('active');
+    } else if (activeCategory === 'creative-boy' && creativeBoyTabBtn) {
+      creativeBoyTabBtn.classList.add('active');
+    } else if (activeCategory === 'classic' && classicTabBtn) {
+      classicTabBtn.classList.add('active');
+    }
+  };
+
   const indicatorsContainer = document.getElementById('carousel-indicators');
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
@@ -259,8 +338,8 @@ document.addEventListener('DOMContentLoaded', () => {
     gridContainer.innerHTML = '';
     indicatorsContainer.innerHTML = '';
     
-    // Filter books based on selected tab
-    const filtered = allBooks.filter(book => book.type === activeCategory);
+    // Filter books based on selected tab (mapped to book.category)
+    const filtered = allBooks.filter(book => book.category === activeCategory);
 
     filtered.forEach((book, idx) => {
       // Load saved rating from localStorage
@@ -278,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const imageUrl = isFeatured ? `./assets/images/${book.pages[0].image}` : '';
 
       card.innerHTML = `
-        <div class="book-cover-art" style="background: var(--bg-${book.coverColor});">
+        <div class="book-cover-art" style="background: var(--bg-${book.coverColor || 'pink'});">
           ${ratingHtml}
           ${isFeatured ? `
             <img src="${imageUrl}" alt="${book.title}" class="book-cover-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -330,24 +409,38 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Tab switching click handlers
-  creativeTabBtn.addEventListener('click', () => {
-    if (activeCategory !== 'creative') {
-      RorongAudio.playBubble();
-      activeCategory = 'creative';
-      creativeTabBtn.classList.add('active');
-      classicTabBtn.classList.remove('active');
-      renderBooks();
-    }
-  });
+  if (creativeGirlTabBtn) {
+    creativeGirlTabBtn.addEventListener('click', () => {
+      if (activeCategory !== 'creative-girl') {
+        RorongAudio.playBubble();
+        activeCategory = 'creative-girl';
+        updateTabUI();
+        renderBooks();
+      }
+    });
+  }
 
-  classicTabBtn.addEventListener('click', () => {
-    if (activeCategory !== 'classic') {
-      RorongAudio.playBubble();
-      activeCategory = 'classic';
-      classicTabBtn.classList.add('active');
-      creativeTabBtn.classList.remove('active');
-      renderBooks();
-    }
+  if (creativeBoyTabBtn) {
+    creativeBoyTabBtn.addEventListener('click', () => {
+      if (activeCategory !== 'creative-boy') {
+        RorongAudio.playBubble();
+        activeCategory = 'creative-boy';
+        updateTabUI();
+        renderBooks();
+      }
+    });
+  }
+
+  if (classicTabBtn) {
+    classicTabBtn.addEventListener('click', () => {
+      if (activeCategory !== 'classic') {
+        RorongAudio.playBubble();
+        activeCategory = 'classic';
+        updateTabUI();
+        renderBooks();
+      }
+    });
+  }
   });
 
   // 4. Mascot "Rorong" Interactions

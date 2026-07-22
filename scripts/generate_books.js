@@ -38,9 +38,9 @@ const generateHTML = (story) => {
       <div class="text-side">
         <button class="read-page-btn">🔊 페이지 읽기</button>
         <div class="story-text-container">
-          <p class="story-paragraph">${page.text}</p>
+          <p class="story-paragraph" data-text="${page.text}" data-english-text="${page.englishText}">${page.text}</p>
         </div>
-        <div class="tts-hint">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
         <div class="page-num">${page.pageNumber} / ${story.pages.length}</div>
       </div>
     </div>`;
@@ -72,6 +72,7 @@ const generateHTML = (story) => {
     <button class="back-btn" onclick="window.location.href='../index.html'">
       🏠 홈으로
     </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
   </div>
 
   <div class="book-viewer">
@@ -111,4 +112,4 @@ stories.forEach(story => {
   console.log(`Generated: ${fileName}`);
 });
 
-console.log('All 30 stories generated successfully!');
+console.log('All ' + stories.length + ' stories generated successfully!');

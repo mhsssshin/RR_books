@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>씽씽 소방차와 하늘을 나는 비행기 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 씽씽 소방차와 하늘을 나는 비행기 (탈것 & 우정)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_boy_03">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_1.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="숲속 소방서에는 빨간 씽씽 소방차 호스가 살았는데, 물을 뿌려 불을 끄는 소중한 구조대원이었어요." data-english-text="Red fire engine Hose lived in the forest fire station and was a precious rescue worker who sprayed water to put out fires.">숲속 소방서에는 빨간 씽씽 소방차 호스가 살았는데, 물을 뿌려 불을 끄는 소중한 구조대원이었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_2.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="높은 절벽 꼭대기 정원에는 파란 요술 날개를 가진 아기 비행기 제트가 매일 이륙 연습을 하고 있었지요." data-english-text="Up on the high cliff garden, baby airplane Jet with blue magic wings practiced taking off every day.">높은 절벽 꼭대기 정원에는 파란 요술 날개를 가진 아기 비행기 제트가 매일 이륙 연습을 하고 있었지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_3.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="그러던 더운 아침, 건조한 바람을 타고 초콜릿 풀숲 밑에서 탁탁 빨간 불씨가 솟아올랐어요." data-english-text="One hot morning, red sparks burst from under the chocolate grass on the dry breeze.">그러던 더운 아침, 건조한 바람을 타고 초콜릿 풀숲 밑에서 탁탁 빨간 불씨가 솟아올랐어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_4.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="불길은 매캐한 연기와 함께 순식간에 절벽 위 아기 비행기 제트의 둥지 주변까지 올라갔지요." data-english-text="With smoky air, the fire quickly reached the nest of baby airplane Jet up on the cliff.">불길은 매캐한 연기와 함께 순식간에 절벽 위 아기 비행기 제트의 둥지 주변까지 올라갔지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_5.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="호스는 소방차 사이렌을 앵앵 울리며 달려갔지만, 높은 절벽 위까지는 물줄기가 닿지 않아 애를 태웠어요." data-english-text="Hose ran over blowing his siren, but his water spray couldn't reach the top of the high cliff.">호스는 소방차 사이렌을 앵앵 울리며 달려갔지만, 높은 절벽 위까지는 물줄기가 닿지 않아 애를 태웠어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_6.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="이때 현명한 [이름](이)가 나서서 아이디어를 냈어요. "제트가 하늘에서 호스의 물탱크를 던져주면 돼!"" data-english-text="Then wise [이름] stepped up with a smart idea. "Jet can fly and drop Hose's water hose from the sky!"">이때 현명한 [이름](이)가 나서서 아이디어를 냈어요. "제트가 하늘에서 호스의 물탱크를 던져주면 돼!"</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_7.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="제트는 용기를 내어 절벽에서 날아올라 호스의 긴 물호스를 물고 높은 하늘 위로 힘껏 솟구쳤답니다." data-english-text="Jet took courage, flew off the cliff, grabbed Hose's long water hose, and soared high into the sky.">제트는 용기를 내어 절벽에서 날아올라 호스의 긴 물호스를 물고 높은 하늘 위로 힘껏 솟구쳤답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_8.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="하늘 위에서 제트가 물호스를 톡 놓자 시원한 분수 비가 내렸고, 타오르던 불은 순식간에 째깍 꺼졌어요." data-english-text="When Jet dropped the water hose from above, a cool rain fell and put out the burning fire in a second.">하늘 위에서 제트가 물호스를 톡 놓자 시원한 분수 비가 내렸고, 타오르던 불은 순식간에 째깍 꺼졌어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_9.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="숲속 동물들은 소방차 호스와 비행기 제트의 완벽한 합동 구조에 손을 흔들며 고마워했어요." data-english-text="The forest animals thanked fire engine Hose and airplane Jet for their perfect rescue.">숲속 동물들은 소방차 호스와 비행기 제트의 완벽한 합동 구조에 손을 흔들며 고마워했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_boy_03/creative_boy_03_10.jpg" alt="씽씽 소방차와 하늘을 나는 비행기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🚒</div>
+          <div class="moral-tag">탈것 & 우정</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="호스와 제트는 서로의 한계를 채워주는 협동이 숲속을 지키는 가장 위대한 힘이라는 것을 배웠답니다." data-english-text="Hose and Jet learned that cooperating to cover each other's limits is the greatest power to protect the forest.">호스와 제트는 서로의 한계를 채워주는 협동이 숲속을 지키는 가장 위대한 힘이라는 것을 배웠답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

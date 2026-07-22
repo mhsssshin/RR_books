@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그림 그리는 구름 요정 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 그림 그리는 구름 요정 (상상력과 창의성 기르기)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_girl_19">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_1.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="푸른 하늘 한가운데에는 몽실몽실 춤을 추는 아기 구름 요정 뭉게가 살고 있었어요." data-english-text="Gumi the cloud fairy lived in the sky and wanted to paint, but she didn't have paper.">푸른 하늘 한가운데에는 몽실몽실 춤을 추는 아기 구름 요정 뭉게가 살고 있었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_2.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="뭉게 요정은 하늘을 커다란 도화지 삼아 바람 붓을 들고 날마다 새로운 변신 그림을 그렸답니다." data-english-text="She flew around sadly, until kind [이름] brought a magical wooden paintbrush.">뭉게 요정은 하늘을 커다란 도화지 삼아 바람 붓을 들고 날마다 새로운 변신 그림을 그렸답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_3.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="어느 날 오후, 하늘을 올려다보던 창의적인 단짝 [이름](이)가 하늘을 향해 크게 손나팔을 불었어요." data-english-text="'Gumi, paint on the blue sky! The sky is your giant sketch pad!'">어느 날 오후, 하늘을 올려다보던 창의적인 단짝 [이름](이)가 하늘을 향해 크게 손나팔을 불었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_4.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="'뭉게 요정아! 이번엔 우주선을 탄 분홍색 꼬마 아기 코끼리 한 마리를 하늘에 띄워줘!'" data-english-text="Gumi dipped the brush in pink sunset light and drew a big fluffy sheep on a cloud.">'뭉게 요정아! 이번엔 우주선을 탄 분홍색 꼬마 아기 코끼리 한 마리를 하늘에 띄워줘!'</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_5.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="뭉게 요정은 신나서 바람을 휘감아 몸을 둥글게 굴렸고 이내 펄럭이는 큰 귀를 가진 코끼리를 완성했어요." data-english-text="She dipped it in gold sunshine and painted a smiling sun and flying birds.">뭉게 요정은 신나서 바람을 휘감아 몸을 둥글게 굴렸고 이내 펄럭이는 큰 귀를 가진 코끼리를 완성했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page undefined -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_undefined.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="코끼리는 엉금엉금 걸어 우주선 구름 속으로 들어가 은하수를 여행하듯 멋진 꼬리를 흔들었답니다." data-english-text="The sky became a grand art gallery, filled with cute animal drawings.">코끼리는 엉금엉금 걸어 우주선 구름 속으로 들어가 은하수를 여행하듯 멋진 꼬리를 흔들었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">undefined / 10</div>
+      </div>
+    </div>
+
+    <!-- Page undefined -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_undefined.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="이번엔 [이름](이)가 '날개 달린 달콤한 고래 초콜릿!' 하고 창의적인 생각을 소리 높여 뿜어냈어요." data-english-text="The forest animals looked up and cheered at the beautiful sky pictures.">이번엔 [이름](이)가 '날개 달린 달콤한 고래 초콜릿!' 하고 창의적인 생각을 소리 높여 뿜어냈어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">undefined / 10</div>
+      </div>
+    </div>
+
+    <!-- Page undefined -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_undefined.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="뭉게 요정은 꼬리를 흔들며 하늘 가득 초콜릿 구름 거품을 뿜어내어 아름답게 변신하였답니다." data-english-text="Gumi laughed, painting a giant rainbow bridge for the animals to see.">뭉게 요정은 꼬리를 흔들며 하늘 가득 초콜릿 구름 거품을 뿜어내어 아름답게 변신하였답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">undefined / 10</div>
+      </div>
+    </div>
+
+    <!-- Page undefined -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_undefined.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="상상하고 소망하는 것은 하늘에서 구름 요정의 춤을 통해 무엇이든 아름답고 재미있게 태어났어요." data-english-text="As the stars came out, the drawings glowed softly in the dark night sky.">상상하고 소망하는 것은 하늘에서 구름 요정의 춤을 통해 무엇이든 아름답고 재미있게 태어났어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">undefined / 10</div>
+      </div>
+    </div>
+
+    <!-- Page undefined -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_19/creative_girl_19_undefined.jpg" alt="그림 그리는 구름 요정" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">☁️</div>
+          <div class="moral-tag">상상력과 창의성 기르기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="[이름](이)는 상상하는 작은 생각 주머니 하나가 세상을 오색빛깔로 바꾸는 가장 위대한 요술봉임을 깨달았답니다." data-english-text="[이름] and Gumi learned that imagination can turn the sky into a magical playground.">[이름](이)는 상상하는 작은 생각 주머니 하나가 세상을 오색빛깔로 바꾸는 가장 위대한 요술봉임을 깨달았답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">undefined / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

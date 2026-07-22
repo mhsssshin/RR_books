@@ -1,6 +1,6 @@
 /**
  * rorongBooks Shared Book Runner
- * Handles page turning, personalization, 3-second long-press TTS, star rating overlay, and canvas particle animations.
+ * Handles page turning, personalization, 1-second long-press TTS, star rating overlay, and canvas particle animations.
  */
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Theme and Personalization Setup
@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const favColor = localStorage.getItem('rorong_fav_color') || 'pink';
   const bookContainer = document.querySelector('.book-viewer');
   const readPageBtns = document.querySelectorAll('.read-page-btn');
+  const langToggleBtn = document.getElementById('lang-toggle-btn');
+  
+  let isEnglishMode = false;
   
   // Set theme background based on user's preference
   if (favColor === 'pink') {
@@ -23,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Personalize page texts and split into word-by-word TTS triggers
   const processStoryTexts = () => {
     const paragraphs = document.querySelectorAll('.story-paragraph');
+    const hints = document.querySelectorAll('.tts-hint');
     
     // Check if the last character of the childName has a batchim (jongseong)
     const lastChar = childName.charAt(childName.length - 1);
@@ -32,18 +36,39 @@ document.addEventListener('DOMContentLoaded', () => {
       return (charCode - 0xAC00) % 28 > 0;
     })();
 
+    // Update hints based on language mode
+    hints.forEach(hint => {
+      const normalHint = hint.getAttribute('data-hint');
+      const englishHint = hint.getAttribute('data-english-hint');
+      hint.textContent = isEnglishMode ? englishHint : normalHint;
+    });
+
     paragraphs.forEach(p => {
-      let text = p.innerHTML.trim();
+      // Get raw template text from attributes
+      let text = isEnglishMode ? p.getAttribute('data-english-text') : p.getAttribute('data-text');
+      if (!text) return;
       
-      // Replace name tokens with correct Korean particles based on batchim
-      text = text.replace(/\[이름\]\(이\)는/g, hasPadchim ? `${childName}이는` : `${childName}는`);
-      text = text.replace(/\[이름\]\(이\)가/g, hasPadchim ? `${childName}이가` : `${childName}가`);
-      text = text.replace(/\[이름\]\(이\)와/g, hasPadchim ? `${childName}이와` : `${childName}와`);
-      text = text.replace(/\[이름\]이의/g, hasPadchim ? `${childName}이의` : `${childName}의`);
-      text = text.replace(/\[이름\]이와/g, hasPadchim ? `${childName}이와` : `${childName}와`);
-      text = text.replace(/\[이름\]이에게/g, hasPadchim ? `${childName}이에게` : `${childName}에게`);
-      text = text.replace(/\[이름\]이를/g, hasPadchim ? `${childName}이를` : `${childName}를`);
-      text = text.replace(/\[이름\]\(이\)/g, hasPadchim ? `${childName}이` : childName);
+      if (!isEnglishMode) {
+        // Replace name tokens with correct Korean particles based on batchim
+        text = text.replace(/\[이름\]\(이\)는/g, hasPadchim ? `${childName}이는` : `${childName}는`);
+        text = text.replace(/\[이름\]\(이\)가/g, hasPadchim ? `${childName}이가` : `${childName}가`);
+        text = text.replace(/\[이름\]\(이\)와/g, hasPadchim ? `${childName}이와` : `${childName}와`);
+        text = text.replace(/\[이름\]이의/g, hasPadchim ? `${childName}이의` : `${childName}의`);
+        text = text.replace(/\[이름\]이와/g, hasPadchim ? `${childName}이와` : `${childName}와`);
+        text = text.replace(/\[이름\]이에게/g, hasPadchim ? `${childName}이에게` : `${childName}에게`);
+        text = text.replace(/\[이름\]이를/g, hasPadchim ? `${childName}이를` : `${childName}를`);
+        text = text.replace(/\[이름\]\(이\)/g, hasPadchim ? `${childName}이` : childName);
+      } else {
+        // In English, just replace direct name token without particles
+        text = text.replace(/\[이름\]\(이\)는/g, childName);
+        text = text.replace(/\[이름\]\(이\)가/g, childName);
+        text = text.replace(/\[이름\]\(이\)와/g, childName);
+        text = text.replace(/\[이름\]이의/g, childName);
+        text = text.replace(/\[이름\]이와/g, childName);
+        text = text.replace(/\[이름\]이에게/g, childName);
+        text = text.replace(/\[이름\]이를/g, childName);
+        text = text.replace(/\[이름\]\(이\)/g, childName);
+      }
       
       // General replacements
       text = text.replace(/\[이름\]/g, childName);
@@ -56,8 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<span class="tts-trigger">${word}</span>`;
       }).join(' ');
     });
+
+    // Re-bind touch/mouse long-press listeners to the newly rendered triggers
+    bindTtsTriggers();
   };
-  processStoryTexts();
 
   // 2. Book Pages Navigation Setup
   const pages = document.querySelectorAll('.book-page');
@@ -88,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (readPageBtns) {
       readPageBtns.forEach(btn => {
         btn.classList.remove('playing');
-        btn.textContent = '🔊 페이지 읽기';
+        btn.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
       });
     }
     window.speechSynthesis.cancel();
@@ -98,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // On the last page, next button still displays to trigger the rating overlay
     nextBtn.innerHTML = idx === pages.length - 1 ? '🌟' : '▶';
   };
-  showPage(currentPageIdx);
 
   const turnPageNext = () => {
     if (currentPageIdx < pages.length - 1) {
@@ -138,12 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   document.addEventListener('touchstart', e => {
     // Only capture swipes on main areas
-    if (e.target.closest('.nav-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay')) return;
+    if (e.target.closest('.nav-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay') || e.target.closest('.header-bar')) return;
     touchStartX = e.changedTouches[0].screenX;
   }, { passive: true });
 
   document.addEventListener('touchend', e => {
-    if (e.target.closest('.nav-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay')) return;
+    if (e.target.closest('.nav-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay') || e.target.closest('.header-bar')) return;
     touchEndX = e.changedTouches[0].screenX;
     handleSwipe();
   }, { passive: true });
@@ -185,36 +211,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // Stop any current voice output
     window.speechSynthesis.cancel();
 
-    // Clean text by stripping Korean particles only if it's a word-only TTS
-    const cleanedText = isWordOnly ? cleanWordForTTS(text) : text;
+    // Clean text by stripping Korean particles only if it's a word-only Korean TTS
+    const cleanedText = (isWordOnly && !isEnglishMode) ? cleanWordForTTS(text) : text;
 
     // Create a new utterance
     currentUtterance = new SpeechSynthesisUtterance(cleanedText);
-    currentUtterance.lang = 'ko-KR';
     
-    // Find friendly child-like or natural Korean voice if available
+    // Find friendly child-like or natural Korean/English voice if available
     const voices = window.speechSynthesis.getVoices();
-    const koreanVoices = voices.filter(v => v.lang.includes('KO') || v.lang.includes('ko'));
     
-    // Preference: Microsoft SunHi (young child voice), Heami (narrator), Google Korean, etc.
-    const selectedVoice = koreanVoices.find(v => v.name.includes('SunHi')) || 
-                          koreanVoices.find(v => v.name.includes('Heami')) || 
-                          koreanVoices.find(v => v.name.toLowerCase().includes('natural')) || 
-                          koreanVoices.find(v => v.name.toLowerCase().includes('google')) || 
-                          koreanVoices[0];
-                          
-    if (selectedVoice) {
-      currentUtterance.voice = selectedVoice;
+    if (isEnglishMode) {
+      currentUtterance.lang = 'en-US';
+      const englishVoices = voices.filter(v => v.lang.includes('EN') || v.lang.includes('en'));
+      
+      // Preference: Google US English, Natural, Microsoft Zira, etc.
+      const selectedVoice = englishVoices.find(v => v.name.includes('Natural')) || 
+                            englishVoices.find(v => v.name.toLowerCase().includes('google')) || 
+                            englishVoices.find(v => v.name.includes('Zira')) || 
+                            englishVoices[0];
+                            
+      if (selectedVoice) {
+        currentUtterance.voice = selectedVoice;
+      }
+    } else {
+      currentUtterance.lang = 'ko-KR';
+      const koreanVoices = voices.filter(v => v.lang.includes('KO') || v.lang.includes('ko'));
+      
+      // Preference: Microsoft SunHi (young child voice), Heami (narrator), Google Korean, etc.
+      const selectedVoice = koreanVoices.find(v => v.name.includes('SunHi')) || 
+                            koreanVoices.find(v => v.name.includes('Heami')) || 
+                            koreanVoices.find(v => v.name.toLowerCase().includes('natural')) || 
+                            koreanVoices.find(v => v.name.toLowerCase().includes('google')) || 
+                            koreanVoices[0];
+                            
+      if (selectedVoice) {
+        currentUtterance.voice = selectedVoice;
+      }
     }
 
-    currentUtterance.rate = 0.72; // Slower and highly comfortable storytelling speed for kids
+    currentUtterance.rate = 0.72; // Comfortable storytelling speed for kids
     currentUtterance.pitch = 1.35; // Slightly higher pitch to sound like a young child-like voice
 
     currentUtterance.onstart = () => {
       element.classList.add('speaking');
       if (!isWordOnly) {
         element.classList.add('playing');
-        element.textContent = '⏹️ 멈추기';
+        element.textContent = isEnglishMode ? '⏹️ Stop' : '⏹️ 멈추기';
       }
     };
 
@@ -222,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
       element.classList.remove('speaking');
       if (!isWordOnly) {
         element.classList.remove('playing');
-        element.textContent = '🔊 페이지 읽기';
+        element.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
       }
     };
 
@@ -230,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       element.classList.remove('speaking');
       if (!isWordOnly) {
         element.classList.remove('playing');
-        element.textContent = '🔊 페이지 읽기';
+        element.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
       }
     };
 
@@ -292,21 +334,61 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const triggers = document.querySelectorAll('.tts-trigger');
-  triggers.forEach(trigger => {
-    // Touch Events
-    trigger.addEventListener('touchstart', (e) => {
-      // Prevent context menu/default selection on touch
-      e.preventDefault();
-      handlePressStart(e);
-    }, { passive: false });
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+    handlePressStart(e);
+  };
 
-    trigger.addEventListener('touchend', handlePressEnd);
-    trigger.addEventListener('touchcancel', handlePressEnd);
-    
-    // Mouse Events for desktop testing
-    trigger.addEventListener('mousedown', handlePressStart);
-    trigger.addEventListener('mouseup', handlePressEnd);
+  const handleMouseDown = (e) => {
+    handlePressStart(e);
+  };
+
+  const bindTtsTriggers = () => {
+    const triggers = document.querySelectorAll('.tts-trigger');
+    triggers.forEach(trigger => {
+      // Touch Events
+      trigger.addEventListener('touchstart', handleTouchStart, { passive: false });
+      trigger.addEventListener('touchend', handlePressEnd);
+      trigger.addEventListener('touchcancel', handlePressEnd);
+      
+      // Mouse Events for desktop testing
+      trigger.addEventListener('mousedown', handleMouseDown);
+      trigger.addEventListener('mouseup', handlePressEnd);
+      trigger.addEventListener('mouseleave', handlePressEnd);
+    });
+  };
+
+  // Initialize story texts first
+  processStoryTexts();
+  showPage(currentPageIdx);
+
+  // Bind Language Toggle Click Handler
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+      RorongAudio.playBubble();
+      isEnglishMode = !isEnglishMode;
+      langToggleBtn.textContent = isEnglishMode ? '🇰🇷 한글로 읽기' : '🇺🇸 English';
+      
+      // Trigger smooth text transition
+      const bookContainer = document.getElementById('book-container');
+      bookContainer.style.opacity = '0.3';
+      bookContainer.style.transition = 'opacity 0.25s ease';
+      
+      setTimeout(() => {
+        processStoryTexts();
+        // Update page buttons text based on mode
+        readPageBtns.forEach(btn => {
+          btn.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
+        });
+        bookContainer.style.opacity = '1';
+      }, 250);
+    });
+  }
+
+  // Cancel TTS when moving away from a page
+  window.addEventListener('beforeunload', () => {
+    window.speechSynthesis.cancel();
+  });eup', handlePressEnd);
     trigger.addEventListener('mouseleave', handlePressEnd);
   });
 
@@ -561,13 +643,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (btn.classList.contains('playing')) {
         window.speechSynthesis.cancel();
         btn.classList.remove('playing');
-        btn.textContent = '🔊 페이지 읽기';
+        btn.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
         return;
       }
 
       readPageBtns.forEach(otherBtn => {
         otherBtn.classList.remove('playing');
-        otherBtn.textContent = '🔊 페이지 읽기';
+        otherBtn.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
       });
 
       const textSide = btn.closest('.text-side');

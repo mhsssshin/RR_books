@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>꼬마 요정의 요술 돋보기 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 꼬마 요정의 요술 돋보기 (세상을 향한 호기심)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_girl_10">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_1.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="마법 숲속 비밀 서랍 속에는 장난꾸러기 아기 요정 미미가 귀중하게 아끼는 은빛 요술 돋보기가 숨어 있었어요." data-english-text="Rumi the little fairy in the flower garden loved to look at bugs and leaves with a magic magnifier.">마법 숲속 비밀 서랍 속에는 장난꾸러기 아기 요정 미미가 귀중하게 아끼는 은빛 요술 돋보기가 숨어 있었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_2.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="이 요술 돋보기는 평범한 풀밭을 대단한 마법 정원처럼 확대하여 신기하게 보여주는 보물이었지요." data-english-text="One day, Rumi lost the magnifier while chasing a yellow butterfly and sat down crying.">이 요술 돋보기는 평범한 풀밭을 대단한 마법 정원처럼 확대하여 신기하게 보여주는 보물이었지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_3.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="오늘 아침, 호기심 많은 [이름](이)가 요정 미미와 단짝이 되어 돋보기를 들고 정원 탐험을 떠났어요." data-english-text="Curious [이름] saw Rumi and offered to help search the forest path together.">오늘 아침, 호기심 많은 [이름](이)가 요정 미미와 단짝이 되어 돋보기를 들고 정원 탐험을 떠났어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_4.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="둘은 돋보기를 조심히 기울여 파란색 나뭇잎 위에 맺힌 차가운 아침 이슬방울을 들여다보았답니다." data-english-text="They looked under clover leaves and behind round pebble stones, laughing and playing.">둘은 돋보기를 조심히 기울여 파란색 나뭇잎 위에 맺힌 차가운 아침 이슬방울을 들여다보았답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_5.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="돋보기 속 이슬방울 안에는 숲속 무지개 요정이 반짝반짝 요술을 부리는 아주 작은 궁전이 비추고 있었어요." data-english-text="Suddenly, a tiny glowing ladybug crawled out, pointing to a blue bellflower.">돋보기 속 이슬방울 안에는 숲속 무지개 요정이 반짝반짝 요술을 부리는 아주 작은 궁전이 비추고 있었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_6.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="바쁘게 기어가던 꼬마 붉은 개미들의 가방에는 숲속 동물들을 위한 달콤한 각설탕 보석들이 가득했지요." data-english-text="Under the bellflower, they found the shiny magic magnifier resting on a green leaf.">바쁘게 기어가던 꼬마 붉은 개미들의 가방에는 숲속 동물들을 위한 달콤한 각설탕 보석들이 가득했지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_7.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="평범해 보이던 민들레 꽃씨들은 노란 요술 털코트를 입은 귀여운 꼬마 아기새처럼 사랑스러웠어요." data-english-text="Rumi was so happy that she let [이름] look through the magic magnifier together.">평범해 보이던 민들레 꽃씨들은 노란 요술 털코트를 입은 귀여운 꼬마 아기새처럼 사랑스러웠어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_8.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="세상은 눈여겨보고 궁금해할수록 훨씬 더 신기하고 재미있는 비밀들이 무궁무진하게 샘솟았답니다." data-english-text="Through the magnifier, tiny flower petals looked like giant glowing castles and stars.">세상은 눈여겨보고 궁금해할수록 훨씬 더 신기하고 재미있는 비밀들이 무궁무진하게 샘솟았답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_9.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="미미 요정과 [이름](이)는 세상을 탐험하는 호기심이야말로 일상을 특별하게 해주는 마법이라는 걸 알았어요." data-english-text="They spent the afternoon exploring the magical world of tiny things in the garden.">미미 요정과 [이름](이)는 세상을 탐험하는 호기심이야말로 일상을 특별하게 해주는 마법이라는 걸 알았어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_10/creative_girl_10_10.jpg" alt="꼬마 요정의 요술 돋보기" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🔍</div>
+          <div class="moral-tag">세상을 향한 호기심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="[이름](이)는 내일 또 어떤 신비로운 비밀을 돋보기로 만나게 될까 기대하며 총총한 별빛 눈으로 미소 지었어요." data-english-text="Thanks to [이름]'s help, Rumi and [이름] discovered that curiosity makes the world a playground.">[이름](이)는 내일 또 어떤 신비로운 비밀을 돋보기로 만나게 될까 기대하며 총총한 별빛 눈으로 미소 지었어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구름 위 도토리 나무 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 구름 위 도토리 나무 (기다릴 줄 아는 인내심)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_girl_07">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_1.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="하늘 위 뭉게구름 정원에는 아기 다람쥐 로롱이와 [이름](이)가 마법의 골드 도토리 씨앗을 가지고 왔어요." data-english-text="Rorong the baby squirrel and [이름] brought a magic golden acorn seed to the cloud garden.">하늘 위 뭉게구름 정원에는 아기 다람쥐 로롱이와 [이름](이)가 마법의 골드 도토리 씨앗을 가지고 왔어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_2.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="둘은 구름 흙을 파서 씨앗을 꾹 묻어두고, 이슬비 구름을 불러 시원한 물을 가득 주었답니다." data-english-text="They dug the cloud soil, planted the seed, and called a rain cloud to give it plenty of water.">둘은 구름 흙을 파서 씨앗을 꾹 묻어두고, 이슬비 구름을 불러 시원한 물을 가득 주었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_3.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="하지만 다음 날 아침이 되어도 구름 흙 위로는 아무런 싹도 파릇하게 돋아나지 않았어요." data-english-text="But the next morning, no green sprout came out of the cloud soil.">하지만 다음 날 아침이 되어도 구름 흙 위로는 아무런 싹도 파릇하게 돋아나지 않았어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_4.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="조급한 로롱이는 흙을 발로 차며 속상해했어요. '씨앗이 고장 났나 봐! 당장 파내 버릴래!'" data-english-text="Impatient Rorong kicked the dirt and got angry. 'This seed is broken! I'm going to dig it up!'">조급한 로롱이는 흙을 발로 차며 속상해했어요. '씨앗이 고장 났나 봐! 당장 파내 버릴래!'</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_5.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="[이름](이)는 화가 난 로롱이를 다독이며 말했어요. '마법 나무는 뿌리가 먼저 자라서 시간이 필요해.'" data-english-text="[이름] calmed Rorong down and said, 'Magic trees grow roots first, so we must wait.'">[이름](이)는 화가 난 로롱이를 다독이며 말했어요. '마법 나무는 뿌리가 먼저 자라서 시간이 필요해.'</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_6.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="로롱이와 [이름](이)는 매일 아침 구름 밭으로 찾아와 노래를 불러주고 이슬을 뿌리며 기다렸어요." data-english-text="Rorong and [이름] visited the cloud garden every morning, singing songs and watering the seed.">로롱이와 [이름](이)는 매일 아침 구름 밭으로 찾아와 노래를 불러주고 이슬을 뿌리며 기다렸어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_7.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="삼 일째, 오 일째가 되어도 변화가 없었지만 둘은 서로를 격려하며 희망을 잃지 않고 인내했답니다." data-english-text="Three days and five days passed without change, but they encouraged each other and waited.">삼 일째, 오 일째가 되어도 변화가 없었지만 둘은 서로를 격려하며 희망을 잃지 않고 인내했답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_8.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="마침내 일주일 뒤, 구름 속에서 찬란한 황금빛 줄기가 번쩍이더니 하늘 높이 거대한 나무가 쑥 자라났어요." data-english-text="Finally, a week later, a golden sprout shot up and a giant tree grew high into the sky.">마침내 일주일 뒤, 구름 속에서 찬란한 황금빛 줄기가 번쩍이더니 하늘 높이 거대한 나무가 쑥 자라났어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_9.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="가지마다 달콤한 솜사탕 맛 황금 도토리가 주렁주렁 매달렸고, 숲속 친구들을 위한 대축제가 열렸답니다." data-english-text="Sweet cotton candy golden acorns hung on every branch, and a big festival was held for friends.">가지마다 달콤한 솜사탕 맛 황금 도토리가 주렁주렁 매달렸고, 숲속 친구들을 위한 대축제가 열렸답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_07/creative_girl_07_10.jpg" alt="구름 위 도토리 나무" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">🌳</div>
+          <div class="moral-tag">기다릴 줄 아는 인내심</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="로롱이는 [이름]이와 함께 기다리는 힘인 인내심이 마법보다 훨씬 강하다는 것을 깨닫고 신나게 웃었답니다." data-english-text="Rorong learned that patience, the power of waiting, is stronger than magic and smiled happily.">로롱이는 [이름]이와 함께 기다리는 힘인 인내심이 마법보다 훨씬 강하다는 것을 깨닫고 신나게 웃었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>

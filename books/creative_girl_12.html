@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숲속 친구들의 감사 편지 - 로롱북스</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - 숲속 친구들의 감사 편지 (고마운 마음 표현하기)">
+</head>
+<body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Interactive sparkles overlay -->
+  <canvas id="sparkle-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="header-bar">
+    <button class="back-btn" onclick="window.location.href='../index.html'">
+      🏠 홈으로
+    </button>
+    <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
+  </div>
+
+  <div class="book-viewer">
+    <div class="book" id="book-container" data-book-id="creative_girl_12">
+      
+    <!-- Page 1 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_1.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="숲속 우체통 앞에는 매일 아침 편지를 전해주는 다정한 비둘기 우체부 폴 아저씨가 서 계셨어요." data-english-text="Pigeon the mail carrier flew around the forest delivering letters, but today his wings were tired.">숲속 우체통 앞에는 매일 아침 편지를 전해주는 다정한 비둘기 우체부 폴 아저씨가 서 계셨어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">1 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_2.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="하지만 폴 아저씨가 감기에 걸려 목소리가 나오지 않고 날개가 너무 쑤셔 날아갈 수가 없게 되었답니다." data-english-text="He had many thank-you letters to deliver to forest friends before the sun went down.">하지만 폴 아저씨가 감기에 걸려 목소리가 나오지 않고 날개가 너무 쑤셔 날아갈 수가 없게 되었답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">2 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_3.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="우체부 가방 안에는 숲속 친구들이 서로에게 전하고 싶은 감사 편지들이 한 가득 쌓여 있었지요." data-english-text="Kind [이름] offered to help and walked along the sunny forest paths carrying the mail bag.">우체부 가방 안에는 숲속 친구들이 서로에게 전하고 싶은 감사 편지들이 한 가득 쌓여 있었지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">3 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_4.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="이를 본 의리 넘치는 [이름](이)가 아저씨의 모자를 대신 쓰고 일일 감사 우체부가 되기로 약속했어요." data-english-text="They delivered a pink envelope with flower seeds to the busy mother squirrel.">이를 본 의리 넘치는 [이름](이)가 아저씨의 모자를 대신 쓰고 일일 감사 우체부가 되기로 약속했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">4 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_5.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="[이름](이)는 다람쥐 집에 들러 '도토리를 나누어주어 고마워'라는 마음이 담긴 핑크빛 편지를 건넸어요." data-english-text="They gave a yellow letter with sweet honey drawings to the sleepy father bear.">[이름](이)는 다람쥐 집에 들러 '도토리를 나누어주어 고마워'라는 마음이 담긴 핑크빛 편지를 건넸어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">5 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_6.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="또 아기 노루에게는 '지난 비오는 날 우산을 씌워주어 늘 고마웠어'라고 적힌 노란 편지를 전했지요." data-english-text="Every friend who received a letter smiled happily and thanked [이름] with warm hugs.">또 아기 노루에게는 '지난 비오는 날 우산을 씌워주어 늘 고마웠어'라고 적힌 노란 편지를 전했지요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">6 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_7.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="편지를 받은 동물 친구들은 너무 감동하여 가슴이 따뜻해졌고 눈에는 기쁨의 눈물이 고였답니다." data-english-text="As the mail bag emptied, the forest was filled with warm words and happy laughter.">편지를 받은 동물 친구들은 너무 감동하여 가슴이 따뜻해졌고 눈에는 기쁨의 눈물이 고였답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">7 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_8.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="숲속 마을 곳곳에서는 '고마워'라는 다정한 속삭임과 감동의 포옹이 아지랑이처럼 몽글몽글 피어났어요." data-english-text="Pigeon rested on [이름]'s shoulder and cooed happily, feeling refreshed.">숲속 마을 곳곳에서는 '고마워'라는 다정한 속삭임과 감동의 포옹이 아지랑이처럼 몽글몽글 피어났어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">8 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_9.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="동물들은 힘을 모아 감기 몸살에 걸린 폴 아저씨를 위해 따뜻한 레몬차와 꿀 케이크를 구워 선물했어요." data-english-text="They watched a beautiful orange sunset over the trees, feeling proud and warm.">동물들은 힘을 모아 감기 몸살에 걸린 폴 아저씨를 위해 따뜻한 레몬차와 꿀 케이크를 구워 선물했어요.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">9 / 10</div>
+      </div>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="book-page">
+      <div class="illustration-side">
+        
+        <img src="../assets/images/creative_girl_12/creative_girl_12_10.jpg" alt="숲속 친구들의 감사 편지" class="illustration-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        
+        <div class="fallback-illustration" style="display: none;">
+          <div class="floating-emoji">✉️</div>
+          <div class="moral-tag">고마운 마음 표현하기</div>
+        </div>
+      </div>
+      <div class="text-side">
+        <button class="read-page-btn">🔊 페이지 읽기</button>
+        <div class="story-text-container">
+          <p class="story-paragraph" data-text="[이름](이)는 고마운 마음은 표현할수록 세상 모두를 행복하게 만드는 마술 편지라는 것을 듬뿍 느꼈답니다." data-english-text="[이름] learned that expressing gratitude makes both the giver and receiver happy.">[이름](이)는 고마운 마음은 표현할수록 세상 모두를 행복하게 만드는 마술 편지라는 것을 듬뿍 느꼈답니다.</p>
+        </div>
+        <div class="tts-hint" data-hint="👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊" data-english-hint="👉 Press and hold any word for 1 second to hear it! 🔊">👉 모르는 단어를 1초 동안 꾹 누르면 읽어줘요! 🔊</div>
+        <div class="page-num">10 / 10</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Full-screen rating overlay -->
+  <div class="rating-overlay" id="rating-overlay">
+    <div class="rating-box">
+      <h2 class="rating-title">책을 재미있게 읽었나요? 🥰</h2>
+      <p class="rating-subtitle">로롱이에게 별점을 남겨주세요!</p>
+      <div class="stars-container">
+        <span class="star-icon" data-value="1">★</span>
+        <span class="star-icon" data-value="2">★</span>
+        <span class="star-icon" data-value="3">★</span>
+        <span class="star-icon" data-value="4">★</span>
+        <span class="star-icon" data-value="5">★</span>
+      </div>
+      <button class="submit-rating-btn" id="submit-rating-btn">별점 남기기 ⭐</button>
+    </div>
+  </div>
+
+  <script src="../js/audio.js"></script>
+  <script src="../js/book.js"></script>
+</body>
+</html>
