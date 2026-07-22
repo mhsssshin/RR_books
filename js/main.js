@@ -441,7 +441,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  });
 
   // 4. Mascot "Rorong" Interactions
   const mascotContainer = document.getElementById('mascot-container');
