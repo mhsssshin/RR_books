@@ -100,7 +100,7 @@ const generateHTML = (story) => {
   </div>
 
   <script src="../js/audio.js"></script>
-  <script src="../js/book.js"></script>
+  <script src="../js/book.js?v=1.0.1"></script>
 </body>
 </html>`;
 };
