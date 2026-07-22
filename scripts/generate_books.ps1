@@ -15,7 +15,12 @@ $stories = Get-Content -Raw -Encoding utf8 -Path $storiesPath | ConvertFrom-Json
 foreach ($story in $stories) {
     $pagesHtmlList = @()
     foreach ($page in $story.pages) {
-        $isFeatured = $story.featured
+        $imagePath = Join-Path $PSScriptRoot "../assets/images/$($page.image)"
+        $hasPhysicalImage = $false
+        if ($page.image -and (Test-Path $imagePath)) {
+            $hasPhysicalImage = $true
+        }
+        $isFeatured = $story.featured -and $hasPhysicalImage
         $imageSrc = if ($isFeatured) { "../assets/images/$($page.image)" } else { "" }
         
         $imgTag = if ($isFeatured) {

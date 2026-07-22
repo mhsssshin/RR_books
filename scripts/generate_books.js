@@ -20,7 +20,9 @@ if (!fs.existsSync(booksDir)) {
 // Template generator
 const generateHTML = (story) => {
   const pagesHtml = story.pages.map(page => {
-    const isFeatured = story.featured;
+    const imagePath = path.join(__dirname, '../assets/images', page.image || '');
+    const hasPhysicalImage = page.image && fs.existsSync(imagePath);
+    const isFeatured = story.featured && hasPhysicalImage;
     const imageSrc = isFeatured ? `../assets/images/${page.image}` : '';
     
     return `

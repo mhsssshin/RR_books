@@ -384,14 +384,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 250);
     });
   }
-
-  // Cancel TTS when moving away from a page
-  window.addEventListener('beforeunload', () => {
-    window.speechSynthesis.cancel();
-  });eup', handlePressEnd);
-    trigger.addEventListener('mouseleave', handlePressEnd);
-  });
-
   // Cancel TTS when moving away from a page
   window.addEventListener('beforeunload', () => {
     window.speechSynthesis.cancel();
