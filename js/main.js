@@ -492,8 +492,9 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Re-adjust size on tab render
-    creativeTabBtn.addEventListener('click', () => setTimeout(resizeCanvas, 100));
-    classicTabBtn.addEventListener('click', () => setTimeout(resizeCanvas, 100));
+    if (creativeGirlTabBtn) creativeGirlTabBtn.addEventListener('click', () => setTimeout(resizeCanvas, 100));
+    if (creativeBoyTabBtn) creativeBoyTabBtn.addEventListener('click', () => setTimeout(resizeCanvas, 100));
+    if (classicTabBtn) classicTabBtn.addEventListener('click', () => setTimeout(resizeCanvas, 100));
 
     class SparkleParticle {
       constructor(x, y) {
