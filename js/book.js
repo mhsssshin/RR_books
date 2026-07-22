@@ -192,15 +192,23 @@ document.addEventListener('DOMContentLoaded', () => {
     currentUtterance = new SpeechSynthesisUtterance(cleanedText);
     currentUtterance.lang = 'ko-KR';
     
-    // Find friendly Korean female voice if available
+    // Find friendly child-like or natural Korean voice if available
     const voices = window.speechSynthesis.getVoices();
-    const koreanVoice = voices.find(v => v.lang.includes('KO') || v.lang.includes('ko'));
-    if (koreanVoice) {
-      currentUtterance.voice = koreanVoice;
+    const koreanVoices = voices.filter(v => v.lang.includes('KO') || v.lang.includes('ko'));
+    
+    // Preference: Microsoft SunHi (young child voice), Heami (narrator), Google Korean, etc.
+    const selectedVoice = koreanVoices.find(v => v.name.includes('SunHi')) || 
+                          koreanVoices.find(v => v.name.includes('Heami')) || 
+                          koreanVoices.find(v => v.name.toLowerCase().includes('natural')) || 
+                          koreanVoices.find(v => v.name.toLowerCase().includes('google')) || 
+                          koreanVoices[0];
+                          
+    if (selectedVoice) {
+      currentUtterance.voice = selectedVoice;
     }
 
-    currentUtterance.rate = 0.85; // Slightly slower, child-friendly pace
-    currentUtterance.pitch = 1.2; // Slightly higher pitch, friendly child-like voice
+    currentUtterance.rate = 0.72; // Slower and highly comfortable storytelling speed for kids
+    currentUtterance.pitch = 1.35; // Slightly higher pitch to sound like a young child-like voice
 
     currentUtterance.onstart = () => {
       element.classList.add('speaking');
