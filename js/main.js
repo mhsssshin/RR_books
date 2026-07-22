@@ -407,26 +407,42 @@ document.addEventListener('DOMContentLoaded', () => {
       constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = Math.random() * 8 + 3;
-        this.speedX = Math.random() * 3 - 1.5;
-        this.speedY = Math.random() * 3 - 1.5;
+        this.size = Math.random() * 14 + 6; // Bigger and highly visible sparkles
+        this.speedY = Math.random() * -1.8 - 0.7; // Rise upwards
+        this.speedX = Math.random() * 1.5 - 0.75; // Slight drift
+        
         const colorPalette = localStorage.getItem('rorong_fav_color') || 'pink';
-        this.color = `hsla(${Math.random() * 40 + (colorPalette === 'pink' ? 330 : colorPalette === 'lavender' ? 260 : colorPalette === 'mint' ? 140 : 40)}, 100%, 75%, ${Math.random() * 0.5 + 0.5})`;
+        const baseHue = colorPalette === 'pink' ? 330 : colorPalette === 'lavender' ? 260 : colorPalette === 'mint' ? 140 : 40;
+        
+        const rand = Math.random();
+        if (rand < 0.25) {
+          this.color = `hsla(50, 100%, 80%, ${Math.random() * 0.4 + 0.6})`; // Golden star
+        } else if (rand < 0.4) {
+          this.color = `hsla(0, 0%, 100%, ${Math.random() * 0.4 + 0.6})`; // Pure white star
+        } else {
+          this.color = `hsla(${Math.random() * 40 + baseHue}, 100%, 75%, ${Math.random() * 0.4 + 0.6})`;
+        }
+        
         this.alpha = 1;
-        this.life = Math.random() * 30 + 20;
+        this.life = Math.random() * 40 + 50; // Longer life
         this.maxLife = this.life;
+        this.wobbleSpeed = Math.random() * 0.05 + 0.02;
+        this.wobbleAngle = Math.random() * Math.PI * 2;
       }
       update() {
-        this.x += this.speedX;
         this.y += this.speedY;
+        this.wobbleAngle += this.wobbleSpeed;
+        this.x += this.speedX + Math.sin(this.wobbleAngle) * 0.8;
+        
         this.life--;
         this.alpha = this.life / this.maxLife;
-        this.size *= 0.95;
+        this.size *= 0.97;
       }
       draw() {
         ctx.save();
-        ctx.globalAlpha = this.alpha;
-        ctx.shadowBlur = 10;
+        // Twinkling opacity
+        ctx.globalAlpha = this.alpha * (0.6 + Math.sin(Date.now() * 0.01) * 0.4);
+        ctx.shadowBlur = 12;
         ctx.shadowColor = this.color;
         ctx.fillStyle = this.color;
         
@@ -436,7 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let cx = this.x;
         let cy = this.y;
         let rOuter = this.size;
-        let rInner = this.size / 2;
+        let rInner = this.size / 2.8; // Sharper star shape
         let step = Math.PI / spikes;
 
         ctx.moveTo(cx, cy - rOuter);
@@ -458,31 +474,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const addParticles = (x, y) => {
-      // Compensate for page scroll
-      const actualY = y + window.scrollY;
-      for (let i = 0; i < 3; i++) {
-        particles.push(new SparkleParticle(x, actualY));
-      }
-    };
-
-    window.addEventListener('mousemove', (e) => {
-      addParticles(e.clientX, e.clientY);
-    });
-
-    window.addEventListener('touchmove', (e) => {
-      if (e.touches.length > 0) {
-        addParticles(e.touches[0].clientX, e.touches[0].clientY);
-      }
-    }, { passive: true });
-
     const animateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Ambient sparkles: 5% chance per frame to generate a floating background sparkle
-      if (Math.random() < 0.05) {
+      // Ambient sparkles: 16% chance per frame, rising from lower screen areas
+      if (Math.random() < 0.16) {
         const randX = Math.random() * canvas.width;
-        const randY = Math.random() * canvas.height;
+        // Bias generation towards the bottom 65% of the page
+        const randY = canvas.height - (Math.random() * canvas.height * 0.65);
         particles.push(new SparkleParticle(randX, randY));
       }
 

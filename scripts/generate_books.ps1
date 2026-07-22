@@ -59,6 +59,14 @@ foreach ($story in $stories) {
   <meta name="description" content="5세 맞춤형 동화 플랫폼 로롱북스 - $($story.title) ($($story.moral))">
 </head>
 <body>
+  <!-- Dynamic floating background bubbles (Metaball/Aurora) -->
+  <div class="bg-bubbles">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
   <!-- Interactive sparkles overlay -->
   <canvas id="sparkle-canvas"></canvas>
   <canvas id="confetti-canvas"></canvas>
