@@ -22,12 +22,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // Personalize page texts and split into word-by-word TTS triggers
   const processStoryTexts = () => {
     const paragraphs = document.querySelectorAll('.story-paragraph');
+    
+    // Check if the last character of the childName has a batchim (jongseong)
+    const lastChar = childName.charAt(childName.length - 1);
+    const hasPadchim = (() => {
+      const charCode = lastChar.charCodeAt(0);
+      if (charCode < 0xAC00 || charCode > 0xD7A3) return false;
+      return (charCode - 0xAC00) % 28 > 0;
+    })();
+
     paragraphs.forEach(p => {
-      let rawText = p.innerHTML.trim();
-      // Replace name tokens
-      const personalized = rawText.replace(/\[이름\]/g, childName).replace(/\{\{name\}\}/g, childName);
+      let text = p.innerHTML.trim();
+      
+      // Replace name tokens with correct Korean particles based on batchim
+      text = text.replace(/\[이름\]\(이\)는/g, hasPadchim ? `${childName}이는` : `${childName}는`);
+      text = text.replace(/\[이름\]\(이\)가/g, hasPadchim ? `${childName}이가` : `${childName}가`);
+      text = text.replace(/\[이름\]\(이\)와/g, hasPadchim ? `${childName}이와` : `${childName}와`);
+      text = text.replace(/\[이름\]이의/g, hasPadchim ? `${childName}이의` : `${childName}의`);
+      text = text.replace(/\[이름\]이와/g, hasPadchim ? `${childName}이와` : `${childName}와`);
+      text = text.replace(/\[이름\]이에게/g, hasPadchim ? `${childName}이에게` : `${childName}에게`);
+      text = text.replace(/\[이름\]이를/g, hasPadchim ? `${childName}이를` : `${childName}를`);
+      text = text.replace(/\[이름\]\(이\)/g, hasPadchim ? `${childName}이` : childName);
+      
+      // General replacements
+      text = text.replace(/\[이름\]/g, childName);
+      text = text.replace(/\{\{name\}\}/g, childName);
+
       // Split by whitespace to create individual words
-      const words = personalized.split(/\s+/);
+      const words = text.split(/\s+/);
       p.innerHTML = words.map(word => {
         if (!word) return '';
         return `<span class="tts-trigger">${word}</span>`;
