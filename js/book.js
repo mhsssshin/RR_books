@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // If reading the whole page and in Korean mode, try playing pre-rendered ElevenLabs MP3
     if (!isWordOnly && !isEnglishMode) {
-      const storyId = bookContainer.getAttribute('data-book-id');
+      const storyId = document.getElementById('book-container').getAttribute('data-book-id');
       const pageNumber = currentPageIdx + 1;
       const audioUrl = `../assets/audio/tts/${storyId}_${pageNumber}.mp3`;
 
