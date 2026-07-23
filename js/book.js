@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   
   let isEnglishMode = localStorage.getItem('rorong_language') === 'en';
+  let currentAudio = null;
   
   // Set theme background based on user's preference
   if (favColor === 'pink') {
@@ -86,9 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
     bindTtsTriggers();
   };
 
-  // 2. Book Pages Navigation Setup
+  // 2. Book Pages Navigation Setup & Autoplay Controller
   const pages = document.querySelectorAll('.book-page');
   let currentPageIdx = 0;
+  let isAutoplayMode = false;
+  const playBookBtn = document.getElementById('play-book-btn');
 
   // Render navigation buttons
   const prevBtn = document.createElement('button');
@@ -114,19 +117,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset all whole page reading buttons when turning pages
     if (readPageBtns) {
       readPageBtns.forEach(btn => {
-        btn.classList.remove('playing');
-        btn.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
+        if (!isAutoplayMode) {
+          btn.classList.remove('playing');
+          btn.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
+        }
       });
     }
-    window.speechSynthesis.cancel();
+
+    if (!isAutoplayMode) {
+      window.speechSynthesis.cancel();
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.src = '';
+        currentAudio = null;
+      }
+    }
 
     // Update buttons visibility
     prevBtn.style.display = idx === 0 ? 'none' : 'flex';
-    // On the last page, next button still displays to trigger the rating overlay
     nextBtn.innerHTML = idx === pages.length - 1 ? '🌟' : '▶';
   };
 
-  const turnPageNext = () => {
+  const turnPageNext = (isAuto = false) => {
+    if (!isAuto) {
+      isAutoplayMode = false;
+      stopAllPlayback();
+    }
     if (currentPageIdx < pages.length - 1) {
       RorongAudio.playPageTurn();
       const currentEl = pages[currentPageIdx];
@@ -142,7 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const turnPagePrev = () => {
+  const turnPagePrev = (isAuto = false) => {
+    if (!isAuto) {
+      isAutoplayMode = false;
+      stopAllPlayback();
+    }
     if (currentPageIdx > 0) {
       RorongAudio.playPageTurn();
       const currentEl = pages[currentPageIdx];
@@ -155,21 +175,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  nextBtn.addEventListener('click', turnPageNext);
-  prevBtn.addEventListener('click', turnPagePrev);
+  nextBtn.addEventListener('click', () => turnPageNext(false));
+  prevBtn.addEventListener('click', () => turnPagePrev(false));
 
   // Swipe support for mobile devices
   let touchStartX = 0;
   let touchEndX = 0;
   
   document.addEventListener('touchstart', e => {
-    // Only capture swipes on main areas
-    if (e.target.closest('.nav-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay') || e.target.closest('.header-bar')) return;
+    if (e.target.closest('.nav-btn') || e.target.closest('.read-page-btn') || e.target.closest('.play-book-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay') || e.target.closest('.header-bar')) return;
     touchStartX = e.changedTouches[0].screenX;
   }, { passive: true });
 
   document.addEventListener('touchend', e => {
-    if (e.target.closest('.nav-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay') || e.target.closest('.header-bar')) return;
+    if (e.target.closest('.nav-btn') || e.target.closest('.read-page-btn') || e.target.closest('.play-book-btn') || e.target.closest('.tts-trigger') || e.target.closest('.rating-overlay') || e.target.closest('.header-bar')) return;
     touchEndX = e.changedTouches[0].screenX;
     handleSwipe();
   }, { passive: true });
@@ -177,11 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleSwipe = () => {
     const diff = touchEndX - touchStartX;
     if (diff < -60) {
-      // Swipe left -> Next page
-      turnPageNext();
+      turnPageNext(false);
     } else if (diff > 60) {
-      // Swipe right -> Prev page
-      turnPagePrev();
+      turnPagePrev(false);
     }
   };
 
@@ -207,10 +224,66 @@ document.addEventListener('DOMContentLoaded', () => {
     return processed.length > 0 ? processed : clean;
   };
 
-  const speakText = (text, element, isWordOnly = true) => {
-    // Stop any current voice output
+  const stopAllPlayback = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.src = '';
+      currentAudio = null;
+    }
     window.speechSynthesis.cancel();
 
+    // Clear playing UI states
+    document.querySelectorAll('.read-page-btn, .play-book-btn').forEach(btn => {
+      btn.classList.remove('playing');
+      if (btn.classList.contains('read-page-btn')) {
+        btn.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
+      } else if (btn.id === 'play-book-btn') {
+        btn.textContent = isEnglishMode ? '🔊 Read Book' : '🔊 전체 읽기';
+      }
+    });
+  };
+
+  const speakText = (text, element, isWordOnly = true, onEndedCallback = null) => {
+    stopAllPlayback();
+
+    // If reading the whole page and in Korean mode, try playing pre-rendered ElevenLabs MP3
+    if (!isWordOnly && !isEnglishMode) {
+      const storyId = bookContainer.getAttribute('data-book-id');
+      const pageNumber = currentPageIdx + 1;
+      const audioUrl = `../assets/audio/tts/${storyId}_${pageNumber}.mp3`;
+
+      const audio = new Audio(audioUrl);
+      currentAudio = audio;
+
+      audio.onplay = () => {
+        element.classList.add('playing');
+        element.textContent = '⏸️ 일시 정지';
+      };
+
+      audio.onended = () => {
+        element.classList.remove('playing');
+        element.textContent = '🔊 페이지 읽기';
+        currentAudio = null;
+        if (onEndedCallback) onEndedCallback();
+      };
+
+      audio.onerror = () => {
+        console.warn(`Pre-rendered audio not found for page ${pageNumber}. Falling back to browser TTS.`);
+        currentAudio = null;
+        speakWebSpeech(text, element, isWordOnly, onEndedCallback);
+      };
+
+      audio.play().catch(err => {
+        console.warn(`Audio play failed, falling back to browser TTS: ${err.message}`);
+        currentAudio = null;
+        speakWebSpeech(text, element, isWordOnly, onEndedCallback);
+      });
+    } else {
+      speakWebSpeech(text, element, isWordOnly, onEndedCallback);
+    }
+  };
+
+  const speakWebSpeech = (text, element, isWordOnly = true, onEndedCallback = null) => {
     // Clean text by stripping Korean particles only if it's a word-only Korean TTS
     const cleanedText = (isWordOnly && !isEnglishMode) ? cleanWordForTTS(text) : text;
 
@@ -224,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
       currentUtterance.lang = 'en-US';
       const englishVoices = voices.filter(v => v.lang.includes('EN') || v.lang.includes('en'));
       
-      // Preference: Google US English, Natural, Microsoft Zira, etc.
       const selectedVoice = englishVoices.find(v => v.name.includes('Natural')) || 
                             englishVoices.find(v => v.name.toLowerCase().includes('google')) || 
                             englishVoices.find(v => v.name.includes('Zira')) || 
@@ -237,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
       currentUtterance.lang = 'ko-KR';
       const koreanVoices = voices.filter(v => v.lang.includes('KO') || v.lang.includes('ko'));
       
-      // Preference: Microsoft SunHi (young child voice), Heami (narrator), Google Korean, etc.
       const selectedVoice = koreanVoices.find(v => v.name.includes('SunHi')) || 
                             koreanVoices.find(v => v.name.includes('Heami')) || 
                             koreanVoices.find(v => v.name.toLowerCase().includes('natural')) || 
@@ -256,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
       element.classList.add('speaking');
       if (!isWordOnly) {
         element.classList.add('playing');
-        element.textContent = isEnglishMode ? '⏹️ Stop' : '⏹️ 멈추기';
+        element.textContent = isEnglishMode ? '⏸️ Stop' : '⏸️ 멈추기';
       }
     };
 
@@ -266,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.remove('playing');
         element.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
       }
+      if (onEndedCallback) onEndedCallback();
     };
 
     currentUtterance.onerror = () => {
@@ -274,6 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element.classList.remove('playing');
         element.textContent = isEnglishMode ? '🔊 Read Page' : '🔊 페이지 읽기';
       }
+      if (onEndedCallback) onEndedCallback();
     };
 
     window.speechSynthesis.speak(currentUtterance);
@@ -363,12 +436,21 @@ document.addEventListener('DOMContentLoaded', () => {
   showPage(currentPageIdx);
 
   // Bind Language Toggle Click Handler
+  // Initialize play book button translation state
+  if (playBookBtn) {
+    playBookBtn.textContent = isEnglishMode ? '🔊 Read Book' : '🔊 전체 읽기';
+  }
+
+  // Bind Language Toggle Click Handler
   if (langToggleBtn) {
     langToggleBtn.textContent = isEnglishMode ? '🇰🇷 한글로 읽기' : '🇺🇸 English';
     langToggleBtn.addEventListener('click', () => {
       RorongAudio.playBubble();
       isEnglishMode = !isEnglishMode;
       langToggleBtn.textContent = isEnglishMode ? '🇰🇷 한글로 읽기' : '🇺🇸 English';
+      if (playBookBtn) {
+        playBookBtn.textContent = isEnglishMode ? '🔊 Read Book' : '🔊 전체 읽기';
+      }
       localStorage.setItem('rorong_language', isEnglishMode ? 'en' : 'ko');
       
       // Trigger smooth text transition
@@ -386,9 +468,68 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 250);
     });
   }
+
+  // Autoplay Logic implementation
+  const playCurrentPageInAutoplay = () => {
+    if (!isAutoplayMode) return;
+
+    if (playBookBtn) {
+      playBookBtn.textContent = isEnglishMode ? '⏸️ Pause' : '⏸️ 일시 정지';
+      playBookBtn.classList.add('playing');
+    }
+
+    const currentPage = pages[currentPageIdx];
+    const paragraph = currentPage.querySelector('.story-paragraph');
+    const textToRead = paragraph.textContent.trim();
+    const pageBtn = currentPage.querySelector('.read-page-btn');
+
+    speakText(textToRead, pageBtn, false, () => {
+      if (isAutoplayMode) {
+        if (currentPageIdx < pages.length - 1) {
+          setTimeout(() => {
+            if (isAutoplayMode) {
+              turnPageNext(true); // pass isAuto = true
+              setTimeout(() => {
+                playCurrentPageInAutoplay();
+              }, 600); // Wait for page flip animation
+            }
+          }, 1000); // 1-second delay
+        } else {
+          isAutoplayMode = false;
+          stopAllPlayback();
+          showRatingOverlay();
+        }
+      }
+    });
+  };
+
+  const togglePlayBook = () => {
+    if (isAutoplayMode) {
+      isAutoplayMode = false;
+      stopAllPlayback();
+    } else {
+      stopAllPlayback();
+      isAutoplayMode = true;
+
+      if (currentPageIdx !== 0) {
+        currentPageIdx = 0;
+        showPage(0);
+        setTimeout(() => {
+          playCurrentPageInAutoplay();
+        }, 500);
+      } else {
+        playCurrentPageInAutoplay();
+      }
+    }
+  };
+
+  if (playBookBtn) {
+    playBookBtn.addEventListener('click', togglePlayBook);
+  }
+
   // Cancel TTS when moving away from a page
   window.addEventListener('beforeunload', () => {
-    window.speechSynthesis.cancel();
+    stopAllPlayback();
   });
 
   // 4. Full Screen Star Rating Overlay
@@ -399,7 +540,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const showRatingOverlay = () => {
     // Stop voice reading
-    window.speechSynthesis.cancel();
+    isAutoplayMode = false;
+    stopAllPlayback();
     ratingOverlay.classList.add('active');
   };
 

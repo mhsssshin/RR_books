@@ -99,6 +99,34 @@ body {
   border-color: #ff69b4;
 }
 
+.play-book-btn {
+  background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%);
+  color: white;
+  border: 3px solid white;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.2);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.play-book-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+  background: linear-gradient(135deg, #ffc0cb 0%, #ff1493 100%);
+}
+
+.play-book-btn.playing {
+  background: linear-gradient(135deg, #ffc0cb 0%, #ff1493 100%);
+  animation: pulseButton 1.5s infinite alternate;
+  border-color: #ff69b4;
+}
+
 /* Book Viewer Area */
 .book-viewer {
   position: relative;
@@ -584,6 +612,12 @@ body {
     font-size: 1.1rem;
     margin-top: 12px;
     padding: 4px 12px;
+  }
+
+  .play-book-btn {
+    padding: 8px 15px;
+    font-size: 1.1rem;
+    border-width: 2px;
   }
 }
 

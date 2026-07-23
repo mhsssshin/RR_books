@@ -74,6 +74,7 @@ const generateHTML = (story) => {
     <button class="back-btn" onclick="window.location.href='../index.html'">
       🏠 홈으로
     </button>
+    <button class="play-book-btn" id="play-book-btn">🔊 전체 읽기</button>
     <button class="lang-toggle-btn" id="lang-toggle-btn">🇺🇸 English</button>
   </div>
 
